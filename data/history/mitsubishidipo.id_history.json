@@ -1,0 +1,60 @@
+{
+  "username": "mitsubishidipo.id",
+  "retention_days": 90,
+  "updated_at": "2026-10-23T05:56:50.822Z",
+  "sessions": [
+    {
+      "id": "mitsubishidipo.id_20261023_125403",
+      "username": "mitsubishidipo.id",
+      "room_id": "7699734648134060820",
+      "title": "",
+      "live_started_at": null,
+      "tracking_started_at": "2026-10-23T05:54:14.071Z",
+      "ended_at": "2026-10-23T05:56:50.821Z",
+      "duration_sec": 157,
+      "tracked_duration_sec": 157,
+      "end_reason": "stream_end",
+      "peak_viewers": 2,
+      "peak_viewers_at": "2026-10-23T05:55:57.092Z",
+      "avg_viewers": 2,
+      "total_likes": 0,
+      "total_comments": 1,
+      "unique_commenters": 1,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-10-23T05:54:14.072Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-23T05:55:14.078Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T05:56:14.080Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T05:56:50.821Z",
+          "v": 2
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "velvetysparkle",
+          "nickname": "N",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "l300",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishidipo.id_20261023_125403.xlsx",
+      "release_tag": "live-mitsubishidipo.id-20261023-125403"
+    }
+  ]
+}
