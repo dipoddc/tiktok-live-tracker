@@ -189,10 +189,31 @@ function clearToken() {
   S.token = ''; lsSet(LS.token, null); $('inToken').value = '';
   updateRepoLabel(); restartPolling(); toast('Token dihapus dari browser ini.');
 }
+const AUTO_DETECT_KEY = 'tlt.lastAutoDetect';
+const AUTO_DETECT_GAP_MS = 3 * 60_000;     // jeda minimal antar pemicu otomatis
+const STATUS_STALE_MS = 12 * 60_000;       // status dianggap basi -> picu detector saat dashboard dibuka
+
+/** Picu detector otomatis (tanpa klik), dibatasi maks 1x per 3 menit per browser. */
+async function autoDetect(reason) {
+  if (!S.token || !S.owner || !S.repo) return false;
+  const last = Number(lsGet(AUTO_DETECT_KEY) || 0);
+  if (Date.now() - last < AUTO_DETECT_GAP_MS) return false;
+  lsSet(AUTO_DETECT_KEY, String(Date.now()));
+  try {
+    await gh(`${repoPath()}/actions/workflows/${DETECTOR_WORKFLOW}/dispatches`, { method: 'POST', body: { ref: await ensureDefaultBranch() } });
+    console.info('Detector dipicu otomatis:', reason);
+    return true;
+  } catch (e) {
+    console.warn('Gagal memicu detector otomatis:', e.message);
+    return false;
+  }
+}
+
 async function runDetector() {
   if (!S.token) return toast('Isi PAT dulu di Pengaturan.', 'error');
   try {
     await gh(`${repoPath()}/actions/workflows/${DETECTOR_WORKFLOW}/dispatches`, { method: 'POST', body: { ref: await ensureDefaultBranch() } });
+    lsSet(AUTO_DETECT_KEY, String(Date.now()));
     toast('Detector dipicu. Kalau detector lama masih jalan, yang baru antre di belakangnya.', 'ok');
   } catch (e) {
     let msg = `Gagal memicu detector: ${e.message}`;
@@ -270,7 +291,8 @@ async function addAccount() {
   }, `tambah @${u}`);
   if (ok) {
     $('inNewAccount').value = '';
-    toast(`@${u} ditambahkan. Status live muncul setelah putaran cek detector berikutnya (±1,5 menit).`, 'ok');
+    const fired = await autoDetect(`tambah @${u}`);
+    toast(fired ? `@${u} ditambahkan. Detector langsung mengecek, status muncul ±1-2 menit lagi.` : `@${u} ditambahkan. Ikut dicek di putaran detector berikutnya.`, 'ok');
     renderAll();
   }
 }
@@ -294,7 +316,8 @@ async function setRecordTarget(u) {
     return null;
   }, u ? `record target @${u}` : 'record target dikosongkan');
   if (ok) {
-    toast(u ? `Auto record diarahkan ke @${u}. Mulai merekam saat terdeteksi live.` : 'Tidak ada akun yang direkam.', 'ok');
+    if (u) await autoDetect(`record target @${u}`);
+    toast(u ? `Auto record diarahkan ke @${u}. Detector langsung mengecek; rekaman mulai kalau akun ini sedang live.` : 'Tidak ada akun yang direkam.', 'ok');
     renderAll();
   } else {
     renderRecord();
@@ -887,6 +910,8 @@ async function refreshAll() {
   if (!S.owner || !S.repo) { renderAll(); return; }
   try { await loadConfig(); } catch (e) { toast(`Gagal membaca data/config.json: ${e.message}`, 'error'); }
   await Promise.all([pollLive(), loadReleases()]);
+  // Dashboard dibuka & status sudah lama tidak diperbarui -> cek ulang otomatis
+  if (S.config.accounts.length && (!S.status || ageMs(S.status.updated_at) > STATUS_STALE_MS)) autoDetect('status basi saat dashboard dibuka');
   renderHistAccountSelect();
   if (S.histAccount) await loadHistory(S.histAccount);
   renderAll();
