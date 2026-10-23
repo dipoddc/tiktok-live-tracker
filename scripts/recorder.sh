@@ -93,25 +93,38 @@ get_direct_url() {
 # -----------------------------------------------------------------------------
 # 1) Cek status live (Streamlink, lalu cadangan URL langsung)
 # -----------------------------------------------------------------------------
-log "Cek status live @${USERNAME} ..."
-STREAMS_JSON="$(streamlink --json "$URL" 2>/dev/null || true)"
+# Cari stream. Kalau belum ketemu, coba lagi tiap 60 detik selama RECORD_WAIT_MINUTES
+# (stream kadang belum tersedia di menit-menit awal live / sumber data sedang error).
+WAIT_MIN="${RECORD_WAIT_MINUTES:-10}"
+FIND_DEADLINE=$(( $(date +%s) + WAIT_MIN * 60 ))
 SL_OK=false
-if echo "$STREAMS_JSON" | jq -e '(.streams // {}) | length > 0' >/dev/null 2>&1; then
-  SL_OK=true
-  log "Streamlink: LIVE. Kualitas tersedia: $(echo "$STREAMS_JSON" | jq -r '.streams | keys | join(", ")')"
-else
-  log "Streamlink tidak menemukan stream: $(echo "$STREAMS_JSON" | jq -r '.error // "tanpa pesan"' 2>/dev/null)"
-fi
-
 DIRECT_URL=""
-if [[ "$SL_OK" == "false" ]]; then
-  DIRECT_URL="$(get_direct_url || true)"
-  if [[ -z "$DIRECT_URL" ]]; then
-    log "Akun sedang offline (Streamlink & cadangan sama-sama tidak menemukan stream)."
-    exit 0
+TRY=0
+while :; do
+  TRY=$((TRY + 1))
+  log "Cari stream @${USERNAME} (percobaan ${TRY}) ..."
+  STREAMS_JSON="$(streamlink --json "$URL" 2>>"${OUT_DIR}/.recorder_debug.log" || true)"
+  if echo "$STREAMS_JSON" | jq -e '(.streams // {}) | length > 0' >/dev/null 2>&1; then
+    SL_OK=true
+    log "Streamlink: stream ditemukan. Kualitas: $(echo "$STREAMS_JSON" | jq -r '.streams | keys | join(", ")')"
+    break
   fi
-  log "Cadangan: URL stream langsung ditemukan, rekam pakai FFmpeg."
-fi
+  log "Streamlink tidak menemukan stream: $(echo "$STREAMS_JSON" | jq -r '.error // "tanpa pesan"' 2>/dev/null)"
+
+  DIRECT_URL="$(get_direct_url || true)"
+  if [[ -n "$DIRECT_URL" ]]; then
+    log "Cadangan: URL stream langsung ditemukan, rekam pakai FFmpeg."
+    break
+  fi
+  log "Cadangan juga tidak menemukan URL stream (detail per sumber ada di laporan Summary)."
+
+  if ! still_allowed; then log "record_target berubah, berhenti."; exit 0; fi
+  if (( $(date +%s) + 60 > FIND_DEADLINE )); then
+    log "GAGAL: ${WAIT_MIN} menit tidak menemukan stream yang bisa direkam."
+    exit 4
+  fi
+  sleep 60
+done
 
 # -----------------------------------------------------------------------------
 # 2) Rekam. Ditulis sebagai segmen .ts (tahan crash), maks MAX_MINUTES total.

@@ -311,13 +311,23 @@ function addKeyValueBlock(ws, startRow, rows) {
   return startRow + rows.length;
 }
 
-/** Sheet detail 1 sesi: info, timeline viewers, top commenter, top keyword. */
-export function addSessionDetailSheet(wb, sheetName, s) {
+const CHAT_COLUMNS = [
+  { header: 'No', width: 7 },
+  { header: 'Waktu (WIB)', width: 20 },
+  { header: 'Username', width: 24 },
+  { header: 'Nickname', width: 24 },
+  { header: 'Komentar', width: 80 }
+];
+
+/**
+ * Sheet detail 1 sesi: info sesi di atas, lalu tabel viewers per menit (kolom A-B)
+ * dan tabel komentar lengkap + username (kolom D-H).
+ */
+export function addSessionDetailSheet(wb, sheetName, s, chats = []) {
   const ws = wb.addWorksheet(sheetName);
   ws.columns = [
     { width: 24 }, { width: 22 }, { width: 3 },
-    { width: 6 }, { width: 22 }, { width: 22 }, { width: 10 }, { width: 3 },
-    { width: 6 }, { width: 20 }, { width: 14 }
+    ...CHAT_COLUMNS.map((c) => ({ width: c.width }))
   ];
 
   ws.getCell('A1').value = `Detail Sesi Live @${s.username}`;
@@ -345,40 +355,34 @@ export function addSessionDetailSheet(wb, sheetName, s) {
 
   row += 1;
   const tStart = row;
-
-  // Timeline viewers (kolom A-B)
   const th = ws.getRow(tStart);
   th.getCell(1).value = 'Waktu (WIB)';
   th.getCell(2).value = 'Viewers';
-  // Top commenter (kolom D-G)
-  th.getCell(4).value = '#';
-  th.getCell(5).value = 'Username';
-  th.getCell(6).value = 'Nickname';
-  th.getCell(7).value = 'Komentar';
-  // Top keyword (kolom I-K)
-  th.getCell(9).value = '#';
-  th.getCell(10).value = 'Kata Kunci';
-  th.getCell(11).value = 'Jml Komentar';
-  styleHeaderRow(th); // eachCell hanya menyentuh sel berisi, kolom pemisah C & H tetap polos
+  CHAT_COLUMNS.forEach((c, i) => { th.getCell(4 + i).value = c.header; });
+  styleHeaderRow(th); // eachCell hanya menyentuh sel berisi, kolom pemisah C tetap polos
 
   (s.viewer_timeline || []).forEach((p, i) => {
     const r = ws.getRow(tStart + 1 + i);
     r.getCell(1).value = fmtWIB(p.t);
     r.getCell(2).value = num(p.v);
   });
-  (s.top_commenters || []).forEach((c, i) => {
-    const r = ws.getRow(tStart + 1 + i);
-    r.getCell(4).value = i + 1;
-    r.getCell(5).value = c.user;
-    r.getCell(6).value = c.nickname || '';
-    r.getCell(7).value = num(c.count);
-  });
-  (s.top_keywords || []).forEach((k, i) => {
-    const r = ws.getRow(tStart + 1 + i);
-    r.getCell(9).value = i + 1;
-    r.getCell(10).value = k.word;
-    r.getCell(11).value = num(k.count);
-  });
+
+  if (chats.length) {
+    chats.forEach((c, i) => {
+      const r = ws.getRow(tStart + 1 + i);
+      r.getCell(4).value = i + 1;
+      r.getCell(5).value = fmtWIB(c.time);
+      r.getCell(6).value = c.user ? `@${c.user}` : '';
+      r.getCell(7).value = c.nickname || '';
+      r.getCell(8).value = c.comment;
+      r.getCell(8).alignment = { wrapText: true, vertical: 'top' };
+    });
+    ws.autoFilter = { from: { row: tStart, column: 4 }, to: { row: tStart + chats.length, column: 8 } };
+  } else {
+    ws.getRow(tStart + 1).getCell(4).value = num(s.total_comments) > 0
+      ? 'Isi komentar sesi ini tidak tersimpan (sesi sebelum fitur simpan komentar aktif).'
+      : 'Tidak ada komentar di sesi ini.';
+  }
 
   ws.views = [{ state: 'frozen', ySplit: tStart }];
   return ws;
@@ -388,30 +392,17 @@ export async function buildSessionReport(session, chats, filePath) {
   const wb = new ExcelJS.Workbook();
   wb.creator = 'TikTok Live Tracker';
   wb.created = new Date();
-
-  addSessionDetailSheet(wb, 'Ringkasan Sesi', session);
-
-  const ws = wb.addWorksheet('Chat Log');
-  ws.columns = [
-    { header: 'No', key: 'no', width: 7 },
-    { header: 'Waktu (WIB)', key: 'time', width: 20 },
-    { header: 'Username', key: 'user', width: 24 },
-    { header: 'Nickname', key: 'nick', width: 24 },
-    { header: 'Komentar', key: 'comment', width: 80 }
-  ];
-  styleHeaderRow(ws.getRow(1));
-  chats.forEach((c, i) => {
-    ws.addRow({ no: i + 1, time: fmtWIB(c.time), user: c.user, nick: c.nickname || '', comment: c.comment });
-  });
-  ws.views = [{ state: 'frozen', ySplit: 1 }];
-  if (chats.length) ws.autoFilter = { from: 'A1', to: `E${chats.length + 1}` };
-
+  addSessionDetailSheet(wb, 'Ringkasan & Komentar', session, chats);
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   await wb.xlsx.writeFile(filePath);
   return filePath;
 }
 
-export async function buildThreeMonthReport(history, filePath) {
+/**
+ * @param chatsBySession  Map/objek { [session.id]: chats[] } berisi komentar lengkap tiap sesi.
+ */
+export async function buildThreeMonthReport(history, filePath, chatsBySession = {}) {
+  const getChats = (id) => (chatsBySession instanceof Map ? chatsBySession.get(id) : chatsBySession[id]) || [];
   const sessions = [...history.sessions].sort((a, b) => new Date(sessionStart(a)) - new Date(sessionStart(b)));
   const wb = new ExcelJS.Workbook();
   wb.creator = 'TikTok Live Tracker';
@@ -457,15 +448,108 @@ export async function buildThreeMonthReport(history, filePath) {
   }
   ws.views = [{ state: 'frozen', ySplit: headerRowIdx }];
 
+  // Semua komentar dari semua sesi dalam 1 sheet (gampang difilter per username / kata)
+  const all = wb.addWorksheet(safeSheetName('Semua Komentar', used));
+  const allCols = [
+    { header: 'No', width: 7 }, { header: 'Sesi (Mulai Live WIB)', width: 20 }, { header: 'Judul Live', width: 30 },
+    { header: 'Waktu Komentar (WIB)', width: 20 }, { header: 'Username', width: 24 }, { header: 'Nickname', width: 24 },
+    { header: 'Komentar', width: 80 }
+  ];
+  allCols.forEach((c, i) => { all.getRow(1).getCell(i + 1).value = c.header; all.getColumn(i + 1).width = c.width; });
+  styleHeaderRow(all.getRow(1));
+  let n = 0;
+  for (const s of sessions) {
+    for (const c of getChats(s.id)) {
+      n += 1;
+      all.getRow(1 + n).values = [n, fmtWIB(sessionStart(s)), s.title || '', fmtWIB(c.time), c.user ? `@${c.user}` : '', c.nickname || '', c.comment];
+    }
+  }
+  if (n) all.autoFilter = { from: 'A1', to: `G${n + 1}` };
+  else all.getRow(2).getCell(1).value = 'Belum ada komentar tersimpan.';
+  all.views = [{ state: 'frozen', ySplit: 1 }];
+
   sessions.forEach((s, i) => {
     const o = wibParts(new Date(sessionStart(s)));
     const name = safeSheetName(`#${String(i + 1).padStart(2, '0')} ${o.year}-${o.month}-${o.day} ${o.hour}.${o.minute}`, used);
-    addSessionDetailSheet(wb, name, s);
+    addSessionDetailSheet(wb, name, s, getChats(s.id));
   });
 
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   await wb.xlsx.writeFile(filePath);
   return filePath;
+}
+
+// ---------------------------------------------------------------------------
+// Penyimpanan komentar lengkap per sesi di branch `chats-<username>`.
+// Branch selalu berisi 1 commit tanpa parent (ditimpa tiap simpan), jadi
+// komentar > 90 hari benar-benar hilang dan repo tidak membengkak.
+// ---------------------------------------------------------------------------
+export class ChatBranchStore {
+  constructor(username) {
+    this.username = username;
+    this.branch = `chats-${username}`;
+    const host = (process.env.GITHUB_SERVER_URL || 'https://github.com').replace(/^https?:\/\//, '');
+    this.remote = process.env.CHAT_REMOTE_URL || (GH_TOKEN && GH_REPO ? `https://x-access-token:${GH_TOKEN}@${host}/${GH_REPO}.git` : '');
+    this.enabled = Boolean(this.remote);
+    this.dir = null;
+  }
+
+  git(...args) {
+    return execFileP('git', args, { cwd: this.dir, env: { ...process.env, GIT_TERMINAL_PROMPT: '0' } });
+  }
+
+  async open() {
+    this.dir = fs.mkdtempSync(path.join(os.tmpdir(), 'chat-branch-'));
+    if (!this.enabled) return;
+    try {
+      await execFileP('git', ['clone', '-q', '--depth', '1', '--branch', this.branch, this.remote, this.dir], { env: { ...process.env, GIT_TERMINAL_PROMPT: '0' } });
+    } catch {
+      // Branch belum ada -> mulai dari kosong
+      fs.rmSync(this.dir, { recursive: true, force: true });
+      fs.mkdirSync(this.dir, { recursive: true });
+      await this.git('init', '-q');
+      await this.git('remote', 'add', 'origin', this.remote);
+    }
+  }
+
+  /** @returns Map<sessionId, chats[]> */
+  readAll() {
+    const map = new Map();
+    if (!this.dir) return map;
+    for (const f of fs.readdirSync(this.dir)) {
+      if (!f.endsWith('.json')) continue;
+      try {
+        const data = JSON.parse(fs.readFileSync(path.join(this.dir, f), 'utf8'));
+        if (data?.session_id && Array.isArray(data.chats)) map.set(data.session_id, data.chats);
+      } catch { /* file rusak diabaikan */ }
+    }
+    return map;
+  }
+
+  /** Simpan ulang hanya sesi yang masih ada di histori (prune 90 hari ikut terjadi di sini). */
+  async save(map, keepIds) {
+    if (!this.dir) return;
+    for (const f of fs.readdirSync(this.dir)) if (f.endsWith('.json')) fs.rmSync(path.join(this.dir, f));
+    for (const [id, chats] of map) {
+      if (!keepIds.has(id)) continue;
+      const safe = id.replace(/[^a-zA-Z0-9._-]/g, '_');
+      fs.writeFileSync(path.join(this.dir, `${safe}.json`), JSON.stringify({ session_id: id, username: this.username, chats }));
+    }
+    fs.writeFileSync(path.join(this.dir, 'README.md'), `# Komentar live @${this.username}\n\nDiisi otomatis oleh tracker. Hanya sesi ${RETENTION_DAYS} hari terakhir.\n`);
+    if (!this.enabled) return;
+    await this.git('add', '-A');
+    const tree = (await this.git('write-tree')).trim();
+    const commit = (await execFileP('git', ['commit-tree', tree, '-m', `chats @${this.username} ${new Date().toISOString()}`], {
+      cwd: this.dir,
+      env: { ...process.env, GIT_AUTHOR_NAME: 'github-actions[bot]', GIT_AUTHOR_EMAIL: '41898283+github-actions[bot]@users.noreply.github.com', GIT_COMMITTER_NAME: 'github-actions[bot]', GIT_COMMITTER_EMAIL: '41898283+github-actions[bot]@users.noreply.github.com' }
+    })).trim();
+    for (let i = 1; i <= 3; i++) {
+      try { await this.git('push', '-q', '-f', 'origin', `${commit}:refs/heads/${this.branch}`); return; } catch (e) {
+        if (i === 3) throw new Error(`push komentar gagal: ${String(e.stderr || errMsg(e)).split(GH_TOKEN || '\u0000').join('***').slice(0, 200)}`);
+        await sleep(3000 * i);
+      }
+    }
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -824,10 +908,24 @@ async function track(username) {
   saveHistory(history);
   log(`Histori disimpan: ${history.sessions.length} sesi (${removed > 0 ? removed + ' sesi >' + RETENTION_DAYS + ' hari dihapus' : 'tidak ada yang dihapus'}).`);
 
+  // Komentar lengkap: simpan ke branch chats-<username>, lalu pakai untuk rekap 3 bulan
+  const chatStore = new ChatBranchStore(username);
+  let chatMap = new Map();
+  try {
+    await chatStore.open();
+    chatMap = chatStore.readAll();
+    chatMap.set(session.id, S.chats);
+    await chatStore.save(chatMap, new Set(history.sessions.map((x) => x.id)));
+    log(`Komentar lengkap disimpan (${S.chats.length} komentar sesi ini, ${chatMap.size} sesi tersimpan).`);
+  } catch (e) {
+    warn(`Gagal menyimpan komentar ke branch chats-${username}: ${errMsg(e)}`);
+    chatMap.set(session.id, S.chats);
+  }
+
   const sessionFile = path.join(OUT_DIR, session.session_report);
   const reportFile = path.join(OUT_DIR, `Report_${username}_3_Months.xlsx`);
   await buildSessionReport(session, S.chats, sessionFile);
-  await buildThreeMonthReport(history, reportFile);
+  await buildThreeMonthReport(history, reportFile, chatMap);
   fs.writeFileSync(path.join(OUT_DIR, 'session.json'), JSON.stringify({
     ...session, viewer_timeline: undefined, chat_count: S.chats.length
   }, null, 2));
