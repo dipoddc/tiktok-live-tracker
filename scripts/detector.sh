@@ -122,9 +122,38 @@ while :; do
   mapfile -t TRACKING < <(active_users track_live.yml)
   mapfile -t RECORDING < <(active_users record_live.yml)
 
+  # Tahap 1: cek semua akun pakai Streamlink
+  declare -A RESULT=()
+  declare -A SOURCE=()
+  NOT_LIVE=()
+  for u in "${ACCOUNTS[@]}"; do
+    RESULT[$u]="$(check_live "$u")"
+    SOURCE[$u]="streamlink"
+    [[ "${RESULT[$u]}" != "live" ]] && NOT_LIVE+=("$u")
+  done
+
+  # Tahap 2: cek ulang akun yang tidak live pakai TikTok-Live-Connector
+  # (Streamlink kadang gagal membaca halaman live tertentu)
+  if (( ${#NOT_LIVE[@]} > 0 )) && [[ -f scripts/check_live.js && -d node_modules/tiktok-live-connector ]]; then
+    FB="$(timeout 120 node scripts/check_live.js "${NOT_LIVE[@]}" 2>/dev/null | tail -n 1)"
+    if echo "$FB" | jq -e 'type == "object"' >/dev/null 2>&1; then
+      for u in "${NOT_LIVE[@]}"; do
+        fb="$(echo "$FB" | jq -r --arg u "$u" '.[$u] // empty')"
+        if [[ "$fb" == "live" ]]; then
+          log "@$u: Streamlink bilang '${RESULT[$u]%%:*}', TikTok-Live-Connector bilang LIVE -> dianggap live."
+          RESULT[$u]="live"; SOURCE[$u]="connector"
+        elif [[ "$fb" == "offline" && "${RESULT[$u]}" == error:* ]]; then
+          RESULT[$u]="offline"; SOURCE[$u]="connector"
+        fi
+      done
+    else
+      log "PERINGATAN: cek cadangan (check_live.js) tidak memberi hasil."
+    fi
+  fi
+
   ROWS="$(mktemp)"
   for u in "${ACCOUNTS[@]}"; do
-    res="$(check_live "$u")"
+    res="${RESULT[$u]}"
     now_iso="$(date -u +%FT%TZ)"
     state="${res%%:*}"
     errmsg=""
@@ -166,11 +195,11 @@ while :; do
       fi
     fi
 
-    jq -cn --arg u "$u" --arg s "$state" --arg e "$errmsg" --arg t "$now_iso" \
+    jq -cn --arg u "$u" --arg s "$state" --arg e "$errmsg" --arg t "$now_iso" --arg src "${SOURCE[$u]}" \
       --arg since "${LIVE_SINCE[$u]:-}" --argjson tr "$is_tracking" --argjson rc "$is_recording" \
       '{username:$u, live:($s=="live"), state:$s, error:(if $e=="" then null else $e end),
         checked_at:$t, live_since:(if $since=="" then null else $since end),
-        tracking:$tr, recording:$rc}' >> "$ROWS"
+        tracking:$tr, recording:$rc, source:$src}' >> "$ROWS"
     log "@$u: $state${errmsg:+ ($errmsg)}$([[ $is_tracking == true ]] && echo ' [tracking]')$([[ $is_recording == true ]] && echo ' [recording]')"
   done
 

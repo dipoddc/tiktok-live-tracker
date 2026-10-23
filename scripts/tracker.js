@@ -680,9 +680,10 @@ async function track(username) {
 
   conn.on(WebcastEvent.CHAT, (data) => {
     touch();
-    const user = data?.user?.uniqueId ?? data?.uniqueId ?? 'unknown';
+    // v2.5+ (proto v3): teks di `content`, username di `user.displayId`; versi lama: `comment` & `uniqueId`
+    const user = data?.user?.uniqueId || data?.user?.displayId || data?.uniqueId || data?.user?.id || 'unknown';
     const nickname = data?.user?.nickname ?? data?.nickname ?? '';
-    const comment = String(data?.comment ?? '').trim();
+    const comment = String(data?.comment ?? data?.content ?? '').trim();
     if (!comment) return;
     S.chats.push({ time: new Date().toISOString(), user, nickname, comment });
     const c = S.commenters.get(user) || { user, nickname, count: 0 };
