@@ -4,7 +4,7 @@
  * --------------------------------
  * - Konek ke WebSocket live TikTok (tiktok-live-connector v2, ESM).
  * - Catat current viewers, peak viewers, total likes, durasi, follow, share, dan chat.
- * - Kirim snapshot live tiap ~60 detik ke branch `live-status` (dibaca dashboard).
+ * - Kirim snapshot live tiap ~15 detik ke branch `live-<username>` (dibaca dashboard).
  * - Saat live selesai: simpan ringkasan ke data/history/<username>_history.json
  *   (hanya 90 hari terakhir), lalu buat:
  *     out/Session_<username>_<stamp>.xlsx       (laporan sesi + chat log lengkap)
@@ -12,20 +12,22 @@
  * - Akun offline / gagal konek => exit 0 (graceful).
  *
  * Pemakaian:
- *   node scripts/tracker.js [username]
+ *   node scripts/tracker.js <username>
  *
  * Environment (opsional):
  *   GITHUB_TOKEN, GITHUB_REPOSITORY, GITHUB_SHA  -> untuk publish snapshot live (otomatis di Actions)
  *   EULER_API_KEY                               -> API key sign server Euler Stream (opsional)
  *   TT_CONNECT_WITH_UNIQUE_ID=true              -> pakai opsi connectWithUniqueId (kalau kena captcha)
  *   MAX_LIVE_MINUTES=160                        -> batas tracking per run
- *   SNAPSHOT_INTERVAL_SEC=60                    -> interval publish snapshot live
+ *   SNAPSHOT_INTERVAL_SEC=15                    -> interval publish snapshot live
  *   SESSION_STAMP=YYYYMMDD_HHmmss                -> disamakan dengan recorder
  *   RELEASE_TAG=live-<user>-<stamp>              -> dicatat di histori untuk link download
- *   OUT_DIR=out, RETENTION_DAYS=90, LIVE_STATUS_BRANCH=live-status, PUBLISH_LIVE_STATUS=true
+ *   OUT_DIR=out, RETENTION_DAYS=90, LIVE_BRANCH_PREFIX=live-, PUBLISH_LIVE_STATUS=true
  */
 
 import fs from 'node:fs';
+import os from 'node:os';
+import { execFile } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import ExcelJS from 'exceljs';
@@ -47,18 +49,17 @@ const OUT_DIR = path.resolve(ROOT, process.env.OUT_DIR || 'out');
 const TZ = 'Asia/Jakarta';
 const RETENTION_DAYS = Number(process.env.RETENTION_DAYS || 90);
 const MAX_LIVE_MINUTES = Number(process.env.MAX_LIVE_MINUTES || 160);
-const SNAPSHOT_INTERVAL_MS = Math.max(30, Number(process.env.SNAPSHOT_INTERVAL_SEC || 60)) * 1000;
+const SNAPSHOT_INTERVAL_MS = Math.max(10, Number(process.env.SNAPSHOT_INTERVAL_SEC || 15)) * 1000;
 const SAMPLE_INTERVAL_MS = 60_000;
 const IDLE_CHECK_MS = 5 * 60_000;
 const CONNECT_ATTEMPTS = 3;
 const RECONNECT_ATTEMPTS = 5;
-const SNAPSHOT_CHAT_LIMIT = 50;
-const LIVE_BRANCH = process.env.LIVE_STATUS_BRANCH || 'live-status';
+const SNAPSHOT_CHAT_LIMIT = 100;
+const LIVE_BRANCH_PREFIX = process.env.LIVE_BRANCH_PREFIX || 'live-';
 const USERNAME_RE = /^[a-z0-9._]{2,24}$/;
 
 const GH_TOKEN = process.env.GITHUB_TOKEN || '';
 const GH_REPO = process.env.GITHUB_REPOSITORY || '';
-const GH_API = process.env.GITHUB_API_URL || 'https://api.github.com';
 
 const STOPWORDS = new Set([
   // Indonesia + slang
@@ -468,96 +469,62 @@ export async function buildThreeMonthReport(history, filePath) {
 }
 
 // ---------------------------------------------------------------------------
-// Publish snapshot live ke branch `live-status` (dibaca dashboard)
+// Publish snapshot live ke branch `live-<username>` lewat git push.
+// Selalu 1 commit (di-amend) + force push: branch tetap kecil, tidak kena limit
+// "content creation" REST API GitHub, dan tidak memicu build GitHub Pages.
 // ---------------------------------------------------------------------------
-async function gh(method, url, body) {
-  const res = await fetch(`${GH_API}${url}`, {
-    method,
-    headers: {
-      Authorization: `Bearer ${GH_TOKEN}`,
-      Accept: 'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28',
-      'Content-Type': 'application/json',
-      'User-Agent': 'tiktok-live-tracker'
-    },
-    body: body ? JSON.stringify(body) : undefined
+function execFileP(cmd, args, opts = {}) {
+  return new Promise((resolve, reject) => {
+    execFile(cmd, args, { maxBuffer: 10 * 1024 * 1024, ...opts }, (err, stdout, stderr) => {
+      if (err) { err.stderr = String(stderr || ''); reject(err); } else resolve(String(stdout));
+    });
   });
-  const text = await res.text();
-  let json = null;
-  try { json = text ? JSON.parse(text) : null; } catch { json = null; }
-  return { status: res.status, ok: res.ok, json };
 }
 
-class LiveStatusPublisher {
+export class LiveBranchPublisher {
   constructor(username) {
     this.enabled = Boolean(GH_TOKEN && GH_REPO) && process.env.PUBLISH_LIVE_STATUS !== 'false';
-    this.filePath = `live/${username}.json`;
-    this.sha = null;
-    this.ready = false;
+    this.branch = `${LIVE_BRANCH_PREFIX}${username}`;
+    this.dir = null;
+    this.hasCommit = false;
     this.busy = false;
     this.pending = null;
+    this.failures = 0;
     if (!this.enabled) log('Publish snapshot live nonaktif (GITHUB_TOKEN/GITHUB_REPOSITORY tidak ada).');
   }
 
-  async ensureBranch() {
-    const ref = await gh('GET', `/repos/${GH_REPO}/git/ref/heads/${LIVE_BRANCH}`);
-    if (ref.ok) return;
-    if (ref.status !== 404) throw new Error(`cek branch ${LIVE_BRANCH} gagal (HTTP ${ref.status})`);
-
-    // Buat orphan branch kecil (tanpa isi repo utama) supaya tidak memicu build GitHub Pages.
-    const tree = await gh('POST', `/repos/${GH_REPO}/git/trees`, {
-      tree: [{
-        path: 'README.md', mode: '100644', type: 'blob',
-        content: '# live-status\n\nBranch otomatis berisi snapshot live terbaru. Jangan diedit manual.\n'
-      }]
-    });
-    if (!tree.ok) throw new Error(`buat tree gagal (HTTP ${tree.status})`);
-    const commit = await gh('POST', `/repos/${GH_REPO}/git/commits`, {
-      message: 'init live-status branch', tree: tree.json.sha, parents: []
-    });
-    if (!commit.ok) throw new Error(`buat commit gagal (HTTP ${commit.status})`);
-    const created = await gh('POST', `/repos/${GH_REPO}/git/refs`, {
-      ref: `refs/heads/${LIVE_BRANCH}`, sha: commit.json.sha
-    });
-    if (!created.ok && created.status !== 422) throw new Error(`buat branch gagal (HTTP ${created.status})`);
-    log(`Branch ${LIVE_BRANCH} dibuat.`);
+  git(...args) {
+    return execFileP('git', args, { cwd: this.dir, env: { ...process.env, GIT_TERMINAL_PROMPT: '0' } });
   }
 
-  async fetchSha() {
-    const r = await gh('GET', `/repos/${GH_REPO}/contents/${this.filePath}?ref=${encodeURIComponent(LIVE_BRANCH)}`);
-    return r.ok && r.json ? r.json.sha : null;
+  async init() {
+    this.dir = fs.mkdtempSync(path.join(os.tmpdir(), 'live-branch-'));
+    const host = (process.env.GITHUB_SERVER_URL || 'https://github.com').replace(/^https?:\/\//, '');
+    await this.git('init', '-q');
+    await this.git('config', 'user.name', 'github-actions[bot]');
+    await this.git('config', 'user.email', '41898283+github-actions[bot]@users.noreply.github.com');
+    await this.git('remote', 'add', 'origin', process.env.LIVE_REMOTE_URL || `https://x-access-token:${GH_TOKEN}@${host}/${GH_REPO}.git`);
+    await this.git('checkout', '-q', '--orphan', this.branch);
   }
 
-  async put(content) {
-    return gh('PUT', `/repos/${GH_REPO}/contents/${this.filePath}`, {
-      message: `live: ${path.basename(this.filePath, '.json')} ${new Date().toISOString()}`,
-      content,
-      branch: LIVE_BRANCH,
-      ...(this.sha ? { sha: this.sha } : {})
-    });
-  }
-
-  /** Publish snapshot. Kalau sedang sibuk, simpan snapshot terakhir lalu kirim setelahnya. */
   async publish(snapshot) {
     if (!this.enabled) return;
     if (this.busy) { this.pending = snapshot; return; }
     this.busy = true;
     try {
-      if (!this.ready) {
-        await this.ensureBranch();
-        this.sha = await this.fetchSha();
-        this.ready = true;
-      }
-      const content = Buffer.from(JSON.stringify(snapshot, null, 2)).toString('base64');
-      let r = await this.put(content);
-      if (r.status === 409 || r.status === 422) {
-        this.sha = await this.fetchSha();
-        r = await this.put(content);
-      }
-      if (r.ok) this.sha = r.json?.content?.sha || this.sha;
-      else warn(`Publish snapshot gagal (HTTP ${r.status}).`);
+      if (!this.dir) await this.init();
+      fs.writeFileSync(path.join(this.dir, 'data.json'), JSON.stringify(snapshot));
+      await this.git('add', 'data.json');
+      await this.git('commit', '-q', ...(this.hasCommit ? ['--amend'] : []), '-m', `live ${snapshot.username} ${snapshot.updated_at}`);
+      this.hasCommit = true;
+      await this.git('push', '-q', '-f', 'origin', `HEAD:refs/heads/${this.branch}`);
+      this.failures = 0;
     } catch (e) {
-      warn(`Publish snapshot error: ${errMsg(e)}`);
+      this.failures += 1;
+      if (this.failures <= 3 || this.failures % 20 === 0) {
+        const msg = `${e.stderr || ''} ${errMsg(e)}`.split(GH_TOKEN || '\u0000').join('***').trim();
+        warn(`Push snapshot gagal (${this.failures}x): ${msg.slice(0, 300)}`);
+      }
     } finally {
       this.busy = false;
     }
@@ -568,8 +535,7 @@ class LiveStatusPublisher {
     }
   }
 
-  /** Tunggu publish yang sedang berjalan selesai (dipakai sebelum exit). */
-  async flush(timeoutMs = 20_000) {
+  async flush(timeoutMs = 30_000) {
     const start = Date.now();
     while ((this.busy || this.pending) && Date.now() - start < timeoutMs) await sleep(250);
   }
@@ -641,7 +607,7 @@ async function connectWithRetry(conn, attempts = CONNECT_ATTEMPTS) {
 async function track(username) {
   const stamp = process.env.SESSION_STAMP || stampWIB(new Date());
   const releaseTag = process.env.RELEASE_TAG || `live-${username}-${stamp.replace('_', '-')}`;
-  const publisher = new LiveStatusPublisher(username);
+  const publisher = new LiveBranchPublisher(username);
 
   const conn = createConnection(username);
   log(`Menghubungkan ke live @${username} ...`);
@@ -774,6 +740,7 @@ async function track(username) {
     snapshot_interval_sec: SNAPSHOT_INTERVAL_MS / 1000,
     release_tag: releaseTag,
     end_reason: S.endReason,
+    timeline: S.timeline.slice(-180),
     recent_chats: S.chats.slice(-SNAPSHOT_CHAT_LIMIT)
   });
 
@@ -877,10 +844,11 @@ async function track(username) {
 // ---------------------------------------------------------------------------
 async function main() {
   const config = readConfig();
-  const username = normalizeUsername(process.argv[2] || config.target_username);
+  const firstAccount = Array.isArray(config.accounts) ? config.accounts[0] : config.target_username;
+  const username = normalizeUsername(process.argv[2] || firstAccount);
 
   if (!username || username === 'username_target') {
-    warn('target_username belum diisi di data/config.json. Exit.');
+    warn('Username belum diberikan (argumen atau data/config.json). Exit.');
     return 0;
   }
   if (!USERNAME_RE.test(username)) {

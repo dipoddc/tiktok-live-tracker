@@ -9,47 +9,46 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
   <style>
-    .chat-scroll::-webkit-scrollbar { width: 6px; }
-    .chat-scroll::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .thin-scroll::-webkit-scrollbar { width: 6px; }
+    .thin-scroll::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
     @keyframes pulse-dot { 0%,100% { opacity: 1 } 50% { opacity: .35 } }
     .pulse-dot { animation: pulse-dot 1.2s ease-in-out infinite; }
+    .tab-btn[aria-selected="true"] { color: #fff; border-color: #6366f1; }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
 
-  <!-- Banner live alert -->
-  <div id="liveBanner" class="hidden bg-rose-600 text-white">
-    <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
-      <span class="inline-flex items-center gap-2 font-semibold">
-        <span class="w-2.5 h-2.5 rounded-full bg-white pulse-dot"></span> LIVE SEKARANG
-      </span>
-      <span id="liveBannerText"></span>
-      <a id="liveBannerLink" href="#" target="_blank" rel="noopener" class="ml-auto underline font-medium">Buka di TikTok ↗</a>
-    </div>
+  <!-- Peringatan detector mati -->
+  <div id="detectorWarn" class="hidden bg-amber-500 text-amber-950 text-sm">
+    <div class="max-w-6xl mx-auto px-4 py-2" id="detectorWarnText"></div>
   </div>
 
   <header class="border-b border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center gap-3">
+    <div class="max-w-6xl mx-auto px-4 pt-4 flex flex-wrap items-center gap-3">
       <div>
         <h1 class="text-lg font-bold tracking-tight">TikTok Live Tracker</h1>
         <p class="text-xs text-slate-400" id="repoLabel">Repo belum diatur</p>
       </div>
-      <span id="statusBadge" class="ml-2 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold bg-slate-800 text-slate-300">
-        <span class="w-2 h-2 rounded-full bg-slate-500"></span> MEMUAT
-      </span>
+      <span id="liveSummary" class="ml-1 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold bg-slate-800 text-slate-300">MEMUAT</span>
       <div class="ml-auto flex items-center gap-2">
+        <span id="pollInfo" class="hidden sm:inline text-xs text-slate-500"></span>
         <button id="btnRefresh" class="rounded-lg border border-slate-700 px-3 py-1.5 text-sm hover:bg-slate-800">Refresh</button>
         <button id="btnToggleSettings" class="rounded-lg border border-slate-700 px-3 py-1.5 text-sm hover:bg-slate-800">Pengaturan</button>
       </div>
     </div>
+    <nav class="max-w-6xl mx-auto px-4 mt-3 flex gap-1 overflow-x-auto" role="tablist">
+      <button class="tab-btn border-b-2 border-transparent px-4 py-2.5 text-sm font-semibold text-slate-400 hover:text-white whitespace-nowrap" data-tab="tiktokers" role="tab">My TikTokers</button>
+      <button class="tab-btn border-b-2 border-transparent px-4 py-2.5 text-sm font-semibold text-slate-400 hover:text-white whitespace-nowrap" data-tab="record" role="tab">Auto Record</button>
+      <button class="tab-btn border-b-2 border-transparent px-4 py-2.5 text-sm font-semibold text-slate-400 hover:text-white whitespace-nowrap" data-tab="history" role="tab">Histori &amp; Laporan</button>
+    </nav>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 py-6 space-y-6">
 
-    <!-- Pengaturan repo + PAT -->
+    <!-- Pengaturan -->
     <section id="settingsPanel" class="hidden rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
       <h2 class="font-semibold mb-1">Koneksi GitHub</h2>
-      <p class="text-xs text-slate-400 mb-4">Token disimpan hanya di localStorage browser ini. Pakai fine-grained PAT yang dibatasi ke repo ini saja.</p>
+      <p class="text-xs text-slate-400 mb-4">Token disimpan hanya di localStorage browser ini. Pakai fine-grained PAT khusus repo ini (Contents & Actions: Read and write).</p>
       <div class="grid gap-3 sm:grid-cols-3">
         <label class="text-sm">Owner
           <input id="inOwner" class="mt-1 w-full rounded-lg bg-slate-950 border border-slate-700 px-3 py-2 text-sm" placeholder="username-github">
@@ -64,155 +63,154 @@
       <div class="mt-4 flex flex-wrap gap-2">
         <button id="btnSaveSettings" class="rounded-lg bg-indigo-600 hover:bg-indigo-500 px-4 py-2 text-sm font-semibold">Simpan &amp; Tes Koneksi</button>
         <button id="btnClearToken" class="rounded-lg border border-slate-700 hover:bg-slate-800 px-4 py-2 text-sm">Hapus Token</button>
+        <button id="btnRunDetector" class="rounded-lg border border-slate-700 hover:bg-slate-800 px-4 py-2 text-sm">Jalankan Detector</button>
         <span id="settingsMsg" class="text-sm self-center text-slate-400"></span>
       </div>
     </section>
 
-    <!-- Config target -->
-    <section class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-      <div class="flex flex-wrap items-end gap-4">
-        <label class="text-sm flex-1 min-w-[220px]">Target Username
-          <div class="mt-1 flex rounded-lg border border-slate-700 bg-slate-950 focus-within:border-indigo-500">
-            <span class="px-3 py-2 text-slate-500">@</span>
-            <input id="inTarget" class="w-full bg-transparent py-2 pr-3 text-sm outline-none" placeholder="username_tiktok">
-          </div>
-        </label>
-        <label class="flex items-center gap-3 text-sm cursor-pointer select-none pb-2">
-          <span>Auto Record</span>
-          <span class="relative inline-flex">
-            <input id="inAutoRecord" type="checkbox" class="peer sr-only">
-            <span class="w-11 h-6 rounded-full bg-slate-700 peer-checked:bg-emerald-500 transition-colors"></span>
-            <span class="absolute left-0.5 top-0.5 w-5 h-5 rounded-full bg-white transition-transform peer-checked:translate-x-5"></span>
-          </span>
-        </label>
-        <button id="btnSaveConfig" class="rounded-lg bg-indigo-600 hover:bg-indigo-500 px-4 py-2 text-sm font-semibold">Simpan Config</button>
-        <button id="btnRunNow" class="rounded-lg border border-slate-700 hover:bg-slate-800 px-4 py-2 text-sm" title="Picu workflow sekarang tanpa menunggu jadwal 10 menit">Cek Sekarang</button>
-      </div>
-      <p id="configMsg" class="mt-3 text-sm text-slate-400"></p>
-    </section>
-
-    <!-- Live counters + chat -->
-    <section class="grid gap-6 lg:grid-cols-5">
-      <div class="lg:col-span-3 space-y-4">
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
-            <p class="text-xs text-slate-400">Current Viewers</p>
-            <p id="cCurrent" class="mt-1 text-3xl font-bold tabular-nums">-</p>
-          </div>
-          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
-            <p class="text-xs text-slate-400">Peak Viewers</p>
-            <p id="cPeak" class="mt-1 text-3xl font-bold tabular-nums">-</p>
-          </div>
-          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
-            <p class="text-xs text-slate-400">Durasi</p>
-            <p id="cDuration" class="mt-1 text-3xl font-bold tabular-nums">-</p>
-          </div>
-          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
-            <p class="text-xs text-slate-400">Total Likes</p>
-            <p id="cLikes" class="mt-1 text-2xl font-semibold tabular-nums">-</p>
-          </div>
-          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
-            <p class="text-xs text-slate-400">Komentar</p>
-            <p id="cComments" class="mt-1 text-2xl font-semibold tabular-nums">-</p>
-          </div>
-          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
-            <p class="text-xs text-slate-400">Follow / Share</p>
-            <p id="cSocial" class="mt-1 text-2xl font-semibold tabular-nums">-</p>
-          </div>
+    <!-- ================= TAB: MY TIKTOKERS ================= -->
+    <section id="tab-tiktokers" class="tab-panel space-y-6">
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+        <div class="flex flex-wrap items-end gap-3">
+          <label class="text-sm flex-1 min-w-[220px]">Tambah akun TikTok
+            <div class="mt-1 flex rounded-lg border border-slate-700 bg-slate-950 focus-within:border-indigo-500">
+              <span class="px-3 py-2 text-slate-500">@</span>
+              <input id="inNewAccount" class="w-full bg-transparent py-2 pr-3 text-sm outline-none" placeholder="username_tiktok">
+            </div>
+          </label>
+          <button id="btnAddAccount" class="rounded-lg bg-indigo-600 hover:bg-indigo-500 px-4 py-2 text-sm font-semibold disabled:opacity-40">Tambah</button>
+          <span id="accountCount" class="text-sm text-slate-400 pb-2">0/10</span>
         </div>
-        <p id="liveMeta" class="text-xs text-slate-500">Data live diperbarui tiap ±60 detik oleh GitHub Actions (bukan real-time per detik).</p>
+        <p id="accountMsg" class="mt-2 text-sm text-rose-400 min-h-[1.25rem]"></p>
       </div>
 
-      <div class="lg:col-span-2 rounded-2xl border border-slate-800 bg-slate-900/60 flex flex-col h-[380px]">
-        <div class="px-4 py-3 border-b border-slate-800 flex items-center">
-          <h2 class="font-semibold text-sm">Live Chat</h2>
-          <span id="chatCount" class="ml-auto text-xs text-slate-500">50 komentar terakhir</span>
+      <div id="accountGrid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+
+      <!-- Detail live akun terpilih -->
+      <div id="liveDetail" class="hidden rounded-2xl border border-slate-800 bg-slate-900/60">
+        <div class="px-5 py-4 border-b border-slate-800 flex flex-wrap items-center gap-3">
+          <h2 class="font-semibold text-lg" id="dTitle">@-</h2>
+          <span id="dBadge"></span>
+          <a id="dLink" href="#" target="_blank" rel="noopener" class="text-xs text-indigo-300 hover:underline">Buka di TikTok ↗</a>
+          <button id="btnCloseDetail" class="ml-auto rounded-lg border border-slate-700 px-3 py-1 text-sm hover:bg-slate-800">Tutup</button>
         </div>
-        <ul id="chatBox" class="chat-scroll flex-1 overflow-y-auto px-4 py-3 space-y-2 text-sm">
-          <li class="text-slate-500">Belum ada chat.</li>
-        </ul>
+        <div class="p-5 grid gap-6 lg:grid-cols-5">
+          <div class="lg:col-span-3 space-y-4 min-w-0">
+            <p id="dLiveTitle" class="text-sm text-slate-300"></p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3"><p class="text-xs text-slate-400">Current Viewers</p><p id="dCurrent" class="mt-1 text-3xl font-bold tabular-nums">-</p></div>
+              <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3"><p class="text-xs text-slate-400">Peak Viewers</p><p id="dPeak" class="mt-1 text-3xl font-bold tabular-nums">-</p></div>
+              <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3"><p class="text-xs text-slate-400">Durasi</p><p id="dDuration" class="mt-1 text-3xl font-bold tabular-nums">-</p></div>
+              <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3"><p class="text-xs text-slate-400">Total Likes</p><p id="dLikes" class="mt-1 text-2xl font-semibold tabular-nums">-</p></div>
+              <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3"><p class="text-xs text-slate-400">Komentar / Unik</p><p id="dComments" class="mt-1 text-2xl font-semibold tabular-nums">-</p></div>
+              <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3"><p class="text-xs text-slate-400">Follow / Share</p><p id="dSocial" class="mt-1 text-2xl font-semibold tabular-nums">-</p></div>
+            </div>
+            <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3">
+              <p class="text-xs text-slate-400 mb-2">Viewers per menit</p>
+              <div class="relative h-40"><canvas id="miniChart"></canvas></div>
+            </div>
+            <p id="dMeta" class="text-xs text-slate-500"></p>
+          </div>
+          <div class="lg:col-span-2 min-w-0 rounded-xl border border-slate-800 bg-slate-950/40 flex flex-col h-[460px]">
+            <div class="px-4 py-3 border-b border-slate-800 flex items-center">
+              <h3 class="font-semibold text-sm">Live Chat</h3>
+              <span id="dChatCount" class="ml-auto text-xs text-slate-500"></span>
+            </div>
+            <ul id="dChat" class="thin-scroll flex-1 overflow-y-auto px-4 py-3 space-y-2 text-sm"></ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Histori 3 bulan -->
-    <section class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-      <div class="flex flex-wrap items-center gap-3 mb-4">
-        <div>
-          <h2 class="font-semibold">Tren Performa 3 Bulan</h2>
-          <p class="text-xs text-slate-400">Sumber: data/history/<span id="histFileName">-</span></p>
+    <!-- ================= TAB: AUTO RECORD ================= -->
+    <section id="tab-record" class="tab-panel hidden space-y-6">
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+        <div class="flex flex-wrap items-center gap-4">
+          <div class="flex-1 min-w-[240px]">
+            <h2 class="font-semibold">Auto Record</h2>
+            <p class="text-xs text-slate-400 mt-1">Hanya 1 akun yang direkam. Ganti kapan saja; rekaman akun lama berhenti otomatis ±1 menit setelah diganti, lalu di-upload.</p>
+          </div>
+          <label class="flex items-center gap-3 text-sm cursor-pointer select-none">
+            <span>Aktif</span>
+            <span class="relative inline-flex">
+              <input id="inAutoRecord" type="checkbox" class="peer sr-only">
+              <span class="w-11 h-6 rounded-full bg-slate-700 peer-checked:bg-emerald-500 transition-colors"></span>
+              <span class="absolute left-0.5 top-0.5 w-5 h-5 rounded-full bg-white transition-transform peer-checked:translate-x-5"></span>
+            </span>
+          </label>
         </div>
-        <button id="btnExportAll" class="ml-auto rounded-lg bg-emerald-600 hover:bg-emerald-500 px-4 py-2 text-sm font-semibold disabled:opacity-40" disabled>
-          Export All Data (3 Months .XLSX)
-        </button>
+        <div id="recStatus" class="mt-4 rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-sm"></div>
       </div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
-        <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3">
-          <p class="text-xs text-slate-400">Jumlah Sesi</p><p id="hSessions" class="text-xl font-bold tabular-nums">-</p>
-        </div>
-        <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3">
-          <p class="text-xs text-slate-400">Rata2 Peak Viewers</p><p id="hAvgPeak" class="text-xl font-bold tabular-nums">-</p>
-        </div>
-        <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3">
-          <p class="text-xs text-slate-400">Peak Tertinggi</p><p id="hMaxPeak" class="text-xl font-bold tabular-nums">-</p>
-        </div>
-        <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3">
-          <p class="text-xs text-slate-400">Total Jam Live</p><p id="hTotalHours" class="text-xl font-bold tabular-nums">-</p>
-        </div>
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+        <h2 class="font-semibold mb-3">Pilih akun yang direkam</h2>
+        <div id="recList" class="space-y-2"></div>
       </div>
 
-      <div class="relative h-72">
-        <canvas id="trendChart"></canvas>
-        <p id="chartEmpty" class="hidden absolute inset-0 flex items-center justify-center text-sm text-slate-500">Belum ada sesi live tercatat.</p>
-      </div>
-
-      <div class="mt-6 overflow-x-auto">
-        <table class="min-w-full text-sm">
-          <thead class="text-left text-xs text-slate-400 border-b border-slate-800">
-            <tr>
-              <th class="py-2 pr-4">Tanggal (WIB)</th>
-              <th class="py-2 pr-4">Durasi</th>
-              <th class="py-2 pr-4 text-right">Peak</th>
-              <th class="py-2 pr-4 text-right">Avg</th>
-              <th class="py-2 pr-4 text-right">Likes</th>
-              <th class="py-2 pr-4 text-right">Komentar</th>
-              <th class="py-2 pr-4">Judul</th>
-            </tr>
-          </thead>
-          <tbody id="historyTable" class="divide-y divide-slate-800/70"></tbody>
-        </table>
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+        <h2 class="font-semibold mb-3">Rekaman Video</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead class="text-left text-xs text-slate-400 border-b border-slate-800">
+              <tr><th class="py-2 pr-4">Nama File</th><th class="py-2 pr-4">Akun</th><th class="py-2 pr-4 text-right">Ukuran</th><th class="py-2 pr-4">Diunggah (WIB)</th><th class="py-2"></th></tr>
+            </thead>
+            <tbody id="recFiles" class="divide-y divide-slate-800/70"></tbody>
+          </table>
+        </div>
       </div>
     </section>
 
-    <!-- Releases -->
-    <section class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-      <div class="flex flex-wrap items-center gap-3 mb-4">
-        <h2 class="font-semibold">Download Reports &amp; Videos</h2>
-        <label class="ml-auto flex items-center gap-2 text-sm text-slate-300">
-          <input id="inOnlyTarget" type="checkbox" class="rounded" checked> Hanya akun target
-        </label>
+    <!-- ================= TAB: HISTORI ================= -->
+    <section id="tab-history" class="tab-panel hidden space-y-6">
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <label class="text-sm">Akun
+            <select id="histAccount" class="ml-2 rounded-lg bg-slate-950 border border-slate-700 px-3 py-2 text-sm"></select>
+          </label>
+          <button id="btnExportAll" class="ml-auto rounded-lg bg-emerald-600 hover:bg-emerald-500 px-4 py-2 text-sm font-semibold disabled:opacity-40" disabled>
+            Export All Data (3 Months .XLSX)
+          </button>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+          <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3"><p class="text-xs text-slate-400">Jumlah Sesi</p><p id="hSessions" class="text-xl font-bold tabular-nums">-</p></div>
+          <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3"><p class="text-xs text-slate-400">Rata2 Peak Viewers</p><p id="hAvgPeak" class="text-xl font-bold tabular-nums">-</p></div>
+          <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3"><p class="text-xs text-slate-400">Peak Tertinggi</p><p id="hMaxPeak" class="text-xl font-bold tabular-nums">-</p></div>
+          <div class="rounded-xl bg-slate-950/60 border border-slate-800 p-3"><p class="text-xs text-slate-400">Total Jam Live</p><p id="hTotalHours" class="text-xl font-bold tabular-nums">-</p></div>
+        </div>
+        <div class="relative h-72">
+          <canvas id="trendChart"></canvas>
+          <p id="chartEmpty" class="hidden absolute inset-0 flex items-center justify-center text-sm text-slate-500">Belum ada sesi live tercatat untuk akun ini.</p>
+        </div>
+        <div class="mt-6 overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead class="text-left text-xs text-slate-400 border-b border-slate-800">
+              <tr><th class="py-2 pr-4">Tanggal (WIB)</th><th class="py-2 pr-4">Durasi</th><th class="py-2 pr-4 text-right">Peak</th><th class="py-2 pr-4 text-right">Avg</th><th class="py-2 pr-4 text-right">Likes</th><th class="py-2 pr-4 text-right">Komentar</th><th class="py-2 pr-4">Judul</th></tr>
+            </thead>
+            <tbody id="historyTable" class="divide-y divide-slate-800/70"></tbody>
+          </table>
+        </div>
       </div>
-      <div class="overflow-x-auto">
-        <table class="min-w-full text-sm">
-          <thead class="text-left text-xs text-slate-400 border-b border-slate-800">
-            <tr>
-              <th class="py-2 pr-4">Nama File</th>
-              <th class="py-2 pr-4">Jenis</th>
-              <th class="py-2 pr-4 text-right">Ukuran</th>
-              <th class="py-2 pr-4">Diunggah (WIB)</th>
-              <th class="py-2 pr-4">Release</th>
-              <th class="py-2"></th>
-            </tr>
-          </thead>
-          <tbody id="releaseTable" class="divide-y divide-slate-800/70">
-            <tr><td colspan="6" class="py-4 text-slate-500">Memuat...</td></tr>
-          </tbody>
-        </table>
+
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <h2 class="font-semibold">Download Reports &amp; Videos</h2>
+          <label class="ml-auto flex items-center gap-2 text-sm text-slate-300">
+            <input id="inOnlySelected" type="checkbox" class="rounded" checked> Hanya akun terpilih
+          </label>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead class="text-left text-xs text-slate-400 border-b border-slate-800">
+              <tr><th class="py-2 pr-4">Nama File</th><th class="py-2 pr-4">Jenis</th><th class="py-2 pr-4">Akun</th><th class="py-2 pr-4 text-right">Ukuran</th><th class="py-2 pr-4">Diunggah (WIB)</th><th class="py-2"></th></tr>
+            </thead>
+            <tbody id="releaseTable" class="divide-y divide-slate-800/70"></tbody>
+          </table>
+        </div>
       </div>
     </section>
 
     <footer class="text-xs text-slate-500 pb-8">
-      Data dari GitHub Actions (cek tiap ±10 menit) &middot; snapshot live tiap ±60 detik &middot; histori disimpan 90 hari.
+      Status live dicek otomatis oleh GitHub Actions &middot; angka live tertunda ±15-40 detik &middot; histori disimpan 90 hari.
     </footer>
   </main>
 

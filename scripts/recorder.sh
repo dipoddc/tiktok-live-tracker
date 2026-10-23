@@ -1,21 +1,23 @@
 #!/usr/bin/env bash
 # =============================================================================
-# TikTok Live Auto-Recorder
+# TikTok Live Auto-Recorder (hanya 1 akun aktif)
 # -----------------------------------------------------------------------------
 # Pemakaian : bash scripts/recorder.sh <username> [output_dir]
 # Output    : <output_dir>/Live_<username>_<timestamp>.mp4
-#             (kalau live panjang: Live_<username>_<timestamp>_part01.mp4, _part02.mp4, ...)
+#             (kalau live panjang: ..._part01.mp4, _part02.mp4, ...)
 #
-# Kenapa dipecah per part?
-#   Batas 1 file di GitHub Releases = 2 GiB. Live 2 jam di kualitas "best" bisa > 2 GB.
-#   Rekaman ditulis sebagai segmen .ts (tahan crash/timeout), lalu di-remux ke .mp4
-#   tanpa re-encode (cepat, kualitas tidak turun).
+# Aturan "1 akun aktif":
+#   - Sebelum mulai, cek data/config.json: username harus = record_target
+#     dan auto_record_enabled = true. Kalau tidak, exit tanpa merekam.
+#   - Selama merekam, config dicek ulang tiap 60 detik. Kalau record_target
+#     diganti / auto record dimatikan, rekaman dihentikan rapi lalu di-upload.
+#
+# Kenapa dipecah per part? Batas 1 file di GitHub Releases = 2 GiB.
 #
 # Environment (opsional):
-#   MAX_LIVE_MINUTES=160   batas lama rekam per run (harus < timeout job)
-#   SEGMENT_SECONDS=1200   panjang 1 part (detik), default 20 menit
-#   SESSION_STAMP=...      timestamp sesi (disamakan dengan tracker)
-#   RECORD_DIR=recordings  folder output kalau argumen ke-2 kosong
+#   MAX_LIVE_MINUTES=160, SEGMENT_SECONDS=1200, SESSION_STAMP, RECORD_DIR=recordings
+#   GITHUB_TOKEN + GITHUB_REPOSITORY -> dipakai untuk membaca config terbaru
+#   SKIP_CONFIG_CHECK=true           -> abaikan cek record_target (tes lokal)
 # =============================================================================
 set -uo pipefail
 
@@ -51,6 +53,36 @@ done
 mkdir -p "$OUT_DIR"
 
 # -----------------------------------------------------------------------------
+# 0) Pastikan akun ini memang record_target yang aktif
+# -----------------------------------------------------------------------------
+API="${GITHUB_API_URL:-https://api.github.com}"
+read_config() {
+  local cfg=""
+  if [[ -n "${GITHUB_TOKEN:-}" && -n "${GITHUB_REPOSITORY:-}" ]]; then
+    cfg="$(curl -fsS -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github.raw+json" \
+          "$API/repos/$GITHUB_REPOSITORY/contents/data/config.json" 2>/dev/null)" || cfg=""
+  fi
+  if [[ -z "$cfg" ]] || ! echo "$cfg" | jq -e . >/dev/null 2>&1; then
+    cfg="$(cat data/config.json 2>/dev/null || echo '{}')"
+  fi
+  echo "$cfg"
+}
+# return 0 kalau akun ini masih boleh direkam
+still_allowed() {
+  [[ "${SKIP_CONFIG_CHECK:-false}" == "true" ]] && return 0
+  local cfg target auto
+  cfg="$(read_config)"
+  target="$(echo "$cfg" | jq -r '(.record_target // "") | ascii_downcase | ltrimstr("@")')"
+  auto="$(echo "$cfg" | jq -r 'if .auto_record_enabled == false then "false" else "true" end')"
+  [[ "$auto" == "true" && "$target" == "$USERNAME" ]]
+}
+
+if ! still_allowed; then
+  log "@${USERNAME} bukan record_target aktif (atau auto record OFF). Tidak merekam."
+  exit 0
+fi
+
+# -----------------------------------------------------------------------------
 # 1) Cek status live
 # -----------------------------------------------------------------------------
 log "Cek status live @${USERNAME} ..."
@@ -67,6 +99,21 @@ log "LIVE terdeteksi. Kualitas tersedia: $(echo "$STREAMS_JSON" | jq -r '.stream
 #    timeout kirim SIGINT ke streamlink supaya ffmpeg menutup segmen terakhir dengan rapi.
 # -----------------------------------------------------------------------------
 mkdir -p "$TMP_DIR"
+STOP_FLAG="${TMP_DIR}/.stopped_by_config"
+
+# Watcher: hentikan rekaman kalau record_target diganti / auto record dimatikan
+(
+  while sleep "${RECORD_WATCH_SEC:-60}"; do
+    if ! still_allowed; then
+      touch "$STOP_FLAG"
+      log "record_target berubah / auto record OFF -> hentikan rekaman @${USERNAME}."
+      pkill -INT -f "streamlink.*tiktok\.com/@${USERNAME}/live" 2>/dev/null || true
+      break
+    fi
+  done
+) &
+WATCHER_PID=$!
+
 log "Mulai rekam (maks ${MAX_MINUTES} menit, 1 part = ${SEGMENT_SECONDS} detik) ..."
 
 timeout --signal=INT --kill-after=60 "${MAX_MINUTES}m" \
@@ -83,6 +130,9 @@ timeout --signal=INT --kill-after=60 "${MAX_MINUTES}m" \
     "${TMP_DIR}/${BASENAME}_seg%03d.ts"
 
 PIPE_STATUS=("${PIPESTATUS[@]}")
+kill "$WATCHER_PID" 2>/dev/null || true
+wait "$WATCHER_PID" 2>/dev/null || true
+[[ -f "$STOP_FLAG" ]] && log "Rekaman dihentikan karena perubahan config." && rm -f "$STOP_FLAG"
 log "Rekaman berhenti (streamlink exit=${PIPE_STATUS[0]}, ffmpeg exit=${PIPE_STATUS[1]})."
 
 # -----------------------------------------------------------------------------
