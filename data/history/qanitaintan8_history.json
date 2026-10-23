@@ -1,0 +1,160 @@
+{
+  "username": "qanitaintan8",
+  "retention_days": 90,
+  "updated_at": "2026-10-23T04:36:11.739Z",
+  "sessions": [
+    {
+      "id": "qanitaintan8_20261023_113118",
+      "username": "qanitaintan8",
+      "room_id": "7699701228418812692",
+      "title": "",
+      "live_started_at": null,
+      "tracking_started_at": "2026-10-23T04:31:29.972Z",
+      "ended_at": "2026-10-23T04:36:11.737Z",
+      "duration_sec": 282,
+      "tracked_duration_sec": 282,
+      "end_reason": "stream_end",
+      "peak_viewers": 10,
+      "peak_viewers_at": "2026-10-23T04:33:07.681Z",
+      "avg_viewers": 6,
+      "total_likes": 4563,
+      "total_comments": 7,
+      "unique_commenters": 5,
+      "follows": 1,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-10-23T04:31:29.972Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-23T04:32:29.979Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-23T04:33:29.980Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-23T04:34:29.984Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-23T04:35:29.985Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-23T04:36:11.737Z",
+          "v": 8
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "_chiloxs",
+          "nickname": "CHILOX'S",
+          "count": 3
+        },
+        {
+          "user": "ferryalexandra96",
+          "nickname": "🅿🅰🅿🅰🅷 🅺🅴🅲🅴𝟗𝟔",
+          "count": 1
+        },
+        {
+          "user": "customhood_",
+          "nickname": "customehood",
+          "count": 1
+        },
+        {
+          "user": "dikri4136",
+          "nickname": "Dikri",
+          "count": 1
+        },
+        {
+          "user": "rezahaerka",
+          "nickname": "Rezahaerka",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "minim",
+          "count": 1
+        },
+        {
+          "word": "berlaku",
+          "count": 1
+        },
+        {
+          "word": "sampai",
+          "count": 1
+        },
+        {
+          "word": "undangan",
+          "count": 1
+        },
+        {
+          "word": "sebarkan",
+          "count": 1
+        },
+        {
+          "word": "destinator",
+          "count": 1
+        },
+        {
+          "word": "brp",
+          "count": 1
+        },
+        {
+          "word": "makacih",
+          "count": 1
+        },
+        {
+          "word": "kecupnya",
+          "count": 1
+        },
+        {
+          "word": "ayah",
+          "count": 1
+        },
+        {
+          "word": "chilox",
+          "count": 1
+        },
+        {
+          "word": "klw",
+          "count": 1
+        },
+        {
+          "word": "hdvnya",
+          "count": 1
+        },
+        {
+          "word": "cicilan",
+          "count": 1
+        },
+        {
+          "word": "teraendahnya",
+          "count": 1
+        },
+        {
+          "word": "nanyain",
+          "count": 1
+        },
+        {
+          "word": "canter",
+          "count": 1
+        },
+        {
+          "word": "fes",
+          "count": 1
+        },
+        {
+          "word": "74shdxnya",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_qanitaintan8_20261023_113118.xlsx",
+      "release_tag": "live-qanitaintan8-20261023-113118"
+    }
+  ]
+}
