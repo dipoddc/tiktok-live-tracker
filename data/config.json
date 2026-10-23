@@ -1,8 +1,7 @@
 {
   "accounts": [
-    "deskacr",
     "qanitaintan8"
   ],
-  "record_target": "deskacr",
+  "record_target": "",
   "auto_record_enabled": true
 }
