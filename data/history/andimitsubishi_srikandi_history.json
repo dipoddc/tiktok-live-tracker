@@ -1,0 +1,85 @@
+{
+  "username": "andimitsubishi_srikandi",
+  "retention_days": 90,
+  "updated_at": "2026-10-23T03:20:55.688Z",
+  "sessions": [
+    {
+      "id": "andimitsubishi_srikandi_20261023_100903",
+      "username": "andimitsubishi_srikandi",
+      "room_id": "7699689899319151368",
+      "title": "DP minim, spesial bunga rate ✨",
+      "live_started_at": "2026-10-23T02:49:54.000Z",
+      "tracking_started_at": "2026-10-23T03:09:40.873Z",
+      "ended_at": "2026-10-23T03:20:55.688Z",
+      "duration_sec": 1862,
+      "tracked_duration_sec": 675,
+      "end_reason": "stream_end",
+      "peak_viewers": 3,
+      "peak_viewers_at": "2026-10-23T03:12:10.020Z",
+      "avg_viewers": 1,
+      "total_likes": 1565,
+      "total_comments": 0,
+      "unique_commenters": 0,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-10-23T03:09:40.873Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T03:10:40.882Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T03:11:40.892Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T03:12:40.897Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T03:13:40.897Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-23T03:14:40.907Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-23T03:15:40.915Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T03:16:40.926Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T03:17:40.936Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T03:18:40.943Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-23T03:19:40.953Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-23T03:20:40.963Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T03:20:55.688Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [],
+      "top_keywords": [],
+      "session_report": "Session_andimitsubishi_srikandi_20261023_100903.xlsx",
+      "release_tag": "live-andimitsubishi_srikandi-20261023-100903"
+    }
+  ]
+}
