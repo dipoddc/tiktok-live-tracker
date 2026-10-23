@@ -2,7 +2,7 @@
 # =============================================================================
 # TikTok Live Detector
 # -----------------------------------------------------------------------------
-# - Membaca daftar akun (maks 10) dari data/config.json (selalu versi terbaru via API).
+# - Membaca daftar akun (maks 21) dari data/config.json (selalu versi terbaru via API).
 # - Mengecek status live tiap akun pakai Streamlink, tiap SWEEP_INTERVAL_SEC detik,
 #   selama DETECT_LOOP_MINUTES menit (0 = cek sekali lalu selesai).
 # - Menulis status semua akun ke branch `live-status` (file status.json) -> dibaca dashboard.
@@ -22,7 +22,8 @@ HOST="${GITHUB_SERVER_URL:-https://github.com}"; HOST="${HOST#https://}"; HOST="
 LOOP_MINUTES="${DETECT_LOOP_MINUTES:-50}"
 SWEEP="${SWEEP_INTERVAL_SEC:-90}"
 STATUS_BRANCH="${LIVE_STATUS_BRANCH:-live-status}"
-MAX_ACCOUNTS=10
+MAX_ACCOUNTS=21
+CHECK_PARALLEL="${CHECK_PARALLEL:-5}"   # jumlah akun yang dicek bersamaan
 DISPATCH_COOLDOWN=600   # detik; jeda minimal memicu ulang tracker/recorder akun yang sama
 
 if [[ -z "$TOKEN" || -z "$REPO" ]]; then
@@ -57,7 +58,7 @@ read_config() {
   echo "$cfg"
 }
 
-# Daftar akun: normalisasi, buang duplikat (urutan dipertahankan), maks 10.
+# Daftar akun: normalisasi, buang duplikat (urutan dipertahankan), maks 21.
 # Kompatibel dengan config lama (target_username).
 parse_accounts() {
   jq -r --argjson max "$MAX_ACCOUNTS" '
@@ -126,16 +127,24 @@ while :; do
   declare -A RESULT=()
   declare -A SOURCE=()
   NOT_LIVE=()
+  # Dicek paralel (CHECK_PARALLEL akun sekaligus) supaya 21 akun tetap selesai < 1 menit
+  CHK_DIR="$(mktemp -d)"
   for u in "${ACCOUNTS[@]}"; do
-    RESULT[$u]="$(check_live "$u")"
+    while (( $(jobs -rp | wc -l) >= CHECK_PARALLEL )); do wait -n 2>/dev/null || true; done
+    ( check_live "$u" > "$CHK_DIR/$u" ) &
+  done
+  wait
+  for u in "${ACCOUNTS[@]}"; do
+    RESULT[$u]="$(cat "$CHK_DIR/$u" 2>/dev/null || echo 'error:hasil cek tidak ada')"
     SOURCE[$u]="streamlink"
     [[ "${RESULT[$u]}" != "live" ]] && NOT_LIVE+=("$u")
   done
+  rm -rf "$CHK_DIR"
 
   # Tahap 2: cek ulang akun yang tidak live pakai TikTok-Live-Connector
   # (Streamlink kadang gagal membaca halaman live tertentu)
   if (( ${#NOT_LIVE[@]} > 0 )) && [[ -f scripts/check_live.js && -d node_modules/tiktok-live-connector ]]; then
-    FB="$(timeout 120 node scripts/check_live.js "${NOT_LIVE[@]}" 2>/dev/null | tail -n 1)"
+    FB="$(timeout 240 node scripts/check_live.js "${NOT_LIVE[@]}" 2>/dev/null | tail -n 1)"
     if echo "$FB" | jq -e 'type == "object"' >/dev/null 2>&1; then
       for u in "${NOT_LIVE[@]}"; do
         fb="$(echo "$FB" | jq -r --arg u "$u" '.[$u] // empty')"

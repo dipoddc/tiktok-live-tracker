@@ -15,7 +15,9 @@ const withTimeout = (p) => Promise.race([
   new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), TIMEOUT_MS))
 ]);
 
-for (const u of users) {
+const PARALLEL = Number(process.env.CHECK_PARALLEL || 5);
+
+async function checkOne(u) {
   try {
     const opts = process.env.EULER_API_KEY ? { signApiKey: process.env.EULER_API_KEY } : {};
     const conn = new TTL.TikTokLiveConnection(u, opts);
@@ -24,6 +26,11 @@ for (const u of users) {
   } catch (e) {
     out[u] = `error:${String(e?.message || e).slice(0, 120)}`;
   }
+}
+
+// Dicek paralel per kelompok supaya 21 akun tetap cepat
+for (let i = 0; i < users.length; i += PARALLEL) {
+  await Promise.all(users.slice(i, i + PARALLEL).map(checkOne));
 }
 
 console.log(JSON.stringify(out));
