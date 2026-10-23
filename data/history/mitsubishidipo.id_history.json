@@ -1,7 +1,7 @@
 {
   "username": "mitsubishidipo.id",
   "retention_days": 90,
-  "updated_at": "2026-10-23T06:43:53.781Z",
+  "updated_at": "2026-10-23T09:11:54.697Z",
   "sessions": [
     {
       "id": "mitsubishidipo.id_20261023_125403",
@@ -268,6 +268,293 @@
       ],
       "session_report": "Session_mitsubishidipo.id_20261023_130958.xlsx",
       "release_tag": "live-mitsubishidipo.id-20261023-130958"
+    },
+    {
+      "id": "mitsubishidipo.id_20261023_153449",
+      "username": "mitsubishidipo.id",
+      "room_id": "7699776811781098258",
+      "title": "",
+      "live_started_at": null,
+      "tracking_started_at": "2026-10-23T08:35:00.786Z",
+      "ended_at": "2026-10-23T09:11:54.696Z",
+      "duration_sec": 2214,
+      "tracked_duration_sec": 2214,
+      "end_reason": "stream_end",
+      "peak_viewers": 131,
+      "peak_viewers_at": "2026-10-23T08:57:50.815Z",
+      "avg_viewers": 15,
+      "total_likes": 26953,
+      "total_comments": 8,
+      "unique_commenters": 3,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-10-23T08:35:00.787Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-23T08:36:00.796Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T08:37:00.799Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T08:38:00.802Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T08:39:00.806Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T08:40:00.809Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T08:41:00.812Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T08:42:00.815Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T08:43:00.818Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T08:44:00.821Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T08:45:00.831Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T08:46:00.832Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T08:47:00.834Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T08:48:00.836Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T08:49:00.838Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-23T08:50:00.839Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T08:51:00.840Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T08:52:00.839Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-23T08:53:00.840Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-23T08:54:00.842Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-23T08:55:00.843Z",
+          "v": 8
+        },
+        {
+          "t": "2026-10-23T08:56:00.844Z",
+          "v": 31
+        },
+        {
+          "t": "2026-10-23T08:57:00.844Z",
+          "v": 103
+        },
+        {
+          "t": "2026-10-23T08:58:00.844Z",
+          "v": 117
+        },
+        {
+          "t": "2026-10-23T08:59:00.845Z",
+          "v": 91
+        },
+        {
+          "t": "2026-10-23T09:00:00.846Z",
+          "v": 73
+        },
+        {
+          "t": "2026-10-23T09:01:00.846Z",
+          "v": 15
+        },
+        {
+          "t": "2026-10-23T09:02:00.848Z",
+          "v": 10
+        },
+        {
+          "t": "2026-10-23T09:03:00.849Z",
+          "v": 11
+        },
+        {
+          "t": "2026-10-23T09:04:00.853Z",
+          "v": 11
+        },
+        {
+          "t": "2026-10-23T09:05:00.861Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-23T09:06:00.861Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-23T09:07:00.866Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-23T09:08:00.872Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-23T09:09:00.876Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-23T09:10:00.877Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-23T09:11:00.878Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-23T09:11:54.696Z",
+          "v": 4
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "galuharindasoemanterimmk",
+          "nickname": "Megaloceros",
+          "count": 3
+        },
+        {
+          "user": "siesca16",
+          "nickname": "Siska",
+          "count": 3
+        },
+        {
+          "user": "ddd832216",
+          "nickname": "DDD",
+          "count": 2
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "kenal",
+          "count": 1
+        },
+        {
+          "word": "novi",
+          "count": 1
+        },
+        {
+          "word": "sun",
+          "count": 1
+        },
+        {
+          "word": "tulungagung",
+          "count": 1
+        },
+        {
+          "word": "ngatuk",
+          "count": 1
+        },
+        {
+          "word": "mata",
+          "count": 1
+        },
+        {
+          "word": "sayu",
+          "count": 1
+        },
+        {
+          "word": "bergadang",
+          "count": 1
+        },
+        {
+          "word": "semalem",
+          "count": 1
+        },
+        {
+          "word": "pasti",
+          "count": 1
+        },
+        {
+          "word": "misalkan",
+          "count": 1
+        },
+        {
+          "word": "punya",
+          "count": 1
+        },
+        {
+          "word": "terios",
+          "count": 1
+        },
+        {
+          "word": "tuker",
+          "count": 1
+        },
+        {
+          "word": "tambah",
+          "count": 1
+        },
+        {
+          "word": "xforce",
+          "count": 1
+        },
+        {
+          "word": "cibinong",
+          "count": 1
+        },
+        {
+          "word": "hybrid",
+          "count": 1
+        },
+        {
+          "word": "non",
+          "count": 1
+        },
+        {
+          "word": "pajaknya",
+          "count": 1
+        },
+        {
+          "word": "kaget",
+          "count": 1
+        },
+        {
+          "word": "sendiri",
+          "count": 1
+        },
+        {
+          "word": "kwkwkw",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishidipo.id_20261023_153449.xlsx",
+      "release_tag": "live-mitsubishidipo.id-20261023-153449"
     }
   ]
 }
