@@ -1,0 +1,127 @@
+name: Track TikTok Live
+run-name: Track @${{ inputs.username }}
+
+# Dipicu otomatis oleh detector (monitor_live.yml) saat akun terdeteksi LIVE.
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: 'Username TikTok (tanpa @)'
+        required: true
+
+permissions:
+  contents: write
+
+# 1 tracker per akun; akun berbeda berjalan paralel.
+concurrency:
+  group: track-${{ inputs.username }}
+  cancel-in-progress: false
+
+env:
+  TZ: Asia/Jakarta
+  MAX_LIVE_MINUTES: '160'
+  SNAPSHOT_INTERVAL_SEC: ${{ vars.SNAPSHOT_INTERVAL_SEC || '15' }}
+  RETENTION_DAYS: '90'
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Validasi username
+        env:
+          INPUT_USERNAME: ${{ inputs.username }}
+        run: |
+          U="$(echo "${INPUT_USERNAME#@}" | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')"
+          if ! [[ "$U" =~ ^[a-z0-9._]{2,24}$ ]]; then
+            echo "::error::Username tidak valid: '$U'"; exit 1
+          fi
+          STAMP="$(date +%Y%m%d_%H%M%S)"
+          {
+            echo "TARGET_USERNAME=$U"
+            echo "SESSION_STAMP=$STAMP"
+            echo "RELEASE_TAG=live-${U}-${STAMP/_/-}"
+          } >> "$GITHUB_ENV"
+
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund --loglevel=error
+
+      - name: Track analitik live
+        id: run
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EULER_API_KEY: ${{ secrets.EULER_API_KEY }}
+          TT_CONNECT_WITH_UNIQUE_ID: ${{ vars.TT_CONNECT_WITH_UNIQUE_ID }}
+        run: |
+          set +e
+          mkdir -p out
+          node scripts/tracker.js "$TARGET_USERNAME"
+          echo "tracker_exit=$?" >> "$GITHUB_OUTPUT"
+          if [ -f "out/Report_${TARGET_USERNAME}_3_Months.xlsx" ]; then
+            echo "has_report=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_report=false" >> "$GITHUB_OUTPUT"
+          fi
+          exit 0
+
+      - name: Commit & push histori
+        if: steps.run.outputs.has_report == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          mkdir -p data/history
+          git add -A data/history
+          if git diff --cached --quiet; then echo "Tidak ada perubahan histori."; exit 0; fi
+          git commit -m "chore(history): @${TARGET_USERNAME} ${SESSION_STAMP} [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "Push berhasil."; exit 0
+            fi
+            echo "Push gagal (percobaan $i), ulangi ..."
+            sleep $((i * 5))
+          done
+          echo "::error::Gagal push histori."; exit 1
+
+      - name: Release laporan sesi
+        if: steps.run.outputs.has_report == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.RELEASE_TAG }}
+          name: 'Laporan Live @${{ env.TARGET_USERNAME }} - ${{ env.SESSION_STAMP }} WIB'
+          body: |
+            Laporan live TikTok **@${{ env.TARGET_USERNAME }}** (stamp `${{ env.SESSION_STAMP }}` WIB).
+            - `Session_*.xlsx` = ringkasan sesi + chat log lengkap
+            - `Report_*_3_Months.xlsx` = rekap 90 hari terakhir saat sesi ini selesai
+          files: out/*.xlsx
+          fail_on_unmatched_files: false
+          make_latest: false
+
+      - name: Update rekap 3 bulan (rolling)
+        if: steps.run.outputs.has_report == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: rekap-${{ env.TARGET_USERNAME }}
+          name: 'Rekap 3 Bulan @${{ env.TARGET_USERNAME }}'
+          body: |
+            Rekap 90 hari terakhir @${{ env.TARGET_USERNAME }}, ditimpa otomatis tiap sesi live baru.
+            Update terakhir: ${{ env.SESSION_STAMP }} WIB.
+          files: out/Report_${{ env.TARGET_USERNAME }}_3_Months.xlsx
+          overwrite_files: true
+          make_latest: false
+
+      - name: Tandai gagal kalau tracker crash
+        if: steps.run.outputs.tracker_exit != '' && steps.run.outputs.tracker_exit != '0'
+        run: |
+          echo "::error::tracker.js keluar dengan kode ${{ steps.run.outputs.tracker_exit }}."
+          exit 1

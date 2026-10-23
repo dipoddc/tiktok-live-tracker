@@ -1,0 +1,91 @@
+name: Record TikTok Live
+run-name: Record @${{ inputs.username }}
+
+# Dipicu detector untuk record_target yang sedang LIVE. Hanya 1 recorder global.
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: 'Username TikTok (harus sama dengan record_target di config)'
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tiktok-live-recorder
+  cancel-in-progress: false
+
+env:
+  TZ: Asia/Jakarta
+  MAX_LIVE_MINUTES: '160'
+  SEGMENT_SECONDS: '1200'
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Validasi username
+        env:
+          INPUT_USERNAME: ${{ inputs.username }}
+        run: |
+          U="$(echo "${INPUT_USERNAME#@}" | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')"
+          if ! [[ "$U" =~ ^[a-z0-9._]{2,24}$ ]]; then
+            echo "::error::Username tidak valid: '$U'"; exit 1
+          fi
+          STAMP="$(date +%Y%m%d_%H%M%S)"
+          {
+            echo "TARGET_USERNAME=$U"
+            echo "SESSION_STAMP=$STAMP"
+            echo "RELEASE_TAG=rec-${U}-${STAMP/_/-}"
+          } >> "$GITHUB_ENV"
+
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install Streamlink & FFmpeg
+        run: |
+          python -m pip install --upgrade --quiet streamlink
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          fi
+          streamlink --version
+          ffmpeg -version | head -n 1
+
+      - name: Rekam live
+        id: rec
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          bash scripts/recorder.sh "$TARGET_USERNAME" recordings
+          shopt -s nullglob
+          FILES=(recordings/*.mp4 recordings/*.ts)
+          if [ ${#FILES[@]} -gt 0 ]; then
+            echo "has_files=true" >> "$GITHUB_OUTPUT"; ls -lh "${FILES[@]}"
+          else
+            echo "has_files=false" >> "$GITHUB_OUTPUT"
+          fi
+          exit 0
+
+      - name: Upload video ke Releases
+        if: steps.rec.outputs.has_files == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.RELEASE_TAG }}
+          name: 'Rekaman Live @${{ env.TARGET_USERNAME }} - ${{ env.SESSION_STAMP }} WIB'
+          body: |
+            Rekaman live TikTok **@${{ env.TARGET_USERNAME }}** (mulai ${{ env.SESSION_STAMP }} WIB).
+            Video > 20 menit dipecah per part (batas 2 GiB per file di Releases).
+          files: |
+            recordings/*.mp4
+            recordings/*.ts
+          fail_on_unmatched_files: false
+          make_latest: false
