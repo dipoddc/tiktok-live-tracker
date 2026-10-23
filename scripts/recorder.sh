@@ -83,23 +83,44 @@ if ! still_allowed; then
 fi
 
 # -----------------------------------------------------------------------------
-# 1) Cek status live
+# Jalur cadangan: URL stream langsung dari data room TikTok (TikTok-Live-Connector)
+# -----------------------------------------------------------------------------
+get_direct_url() {
+  [[ -f scripts/stream_url.js && -d node_modules/tiktok-live-connector ]] || return 1
+  timeout 60 node scripts/stream_url.js "$USERNAME" 2>>"${OUT_DIR}/.recorder_debug.log" | tail -n 1
+}
+
+# -----------------------------------------------------------------------------
+# 1) Cek status live (Streamlink, lalu cadangan URL langsung)
 # -----------------------------------------------------------------------------
 log "Cek status live @${USERNAME} ..."
 STREAMS_JSON="$(streamlink --json "$URL" 2>/dev/null || true)"
-if ! echo "$STREAMS_JSON" | jq -e '(.streams // {}) | length > 0' >/dev/null 2>&1; then
-  ERR_MSG="$(echo "$STREAMS_JSON" | jq -r '.error // empty' 2>/dev/null || true)"
-  log "Akun sedang offline${ERR_MSG:+ ($ERR_MSG)}"
-  exit 0
+SL_OK=false
+if echo "$STREAMS_JSON" | jq -e '(.streams // {}) | length > 0' >/dev/null 2>&1; then
+  SL_OK=true
+  log "Streamlink: LIVE. Kualitas tersedia: $(echo "$STREAMS_JSON" | jq -r '.streams | keys | join(", ")')"
+else
+  log "Streamlink tidak menemukan stream: $(echo "$STREAMS_JSON" | jq -r '.error // "tanpa pesan"' 2>/dev/null)"
 fi
-log "LIVE terdeteksi. Kualitas tersedia: $(echo "$STREAMS_JSON" | jq -r '.streams | keys | join(", ")')"
+
+DIRECT_URL=""
+if [[ "$SL_OK" == "false" ]]; then
+  DIRECT_URL="$(get_direct_url || true)"
+  if [[ -z "$DIRECT_URL" ]]; then
+    log "Akun sedang offline (Streamlink & cadangan sama-sama tidak menemukan stream)."
+    exit 0
+  fi
+  log "Cadangan: URL stream langsung ditemukan, rekam pakai FFmpeg."
+fi
 
 # -----------------------------------------------------------------------------
-# 2) Rekam: streamlink -> stdout -> ffmpeg segmenter (.ts)
-#    timeout kirim SIGINT ke streamlink supaya ffmpeg menutup segmen terakhir dengan rapi.
+# 2) Rekam. Ditulis sebagai segmen .ts (tahan crash), maks MAX_MINUTES total.
+#    Kalau satu metode gagal (data < 1 MB), otomatis pindah ke metode lain.
 # -----------------------------------------------------------------------------
 mkdir -p "$TMP_DIR"
 STOP_FLAG="${TMP_DIR}/.stopped_by_config"
+DEADLINE=$(( $(date +%s) + MAX_MINUTES * 60 ))
+UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 
 # Watcher: hentikan rekaman kalau record_target diganti / auto record dimatikan
 (
@@ -108,41 +129,90 @@ STOP_FLAG="${TMP_DIR}/.stopped_by_config"
       touch "$STOP_FLAG"
       log "record_target berubah / auto record OFF -> hentikan rekaman @${USERNAME}."
       pkill -INT -f "streamlink.*tiktok\.com/@${USERNAME}/live" 2>/dev/null || true
+      pkill -INT -f "ffmpeg.*rec_${USERNAME}_" 2>/dev/null || true
       break
     fi
   done
 ) &
 WATCHER_PID=$!
 
-log "Mulai rekam (maks ${MAX_MINUTES} menit, 1 part = ${SEGMENT_SECONDS} detik) ..."
+record_streamlink() {   # $1 = prefix file, $2 = sisa detik
+  timeout --signal=INT --kill-after=60 "$2" \
+    streamlink "$URL" best --retry-streams 10 --retry-max 3 --stream-timeout 30 --stdout --loglevel info \
+      2>>"${OUT_DIR}/.recorder_debug.log" \
+  | ffmpeg -hide_banner -loglevel warning -nostdin -i pipe:0 \
+      -map '0:v?' -map '0:a?' -c copy \
+      -f segment -segment_time "$SEGMENT_SECONDS" -segment_format mpegts -reset_timestamps 1 \
+      "$1_seg%03d.ts"
+  local st=("${PIPESTATUS[@]}")
+  log "  streamlink exit=${st[0]}, ffmpeg exit=${st[1]}"
+}
 
-timeout --signal=INT --kill-after=60 "${MAX_MINUTES}m" \
-  streamlink "$URL" best \
-    --retry-streams 10 \
-    --retry-max 3 \
-    --stream-timeout 30 \
-    --stdout \
-    --loglevel warning \
-| ffmpeg -hide_banner -loglevel warning -nostdin \
-    -i pipe:0 \
-    -map '0:v?' -map '0:a?' -c copy \
-    -f segment -segment_time "$SEGMENT_SECONDS" -segment_format mpegts -reset_timestamps 1 \
-    "${TMP_DIR}/${BASENAME}_seg%03d.ts"
+record_direct() {       # $1 = prefix file, $2 = sisa detik, $3 = URL
+  # nama output memuat "rec_<user>_" supaya watcher bisa menghentikannya
+  timeout --signal=INT --kill-after=60 "$2" \
+    ffmpeg -hide_banner -loglevel warning -nostdin \
+      -user_agent "$UA" -headers $'Referer: https://www.tiktok.com/\r\n' \
+      -reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 10 -rw_timeout 30000000 \
+      -i "$3" -map '0:v?' -map '0:a?' -c copy \
+      -f segment -segment_time "$SEGMENT_SECONDS" -segment_format mpegts -reset_timestamps 1 \
+      "$1_seg%03d.ts" 2>>"${OUT_DIR}/.recorder_debug.log"
+  log "  ffmpeg (URL langsung) exit=$?"
+}
 
-PIPE_STATUS=("${PIPESTATUS[@]}")
+bytes_of() { local t=0 f; for f in "$1"_seg*.ts; do [[ -f "$f" ]] && t=$(( t + $(stat -c%s "$f") )); done; echo "$t"; }
+
+shopt -s nullglob
+METHOD="streamlink"; [[ "$SL_OK" == "false" ]] && METHOD="direct"
+ATTEMPT=0
+while (( ATTEMPT < 4 )); do
+  ATTEMPT=$((ATTEMPT + 1))
+  REMAIN=$(( DEADLINE - $(date +%s) ))
+  (( REMAIN < 30 )) && { log "Batas waktu rekam tercapai."; break; }
+  [[ -f "$STOP_FLAG" ]] && break
+  PREFIX="${TMP_DIR}/rec_${USERNAME}_a${ATTEMPT}"
+
+  log "Percobaan ${ATTEMPT}: rekam pakai ${METHOD} (sisa waktu $((REMAIN / 60)) menit) ..."
+  if [[ "$METHOD" == "streamlink" ]]; then
+    record_streamlink "$PREFIX" "$REMAIN"
+  else
+    [[ -z "$DIRECT_URL" ]] && DIRECT_URL="$(get_direct_url || true)"
+    if [[ -z "$DIRECT_URL" ]]; then log "  URL langsung tidak tersedia."; break; fi
+    record_direct "$PREFIX" "$REMAIN" "$DIRECT_URL"
+    DIRECT_URL=""   # URL bisa kedaluwarsa; ambil baru di percobaan berikutnya
+  fi
+
+  GOT=$(bytes_of "$PREFIX")
+  log "  Data terekam di percobaan ini: $(( GOT / 1024 )) KB"
+  [[ -f "$STOP_FLAG" ]] && break
+
+  # Live masih jalan? (cek ulang singkat)
+  STILL_LIVE=false
+  if streamlink --json "$URL" 2>/dev/null | jq -e '(.streams // {}) | length > 0' >/dev/null 2>&1; then STILL_LIVE=true
+  elif [[ -n "$(get_direct_url || true)" ]]; then STILL_LIVE=true; fi
+  if [[ "$STILL_LIVE" == "false" ]]; then log "Live sudah selesai."; break; fi
+
+  # Masih live tapi metode ini gagal / terputus -> coba metode lain
+  if (( GOT < 1048576 )); then
+    if [[ "$METHOD" == "streamlink" ]]; then METHOD="direct"; else METHOD="streamlink"; fi
+    log "  Metode sebelumnya gagal, pindah ke ${METHOD}."
+  else
+    log "  Rekaman terputus padahal masih live, sambung lagi."
+  fi
+  sleep 5
+done
+
 kill "$WATCHER_PID" 2>/dev/null || true
 wait "$WATCHER_PID" 2>/dev/null || true
 [[ -f "$STOP_FLAG" ]] && log "Rekaman dihentikan karena perubahan config." && rm -f "$STOP_FLAG"
-log "Rekaman berhenti (streamlink exit=${PIPE_STATUS[0]}, ffmpeg exit=${PIPE_STATUS[1]})."
 
 # -----------------------------------------------------------------------------
 # 3) Remux .ts -> .mp4 (tanpa re-encode)
 # -----------------------------------------------------------------------------
-shopt -s nullglob
-
-# buang segmen sangat kecil (< 200 KB), biasanya sisa koneksi putus
+# buang segmen kosong/sangat kecil (< 50 KB)
 for ts in "${TMP_DIR}"/*.ts; do
-  if (( $(stat -c%s "$ts") < 204800 )); then
+  if (( $(stat -c%s "$ts") < 51200 )); then
+    log "Segmen terlalu kecil dibuang: $(basename "$ts") ($(stat -c%s "$ts") byte)"
     rm -f "$ts"
   fi
 done
@@ -150,9 +220,9 @@ done
 PARTS=("${TMP_DIR}"/*.ts)
 TOTAL=${#PARTS[@]}
 if (( TOTAL == 0 )); then
-  log "Tidak ada data video yang terekam (stream mungkin langsung berhenti)."
+  log "GAGAL: tidak ada data video yang terekam. Detail error ada di ${OUT_DIR}/.recorder_debug.log"
   rm -rf "$TMP_DIR"
-  exit 0
+  exit 3
 fi
 
 IDX=0
