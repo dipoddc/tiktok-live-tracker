@@ -262,9 +262,17 @@ async function runNow() {
     await gh(`${repoPath()}/actions/workflows/${WORKFLOW_FILE}/dispatches`, { method: 'POST', body: { ref: branch } });
     toast('Workflow dipicu. Kalau sedang live, data muncul ±2-3 menit lagi.', 'ok');
   } catch (e) {
-    toast(e.status === 403 || e.status === 404
-      ? 'Gagal memicu workflow. Pastikan PAT punya izin "Actions: Read and write".'
-      : `Gagal memicu workflow: ${e.message}`, 'error');
+    let msg = `Gagal memicu workflow: ${e.message}`;
+    if (e.status === 404 || e.status === 403) {
+      // Bedakan: file workflow tidak ada vs token kurang izin
+      let workflowExists = true;
+      try { await gh(`${repoPath()}/actions/workflows/${WORKFLOW_FILE}`); }
+      catch (e2) { if (e2.status === 404) workflowExists = false; }
+      msg = workflowExists
+        ? 'Gagal memicu workflow. Pastikan PAT punya izin "Actions: Read and write" dan Actions aktif di repo.'
+        : `File .github/workflows/${WORKFLOW_FILE} tidak ditemukan di repo. Upload ulang folder .github.`;
+    }
+    toast(msg, 'error');
   }
 }
 
