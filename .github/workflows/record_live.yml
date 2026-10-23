@@ -18,7 +18,7 @@ concurrency:
 
 env:
   TZ: Asia/Jakarta
-  MAX_LIVE_MINUTES: '160'
+  MAX_LIVE_MINUTES: '150'   # + maks 10 menit mencari stream, sisa waktu untuk upload
   SEGMENT_SECONDS: '1200'
 
 jobs:
