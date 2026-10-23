@@ -4,7 +4,7 @@ name: Monitor TikTok Live
 # lalu memicu track_live.yml (per akun) dan record_live.yml (1 akun).
 on:
   schedule:
-    - cron: '3-59/10 * * * *'    # menjaga detector selalu ada yang antre/jalan
+    - cron: '3-59/10 * * * *'   # mode hemat: cek tiap 10 menit (hindari menit :00)
   workflow_dispatch:
 
 permissions:
@@ -45,6 +45,15 @@ jobs:
         run: |
           python -m pip install --upgrade --quiet streamlink
           streamlink --version
+
+      # Untuk cek cadangan (scripts/check_live.js) kalau Streamlink bilang offline
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund --loglevel=error
 
       # ---------------- Perawatan (prune 90 hari, keepalive, hapus release lama) -------------
       - name: Prune histori > 90 hari
@@ -101,4 +110,5 @@ jobs:
       - name: Deteksi live (loop)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EULER_API_KEY: ${{ secrets.EULER_API_KEY }}
         run: bash scripts/detector.sh
