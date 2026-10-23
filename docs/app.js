@@ -217,6 +217,16 @@ async function autoDetect(reason) {
   }
 }
 
+async function dispatchRecorder(u) {
+  try {
+    await gh(`${repoPath()}/actions/workflows/record_live.yml/dispatches`, { method: 'POST', body: { ref: await ensureDefaultBranch(), inputs: { username: u } } });
+    return true;
+  } catch (e) {
+    console.warn('Gagal memicu recorder:', e.message);
+    return false;
+  }
+}
+
 async function runDetector() {
   if (!S.token) return toast('Isi PAT dulu di Pengaturan.', 'error');
   try {
@@ -326,8 +336,18 @@ async function setRecordTarget(u) {
     return null;
   }, u ? `record target @${u}` : 'record target dikosongkan');
   if (ok) {
-    if (u) await autoDetect(`record target @${u}`);
-    toast(u ? `Auto record diarahkan ke @${u}. Detector langsung mengecek; rekaman mulai kalau akun ini sedang live.` : 'Tidak ada akun yang direkam.', 'ok');
+    let msg = 'Tidak ada akun yang direkam.';
+    if (u && S.config.auto_record_enabled && stateOf(u) === 'live') {
+      // Akun sedang live: langsung picu recorder, tidak menunggu putaran detector
+      const ok2 = await dispatchRecorder(u);
+      msg = ok2 ? `@${u} sedang live, recorder langsung dijalankan (mulai merekam ±1-2 menit lagi).`
+        : `Auto record diarahkan ke @${u}, tapi gagal memicu recorder langsung. Detector akan mencoba.`;
+      if (!ok2) await autoDetect(`record target @${u}`);
+    } else if (u) {
+      await autoDetect(`record target @${u}`);
+      msg = `Auto record diarahkan ke @${u}. Rekaman mulai otomatis saat akun ini terdeteksi live.`;
+    }
+    toast(msg, 'ok');
     renderAll();
   } else {
     renderRecord();
