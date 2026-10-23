@@ -1,7 +1,7 @@
 {
   "username": "qanitaintan8",
   "retention_days": 90,
-  "updated_at": "2026-10-23T04:36:11.739Z",
+  "updated_at": "2026-10-23T08:06:14.311Z",
   "sessions": [
     {
       "id": "qanitaintan8_20261023_113118",
@@ -155,6 +155,474 @@
       ],
       "session_report": "Session_qanitaintan8_20261023_113118.xlsx",
       "release_tag": "live-qanitaintan8-20261023-113118"
+    },
+    {
+      "id": "qanitaintan8_20261023_141221",
+      "username": "qanitaintan8",
+      "room_id": "7699756840816708373",
+      "title": "",
+      "live_started_at": null,
+      "tracking_started_at": "2026-10-23T07:12:34.218Z",
+      "ended_at": "2026-10-23T08:06:14.309Z",
+      "duration_sec": 3220,
+      "tracked_duration_sec": 3220,
+      "end_reason": "stream_end",
+      "peak_viewers": 21,
+      "peak_viewers_at": "2026-10-23T07:59:22.451Z",
+      "avg_viewers": 10,
+      "total_likes": 1518,
+      "total_comments": 121,
+      "unique_commenters": 56,
+      "follows": 10,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-10-23T07:12:34.218Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-23T07:13:34.227Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-23T07:14:34.230Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-23T07:15:34.232Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-23T07:16:34.235Z",
+          "v": 8
+        },
+        {
+          "t": "2026-10-23T07:17:34.236Z",
+          "v": 17
+        },
+        {
+          "t": "2026-10-23T07:18:34.237Z",
+          "v": 11
+        },
+        {
+          "t": "2026-10-23T07:19:34.238Z",
+          "v": 11
+        },
+        {
+          "t": "2026-10-23T07:20:34.239Z",
+          "v": 16
+        },
+        {
+          "t": "2026-10-23T07:21:34.242Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-23T07:22:34.246Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-23T07:23:34.247Z",
+          "v": 8
+        },
+        {
+          "t": "2026-10-23T07:24:34.249Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-23T07:25:34.250Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-23T07:26:34.250Z",
+          "v": 8
+        },
+        {
+          "t": "2026-10-23T07:27:34.253Z",
+          "v": 9
+        },
+        {
+          "t": "2026-10-23T07:28:34.255Z",
+          "v": 9
+        },
+        {
+          "t": "2026-10-23T07:29:34.256Z",
+          "v": 10
+        },
+        {
+          "t": "2026-10-23T07:30:34.257Z",
+          "v": 8
+        },
+        {
+          "t": "2026-10-23T07:31:34.258Z",
+          "v": 12
+        },
+        {
+          "t": "2026-10-23T07:32:34.266Z",
+          "v": 12
+        },
+        {
+          "t": "2026-10-23T07:33:34.268Z",
+          "v": 12
+        },
+        {
+          "t": "2026-10-23T07:34:34.270Z",
+          "v": 12
+        },
+        {
+          "t": "2026-10-23T07:35:34.272Z",
+          "v": 11
+        },
+        {
+          "t": "2026-10-23T07:36:34.273Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-23T07:37:34.275Z",
+          "v": 10
+        },
+        {
+          "t": "2026-10-23T07:38:34.275Z",
+          "v": 13
+        },
+        {
+          "t": "2026-10-23T07:39:34.277Z",
+          "v": 9
+        },
+        {
+          "t": "2026-10-23T07:40:34.278Z",
+          "v": 8
+        },
+        {
+          "t": "2026-10-23T07:41:34.279Z",
+          "v": 10
+        },
+        {
+          "t": "2026-10-23T07:42:34.280Z",
+          "v": 9
+        },
+        {
+          "t": "2026-10-23T07:43:34.282Z",
+          "v": 12
+        },
+        {
+          "t": "2026-10-23T07:44:34.285Z",
+          "v": 14
+        },
+        {
+          "t": "2026-10-23T07:45:34.288Z",
+          "v": 10
+        },
+        {
+          "t": "2026-10-23T07:46:34.289Z",
+          "v": 12
+        },
+        {
+          "t": "2026-10-23T07:47:34.290Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-23T07:48:34.293Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-23T07:49:34.294Z",
+          "v": 9
+        },
+        {
+          "t": "2026-10-23T07:50:34.294Z",
+          "v": 13
+        },
+        {
+          "t": "2026-10-23T07:51:34.296Z",
+          "v": 13
+        },
+        {
+          "t": "2026-10-23T07:52:34.297Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-23T07:53:34.298Z",
+          "v": 9
+        },
+        {
+          "t": "2026-10-23T07:54:34.304Z",
+          "v": 9
+        },
+        {
+          "t": "2026-10-23T07:55:34.305Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-23T07:56:34.306Z",
+          "v": 9
+        },
+        {
+          "t": "2026-10-23T07:57:34.311Z",
+          "v": 11
+        },
+        {
+          "t": "2026-10-23T07:58:34.313Z",
+          "v": 12
+        },
+        {
+          "t": "2026-10-23T07:59:34.314Z",
+          "v": 17
+        },
+        {
+          "t": "2026-10-23T08:00:34.315Z",
+          "v": 14
+        },
+        {
+          "t": "2026-10-23T08:01:34.317Z",
+          "v": 13
+        },
+        {
+          "t": "2026-10-23T08:02:34.324Z",
+          "v": 18
+        },
+        {
+          "t": "2026-10-23T08:03:34.325Z",
+          "v": 16
+        },
+        {
+          "t": "2026-10-23T08:04:34.326Z",
+          "v": 15
+        },
+        {
+          "t": "2026-10-23T08:05:34.329Z",
+          "v": 13
+        },
+        {
+          "t": "2026-10-23T08:06:14.309Z",
+          "v": 8
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "radit.mata",
+          "nickname": "ragasa box",
+          "count": 11
+        },
+        {
+          "user": "rado_reipan",
+          "nickname": "r",
+          "count": 10
+        },
+        {
+          "user": "agusstiawan241",
+          "nickname": "kang agus",
+          "count": 8
+        },
+        {
+          "user": "puzieana",
+          "nickname": "Puzieana",
+          "count": 6
+        },
+        {
+          "user": "brewok880",
+          "nickname": "brewok",
+          "count": 5
+        },
+        {
+          "user": "123mukidi",
+          "nickname": "✨️MUKIDI 123",
+          "count": 4
+        },
+        {
+          "user": "febrianto.melria",
+          "nickname": "FEBRI.OMS",
+          "count": 4
+        },
+        {
+          "user": "agangagah6",
+          "nickname": "Agan Gagah",
+          "count": 3
+        },
+        {
+          "user": "dodirahardi",
+          "nickname": "dodirahardi",
+          "count": 3
+        },
+        {
+          "user": "sedulurnoorsaktif",
+          "nickname": "sedulurnoorsaktifarm",
+          "count": 3
+        },
+        {
+          "user": "a.jimal8",
+          "nickname": "jikar",
+          "count": 3
+        },
+        {
+          "user": "riskams17",
+          "nickname": "Icha",
+          "count": 3
+        },
+        {
+          "user": "usrodicky",
+          "nickname": "usrodicky",
+          "count": 2
+        },
+        {
+          "user": "akbarchippe",
+          "nickname": "Akbar Chippe",
+          "count": 2
+        },
+        {
+          "user": "dionzering",
+          "nickname": "dionzering99",
+          "count": 2
+        },
+        {
+          "user": "a_b4r4_76",
+          "nickname": "@ABARA.PESEK76",
+          "count": 2
+        },
+        {
+          "user": "kokeng692",
+          "nickname": "kokeng",
+          "count": 2
+        },
+        {
+          "user": "cipto.widodo41",
+          "nickname": "Cipto widodo",
+          "count": 2
+        },
+        {
+          "user": "nurfadil96",
+          "nickname": "nur fadil",
+          "count": 2
+        },
+        {
+          "user": "moyy42148",
+          "nickname": "Moyy",
+          "count": 2
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "teh",
+          "count": 17
+        },
+        {
+          "word": "bak",
+          "count": 9
+        },
+        {
+          "word": "l300",
+          "count": 8
+        },
+        {
+          "word": "brpa",
+          "count": 8
+        },
+        {
+          "word": "brp",
+          "count": 8
+        },
+        {
+          "word": "lokasi",
+          "count": 6
+        },
+        {
+          "word": "pajero",
+          "count": 6
+        },
+        {
+          "word": "ragasa",
+          "count": 6
+        },
+        {
+          "word": "destinator",
+          "count": 5
+        },
+        {
+          "word": "mbk",
+          "count": 5
+        },
+        {
+          "word": "xpander",
+          "count": 4
+        },
+        {
+          "word": "brapa",
+          "count": 4
+        },
+        {
+          "word": "intan",
+          "count": 4
+        },
+        {
+          "word": "persyaratan",
+          "count": 4
+        },
+        {
+          "word": "ambil",
+          "count": 3
+        },
+        {
+          "word": "cicilan",
+          "count": 3
+        },
+        {
+          "word": "mitsubishi",
+          "count": 3
+        },
+        {
+          "word": "kes",
+          "count": 2
+        },
+        {
+          "word": "beda",
+          "count": 2
+        },
+        {
+          "word": "cross",
+          "count": 2
+        },
+        {
+          "word": "aisha",
+          "count": 2
+        },
+        {
+          "word": "otr",
+          "count": 2
+        },
+        {
+          "word": "berap",
+          "count": 2
+        },
+        {
+          "word": "sport",
+          "count": 2
+        },
+        {
+          "word": "dek",
+          "count": 2
+        },
+        {
+          "word": "dakar",
+          "count": 2
+        },
+        {
+          "word": "teteh",
+          "count": 2
+        },
+        {
+          "word": "tuker",
+          "count": 2
+        },
+        {
+          "word": "tambah",
+          "count": 2
+        },
+        {
+          "word": "cash",
+          "count": 2
+        }
+      ],
+      "session_report": "Session_qanitaintan8_20261023_141221.xlsx",
+      "release_tag": "live-qanitaintan8-20261023-141221"
     }
   ]
 }
