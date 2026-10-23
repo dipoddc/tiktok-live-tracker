@@ -1,36 +1,34 @@
 name: Monitor TikTok Live
 
+# Detector: cek status live semua akun di data/config.json (maks 10),
+# lalu memicu track_live.yml (per akun) dan record_live.yml (1 akun).
 on:
   schedule:
-    - cron: '*/10 * * * *'   # tiap 10 menit (jadwal GitHub bisa telat 5-20 menit saat ramai)
+    - cron: '*/5 * * * *'    # menjaga detector selalu ada yang antre/jalan
   workflow_dispatch:
-    inputs:
-      username:
-        description: 'Override username (kosongkan = pakai data/config.json)'
-        required: false
-        default: ''
 
 permissions:
   contents: write
+  actions: write
 
-# Hanya 1 run aktif. Run baru menunggu run yang sedang merekam selesai,
-# lalu otomatis lanjut merekam kalau live masih berjalan (> MAX_LIVE_MINUTES).
+# Hanya 1 detector aktif; run baru antre dan langsung jalan saat yang lama selesai.
 concurrency:
-  group: tiktok-live-monitor
+  group: tiktok-live-detector
   cancel-in-progress: false
 
 env:
   TZ: Asia/Jakarta
-  MAX_LIVE_MINUTES: '160'        # sisakan ~20 menit untuk remux, Excel, upload
-  SEGMENT_SECONDS: '1200'        # 1 part video = 20 menit (aman di bawah 2 GiB)
-  SNAPSHOT_INTERVAL_SEC: '60'
   RETENTION_DAYS: '90'
+  # Mode loop: detector jalan terus N menit, cek tiap SWEEP_INTERVAL_SEC.
+  # Set variable repo DETECT_LOOP_MINUTES = 0 untuk mode hemat (cek sekali tiap cron).
+  DETECT_LOOP_MINUTES: ${{ vars.DETECT_LOOP_MINUTES || '50' }}
+  SWEEP_INTERVAL_SEC: ${{ vars.SWEEP_INTERVAL_SEC || '90' }}
   LIVE_STATUS_BRANCH: live-status
 
 jobs:
-  monitor:
+  detect:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 60
 
     steps:
       - name: Checkout
@@ -38,141 +36,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      # ------------------------------------------------------------------
-      # a. Baca parameter dari data/config.json
-      # ------------------------------------------------------------------
-      - name: Baca config
-        id: cfg
-        env:
-          INPUT_USERNAME: ${{ inputs.username }}
-        run: |
-          USERNAME="${INPUT_USERNAME:-}"
-          if [ -z "$USERNAME" ]; then
-            USERNAME="$(jq -r '.target_username // empty' data/config.json)"
-          fi
-          USERNAME="$(echo "${USERNAME#@}" | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')"
-          AUTO_REC="$(jq -r 'if .auto_record_enabled == false then "false" else "true" end' data/config.json)"
-
-          if [ -z "$USERNAME" ] || [ "$USERNAME" = "username_target" ] || ! [[ "$USERNAME" =~ ^[a-z0-9._]{2,24}$ ]]; then
-            echo "::warning::target_username di data/config.json belum valid ('$USERNAME'). Run dilewati."
-            echo "valid=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          STAMP="$(date +%Y%m%d_%H%M%S)"
-          {
-            echo "valid=true"
-            echo "username=$USERNAME"
-            echo "auto_record=$AUTO_REC"
-            echo "stamp=$STAMP"
-          } >> "$GITHUB_OUTPUT"
-          {
-            echo "TARGET_USERNAME=$USERNAME"
-            echo "AUTO_RECORD=$AUTO_REC"
-            echo "SESSION_STAMP=$STAMP"
-            echo "RELEASE_TAG=live-${USERNAME}-${STAMP/_/-}"
-          } >> "$GITHUB_ENV"
-          echo "Target: @$USERNAME | auto record: $AUTO_REC | stamp: $STAMP"
-
       - name: Setup Python
-        if: steps.cfg.outputs.valid == 'true'
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
       - name: Install Streamlink
-        if: steps.cfg.outputs.valid == 'true'
         run: |
           python -m pip install --upgrade --quiet streamlink
           streamlink --version
 
-      # Cek cepat dulu supaya run saat offline cuma ~30 detik (hemat antrean runner)
-      - name: Cek status live
-        id: live
-        if: steps.cfg.outputs.valid == 'true'
-        run: |
-          URL="https://www.tiktok.com/@${TARGET_USERNAME}/live"
-          OUT="$(streamlink --json "$URL" 2>/dev/null || true)"
-          if echo "$OUT" | jq -e '(.streams // {}) | length > 0' >/dev/null 2>&1; then
-            echo "live=true" >> "$GITHUB_OUTPUT"
-            echo "@${TARGET_USERNAME} sedang LIVE"
-          else
-            echo "live=false" >> "$GITHUB_OUTPUT"
-            echo "@${TARGET_USERNAME} offline. $(echo "$OUT" | jq -r '.error // empty' 2>/dev/null)"
-          fi
-
-      # ------------------------------------------------------------------
-      # Jalur LIVE: setup lengkap, tracker + recorder paralel
-      # ------------------------------------------------------------------
-      - name: Setup Node.js
-        if: steps.live.outputs.live == 'true'
-        uses: actions/setup-node@v5
-        with:
-          node-version: '22'
-
-      - name: Install FFmpeg & dependencies
-        if: steps.live.outputs.live == 'true'
-        run: |
-          if ! command -v ffmpeg >/dev/null 2>&1; then
-            sudo apt-get update -qq
-            sudo apt-get install -y -qq ffmpeg
-          fi
-          ffmpeg -version | head -n 1
-          npm install --no-audit --no-fund --loglevel=error
-          npm ls exceljs tiktok-live-connector || true
-
-      - name: Track analitik + rekam video (paralel)
-        id: run
-        if: steps.live.outputs.live == 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EULER_API_KEY: ${{ secrets.EULER_API_KEY }}
-          TT_CONNECT_WITH_UNIQUE_ID: ${{ vars.TT_CONNECT_WITH_UNIQUE_ID }}
-        run: |
-          set +e
-          set -o pipefail
-          mkdir -p out recordings
-
-          node scripts/tracker.js "$TARGET_USERNAME" 2>&1 | sed -u 's/^/[TRACKER] /' &
-          TRACKER_PID=$!
-
-          REC_PID=""
-          if [ "$AUTO_RECORD" = "true" ]; then
-            bash scripts/recorder.sh "$TARGET_USERNAME" recordings 2>&1 | sed -u 's/^/[RECORDER] /' &
-            REC_PID=$!
-          else
-            echo "Auto record dimatikan di config. Hanya tracking analitik."
-          fi
-
-          wait "$TRACKER_PID"; TRACKER_EXIT=$?
-          REC_EXIT=0
-          if [ -n "$REC_PID" ]; then wait "$REC_PID"; REC_EXIT=$?; fi
-
-          echo "tracker_exit=$TRACKER_EXIT" >> "$GITHUB_OUTPUT"
-          echo "recorder_exit=$REC_EXIT" >> "$GITHUB_OUTPUT"
-          echo "Tracker exit=$TRACKER_EXIT | Recorder exit=$REC_EXIT"
-
-          shopt -s nullglob
-          FILES=(out/*.xlsx recordings/*.mp4 recordings/*.ts)
-          if [ ${#FILES[@]} -gt 0 ]; then
-            echo "has_files=true" >> "$GITHUB_OUTPUT"
-            ls -lh "${FILES[@]}"
-          else
-            echo "has_files=false" >> "$GITHUB_OUTPUT"
-          fi
-          if [ -f "out/Report_${TARGET_USERNAME}_3_Months.xlsx" ]; then
-            echo "has_report=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "has_report=false" >> "$GITHUB_OUTPUT"
-          fi
-          exit 0
-
-      # ------------------------------------------------------------------
-      # Jalur OFFLINE: buang sesi > 90 hari walau tidak ada live baru
-      # ------------------------------------------------------------------
+      # ---------------- Perawatan (prune 90 hari, keepalive, hapus release lama) -------------
       - name: Prune histori > 90 hari
-        if: steps.cfg.outputs.valid == 'true' && steps.live.outputs.live != 'true'
         run: |
+          mkdir -p data/history
           CUTOFF="$(date -u -d "${RETENTION_DAYS} days ago" +%Y-%m-%dT%H:%M:%SZ)"
           shopt -s nullglob
           for f in data/history/*_history.json; do
@@ -180,103 +57,48 @@ jobs:
               '.sessions = ((.sessions // []) | map(select((.ended_at // .tracking_started_at // "") >= $c)))' \
               "$f" > "$f.tmp"
             if [ "$(jq '.sessions | length' "$f")" != "$(jq '.sessions | length' "$f.tmp")" ]; then
-              mv "$f.tmp" "$f"
-              echo "Pruned: $f"
+              mv "$f.tmp" "$f"; echo "Pruned: $f"
             else
               rm -f "$f.tmp"
             fi
           done
 
-      # Workflow terjadwal di repo publik dimatikan GitHub kalau 60 hari tanpa aktivitas.
-      - name: Keepalive (cegah cron dinonaktifkan)
-        if: steps.cfg.outputs.valid == 'true'
+      - name: Keepalive (cegah cron dinonaktifkan GitHub)
         run: |
           LAST=$(git log -1 --format=%ct)
-          NOW=$(date +%s)
-          if (( NOW - LAST > 45 * 86400 )); then
+          if (( $(date +%s) - LAST > 45 * 86400 )); then
             date -u +%Y-%m-%dT%H:%M:%SZ > data/.keepalive
             echo "Keepalive ditulis."
           fi
 
-      # ------------------------------------------------------------------
-      # d. Commit & push histori
-      # ------------------------------------------------------------------
-      - name: Commit & push histori
-        if: steps.cfg.outputs.valid == 'true'
+      - name: Commit perawatan
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          mkdir -p data/history
           git add -A data/
-          if git diff --cached --quiet; then
-            echo "Tidak ada perubahan histori."
-            exit 0
-          fi
-          git commit -m "chore(history): update @${TARGET_USERNAME} ${SESSION_STAMP} [skip ci]"
-          BRANCH="${GITHUB_REF_NAME}"
+          if git diff --cached --quiet; then echo "Tidak ada perubahan."; exit 0; fi
+          git commit -m "chore: prune histori > ${RETENTION_DAYS} hari [skip ci]"
           for i in 1 2 3; do
-            if git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH"; then
-              echo "Push berhasil."
-              exit 0
-            fi
-            echo "Push gagal (percobaan $i), ulangi ..."
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
             sleep $((i * 5))
           done
-          echo "::error::Gagal push histori setelah 3 percobaan."
-          exit 1
+          echo "::warning::Push perawatan gagal, dicoba lagi di run berikutnya."
 
-      # ------------------------------------------------------------------
-      # e. Upload video + Excel ke GitHub Releases
-      # ------------------------------------------------------------------
-      - name: Release sesi live (video + laporan)
-        if: steps.run.outputs.has_files == 'true'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ env.RELEASE_TAG }}
-          name: 'Live @${{ env.TARGET_USERNAME }} - ${{ env.SESSION_STAMP }} WIB'
-          body: |
-            Rekaman & laporan live TikTok **@${{ env.TARGET_USERNAME }}**.
-            - Stamp sesi: `${{ env.SESSION_STAMP }}` (WIB)
-            - `Session_*.xlsx` = laporan sesi + chat log lengkap
-            - `Report_*_3_Months.xlsx` = rekap 90 hari terakhir
-            - Video > 20 menit dipecah per part (batas 2 GiB per file di Releases)
-          files: |
-            out/*.xlsx
-            recordings/*.mp4
-            recordings/*.ts
-          fail_on_unmatched_files: false
-          make_latest: false
-
-      - name: Update release rekap 3 bulan (selalu versi terbaru)
-        if: steps.run.outputs.has_report == 'true'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: rekap-${{ env.TARGET_USERNAME }}
-          name: 'Rekap 3 Bulan @${{ env.TARGET_USERNAME }}'
-          body: |
-            Rekap 90 hari terakhir @${{ env.TARGET_USERNAME }}, otomatis ditimpa tiap ada sesi live baru.
-            Update terakhir: ${{ env.SESSION_STAMP }} WIB.
-          files: out/Report_${{ env.TARGET_USERNAME }}_3_Months.xlsx
-          overwrite_files: true
-          make_latest: false
-
-      # Hapus release sesi yang lebih tua dari 90 hari (konsisten dengan histori)
-      - name: Hapus release sesi > 90 hari
-        if: steps.cfg.outputs.valid == 'true'
+      - name: Hapus release > 90 hari
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           CUTOFF="$(date -u -d "${RETENTION_DAYS} days ago" +%Y-%m-%dT%H:%M:%SZ)"
           gh release list --limit 500 --json tagName,createdAt \
-            | jq -r --arg c "$CUTOFF" '.[] | select((.tagName | startswith("live-")) and .createdAt < $c) | .tagName' \
+            | jq -r --arg c "$CUTOFF" '.[] | select(((.tagName | startswith("live-")) or (.tagName | startswith("rec-"))) and .createdAt < $c) | .tagName' \
             | while read -r TAG; do
                 [ -z "$TAG" ] && continue
                 echo "Hapus release lama: $TAG"
                 gh release delete "$TAG" --yes --cleanup-tag || true
               done
 
-      - name: Tandai gagal kalau tracker crash
-        if: steps.run.outputs.tracker_exit != '' && steps.run.outputs.tracker_exit != '0'
-        run: |
-          echo "::error::tracker.js keluar dengan kode ${{ steps.run.outputs.tracker_exit }}. Cek log [TRACKER] di atas."
-          exit 1
+      # ---------------- Deteksi live ----------------
+      - name: Deteksi live (loop)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash scripts/detector.sh
