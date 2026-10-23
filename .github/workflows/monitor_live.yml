@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -76,7 +76,7 @@ jobs:
 
       - name: Setup Python
         if: steps.cfg.outputs.valid == 'true'
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -106,7 +106,7 @@ jobs:
       # ------------------------------------------------------------------
       - name: Setup Node.js
         if: steps.live.outputs.live == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '22'
 
@@ -206,7 +206,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add data/history data/.keepalive 2>/dev/null || git add data/history
+          mkdir -p data/history
+          git add -A data/
           if git diff --cached --quiet; then
             echo "Tidak ada perubahan histori."
             exit 0
