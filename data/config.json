@@ -1,5 +1,7 @@
 {
-  "accounts": [],
+  "accounts": [
+    "deskacr"
+  ],
   "record_target": "",
   "auto_record_enabled": true
 }
