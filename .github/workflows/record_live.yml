@@ -59,13 +59,25 @@ jobs:
           streamlink --version
           ffmpeg -version | head -n 1
 
+      # Untuk jalur cadangan rekaman (scripts/stream_url.js)
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund --loglevel=error
+
       - name: Rekam live
         id: rec
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EULER_API_KEY: ${{ secrets.EULER_API_KEY }}
         run: |
           set +e
-          bash scripts/recorder.sh "$TARGET_USERNAME" recordings
+          mkdir -p recordings
+          bash scripts/recorder.sh "$TARGET_USERNAME" recordings 2>&1 | tee recordings/.recorder.log
+          echo "recorder_exit=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
           shopt -s nullglob
           FILES=(recordings/*.mp4 recordings/*.ts)
           if [ ${#FILES[@]} -gt 0 ]; then
@@ -89,3 +101,20 @@ jobs:
             recordings/*.ts
           fail_on_unmatched_files: false
           make_latest: false
+
+      - name: Laporan rekaman
+        if: always()
+        run: |
+          {
+            echo "## Rekaman @${TARGET_USERNAME}"
+            if [ "${{ steps.rec.outputs.has_files }}" = "true" ]; then
+              echo "Berhasil. File video:"
+              echo '```'; ls -lh recordings/*.mp4 recordings/*.ts 2>/dev/null; echo '```'
+            else
+              echo "**Tidak ada video yang dihasilkan** (exit recorder: ${{ steps.rec.outputs.recorder_exit }})."
+            fi
+            echo "### Log recorder"
+            echo '```'; tail -n 60 recordings/.recorder.log 2>/dev/null || echo "(log tidak ada)"; echo '```'
+            echo "### Detail error Streamlink / FFmpeg (40 baris terakhir)"
+            echo '```'; tail -n 40 recordings/.recorder_debug.log 2>/dev/null || echo "(kosong)"; echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
