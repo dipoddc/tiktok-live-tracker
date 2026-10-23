@@ -193,11 +193,19 @@ const AUTO_DETECT_KEY = 'tlt.lastAutoDetect';
 const AUTO_DETECT_GAP_MS = 3 * 60_000;     // jeda minimal antar pemicu otomatis
 const STATUS_STALE_MS = 12 * 60_000;       // status dianggap basi -> picu detector saat dashboard dibuka
 
-/** Picu detector otomatis (tanpa klik), dibatasi maks 1x per 3 menit per browser. */
+let autoDetectTimer = null;
+/** Picu detector otomatis (tanpa klik). Maks 1x per 3 menit; kalau masih dalam jeda,
+ *  pemicu ditunda (bukan dibuang) supaya perubahan terakhir pasti ikut dicek. */
 async function autoDetect(reason) {
   if (!S.token || !S.owner || !S.repo) return false;
   const last = Number(lsGet(AUTO_DETECT_KEY) || 0);
-  if (Date.now() - last < AUTO_DETECT_GAP_MS) return false;
+  const wait = AUTO_DETECT_GAP_MS - (Date.now() - last);
+  if (wait > 0) {
+    if (!autoDetectTimer) {
+      autoDetectTimer = setTimeout(() => { autoDetectTimer = null; autoDetect(`${reason} (tertunda)`); }, wait + 1000);
+    }
+    return 'deferred';
+  }
   lsSet(AUTO_DETECT_KEY, String(Date.now()));
   try {
     await gh(`${repoPath()}/actions/workflows/${DETECTOR_WORKFLOW}/dispatches`, { method: 'POST', body: { ref: await ensureDefaultBranch() } });
@@ -292,7 +300,9 @@ async function addAccount() {
   if (ok) {
     $('inNewAccount').value = '';
     const fired = await autoDetect(`tambah @${u}`);
-    toast(fired ? `@${u} ditambahkan. Detector langsung mengecek, status muncul ±1-2 menit lagi.` : `@${u} ditambahkan. Ikut dicek di putaran detector berikutnya.`, 'ok');
+    toast(fired === true ? `@${u} ditambahkan. Detector langsung mengecek, status muncul ±1-2 menit lagi.`
+      : fired === 'deferred' ? `@${u} ditambahkan. Detector dijadwalkan cek otomatis dalam ±3 menit (biarkan tab ini terbuka).`
+      : `@${u} ditambahkan. Ikut dicek di putaran detector berikutnya.`, 'ok');
     renderAll();
   }
 }
