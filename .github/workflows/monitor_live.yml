@@ -4,7 +4,7 @@ name: Monitor TikTok Live
 # lalu memicu track_live.yml (per akun) dan record_live.yml (1 akun).
 on:
   schedule:
-    - cron: '*/5 * * * *'    # menjaga detector selalu ada yang antre/jalan
+    - cron: '3-59/10 * * * *'    # menjaga detector selalu ada yang antre/jalan
   workflow_dispatch:
 
 permissions:
