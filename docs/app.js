@@ -14,7 +14,7 @@ const TZ = 'Asia/Jakarta';
 const STATUS_BRANCH = 'live-status';
 const LIVE_PREFIX = 'live-';
 const DETECTOR_WORKFLOW = 'monitor_live.yml';
-const MAX_ACCOUNTS = 10;
+const MAX_ACCOUNTS = 21;
 const USERNAME_RE = /^[a-z0-9._]{2,24}$/;
 const CHAT_KEEP = 500;
 const LS = { token: 'tlt.pat', owner: 'tlt.owner', repo: 'tlt.repo', tab: 'tlt.tab', onlySel: 'tlt.onlySelected' };
@@ -435,12 +435,14 @@ function renderHeader() {
     const limit = S.status.loop_mode ? Math.max(6 * 60_000, iv * 4) : 20 * 60_000;
     if (ageMs(S.status.updated_at) > limit) {
       warn.classList.remove('hidden');
-      $('detectorWarnText').textContent = `Detector terakhir cek ${fmtAgo(S.status.updated_at)}. Status ON/OFF mungkin tidak akurat. Cek tab Actions atau klik "Jalankan Detector" di Pengaturan.`;
+      $('detectorWarnText').textContent = S.token
+        ? `Jadwal otomatis GitHub sedang telat (cek terakhir ${fmtAgo(S.status.updated_at)}). Dashboard sudah memicu cek ulang sendiri, status diperbarui ±1-2 menit lagi.`
+        : `Cek terakhir ${fmtAgo(S.status.updated_at)}. Isi PAT di Pengaturan supaya dashboard bisa memicu cek ulang otomatis.`;
       return;
     }
   } else if (total && !S.status) {
     warn.classList.remove('hidden');
-    $('detectorWarnText').textContent = 'Detector belum pernah berjalan. Klik "Jalankan Detector" di Pengaturan, atau tunggu jadwal otomatis.';
+    $('detectorWarnText').textContent = 'Detector belum pernah berjalan. Dashboard sedang memicunya otomatis, tunggu ±1-2 menit.';
     return;
   }
   warn.classList.add('hidden');
@@ -472,7 +474,7 @@ function renderTiktokers() {
   const grid = $('accountGrid');
   grid.replaceChildren();
   if (!n) {
-    grid.append(el('p', 'text-sm text-slate-500 sm:col-span-2 lg:col-span-3', 'Belum ada akun. Tambahkan username TikTok di atas (maksimal 10).'));
+    grid.append(el('p', 'text-sm text-slate-500 sm:col-span-2 lg:col-span-3', `Belum ada akun. Tambahkan username TikTok di atas (maksimal ${MAX_ACCOUNTS}).`));
     return;
   }
   // akun live di urutan atas
@@ -767,6 +769,23 @@ function styleHeader(row) {
     c.alignment = { vertical: 'middle', horizontal: 'center', wrapText: true };
   });
 }
+/** Ambil komentar lengkap tiap sesi dari branch chats-<akun>. Return { [sessionId]: chats[] } */
+async function loadChatsFor(u, sessions) {
+  const ref = `chats-${u}`;
+  let files = [];
+  try { files = await gh(`${repoPath()}/contents/?ref=${encodeURIComponent(ref)}`); } catch (e) { if (e.status !== 404) console.warn('chats:', e.message); return {}; }
+  const names = new Set((Array.isArray(files) ? files : []).map((f) => f.name));
+  const out = {};
+  const wanted = sessions.filter((s) => names.has(`${s.id.replace(/[^a-zA-Z0-9._-]/g, '_')}.json`));
+  for (let i = 0; i < wanted.length; i += 5) {
+    await Promise.all(wanted.slice(i, i + 5).map(async (s) => {
+      const data = await readJsonOrNull(`${s.id.replace(/[^a-zA-Z0-9._-]/g, '_')}.json`, ref);
+      if (data?.chats) out[s.id] = data.chats;
+    }));
+  }
+  return out;
+}
+
 async function exportAllXlsx() {
   if (typeof ExcelJS === 'undefined') return toast('Library ExcelJS gagal dimuat (cek koneksi/CDN).', 'error');
   const u = S.histAccount;
@@ -812,10 +831,29 @@ async function exportAllXlsx() {
     ws.views = [{ state: 'frozen', ySplit: 4 }];
     ws.autoFilter = { from: { row: 4, column: 1 }, to: { row: last, column: cols.length } };
 
+    // Komentar lengkap dari branch chats-<akun>
+    btn.textContent = 'Mengambil komentar...';
+    const chatMap = await loadChatsFor(u, sessions);
+
+    const all = wb.addWorksheet(sheetName('Semua Komentar'));
+    const allCols = [['No', 7], ['Sesi (Mulai Live WIB)', 20], ['Judul Live', 30], ['Waktu Komentar (WIB)', 20], ['Username', 24], ['Nickname', 24], ['Komentar', 80]];
+    allCols.forEach(([h, w], i) => { all.getRow(1).getCell(i + 1).value = h; all.getColumn(i + 1).width = w; });
+    styleHeader(all.getRow(1));
+    let n = 0;
+    for (const s of sessions) {
+      for (const c of chatMap[s.id] || []) {
+        n += 1;
+        all.getRow(1 + n).values = [n, wibDateTime(sessionStart(s)), s.title || '', wibDateTime(c.time), c.user ? `@${c.user}` : '', c.nickname || '', c.comment];
+      }
+    }
+    if (n) all.autoFilter = { from: 'A1', to: `G${n + 1}` };
+    else all.getRow(2).getCell(1).value = 'Belum ada komentar tersimpan.';
+    all.views = [{ state: 'frozen', ySplit: 1 }];
+
     sessions.forEach((s, i) => {
       const start = wibDateTime(sessionStart(s));
       const d = wb.addWorksheet(sheetName(`#${String(i + 1).padStart(2, '0')} ${start.slice(0, 10)} ${start.slice(11, 16).replace(':', '.')}`));
-      [24, 22, 3, 6, 22, 22, 10, 3, 6, 20, 14].forEach((w, ci) => { d.getColumn(ci + 1).width = w; });
+      [24, 22, 3, 7, 20, 24, 24, 80].forEach((w, ci) => { d.getColumn(ci + 1).width = w; });
       d.getCell('A1').value = `Detail Sesi Live @${u}`;
       d.getCell('A1').font = { bold: true, size: 14 };
       const info = [['Judul Live', s.title || '-'], ['Room ID', s.room_id || '-'], ['Mulai Live (WIB)', wibDateTime(s.live_started_at) || '(tidak diketahui)'],
@@ -827,12 +865,19 @@ async function exportAllXlsx() {
       info.forEach(([k, v], idx) => { const r = d.getRow(3 + idx); r.getCell(1).value = k; r.getCell(1).font = { bold: true }; r.getCell(2).value = v; });
       const t0 = 3 + info.length + 1, th = d.getRow(t0);
       th.getCell(1).value = 'Waktu (WIB)'; th.getCell(2).value = 'Viewers';
-      th.getCell(4).value = '#'; th.getCell(5).value = 'Username'; th.getCell(6).value = 'Nickname'; th.getCell(7).value = 'Komentar';
-      th.getCell(9).value = '#'; th.getCell(10).value = 'Kata Kunci'; th.getCell(11).value = 'Jml Komentar';
+      ['No', 'Waktu (WIB)', 'Username', 'Nickname', 'Komentar'].forEach((h, k) => { th.getCell(4 + k).value = h; });
       styleHeader(th);
       (s.viewer_timeline || []).forEach((p, k) => { const r = d.getRow(t0 + 1 + k); r.getCell(1).value = wibDateTime(p.t); r.getCell(2).value = Number(p.v) || 0; });
-      (s.top_commenters || []).forEach((c, k) => { const r = d.getRow(t0 + 1 + k); r.getCell(4).value = k + 1; r.getCell(5).value = c.user; r.getCell(6).value = c.nickname || ''; r.getCell(7).value = Number(c.count) || 0; });
-      (s.top_keywords || []).forEach((w, k) => { const r = d.getRow(t0 + 1 + k); r.getCell(9).value = k + 1; r.getCell(10).value = w.word; r.getCell(11).value = Number(w.count) || 0; });
+      const chats = chatMap[s.id] || [];
+      chats.forEach((c, k) => {
+        const r = d.getRow(t0 + 1 + k);
+        r.getCell(4).value = k + 1; r.getCell(5).value = wibDateTime(c.time);
+        r.getCell(6).value = c.user ? `@${c.user}` : ''; r.getCell(7).value = c.nickname || ''; r.getCell(8).value = c.comment;
+      });
+      if (chats.length) d.autoFilter = { from: { row: t0, column: 4 }, to: { row: t0 + chats.length, column: 8 } };
+      else d.getRow(t0 + 1).getCell(4).value = (Number(s.total_comments) || 0) > 0
+        ? 'Isi komentar sesi ini tidak tersimpan (sesi sebelum fitur simpan komentar aktif).'
+        : 'Tidak ada komentar di sesi ini.';
       d.views = [{ state: 'frozen', ySplit: t0 }];
     });
 
@@ -842,7 +887,7 @@ async function exportAllXlsx() {
     a.download = `Report_${u}_3_Months.xlsx`;
     document.body.append(a); a.click();
     setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
-    toast('Rekap 3 bulan diunduh. Chat log lengkap per sesi ada di file Session_*.xlsx.', 'ok');
+    toast('Rekap 3 bulan diunduh, termasuk sheet "Semua Komentar" (isi komentar lengkap + username).', 'ok');
   } catch (e) {
     console.error(e); toast(`Export gagal: ${e.message}`, 'error');
   } finally {
@@ -949,21 +994,39 @@ async function refreshAll() {
   restartPolling();
 }
 
+/** Interval refresh menyesuaikan jumlah akun live, supaya tidak melewati limit GitHub API
+ *  (PAT: 5.000 request/jam; tanpa token: 60 request/jam). 1 putaran = 1 status + 1 per akun live. */
+function pollIntervalMs() {
+  const perPoll = 1 + S.config.accounts.filter((u) => {
+    const st = statusOf(u);
+    return st?.live || st?.tracking || snapFresh(S.live[u]) || u === S.selected;
+  }).length;
+  if (S.token) return Math.max(15_000, Math.ceil(perPoll * 1.1) * 1000);      // maks ±3.300 req/jam
+  return Math.max(120_000, perPoll * 65_000);                                // maks ±55 req/jam
+}
+
 function restartPolling() {
-  clearInterval(S.pollTimer);
-  const every = S.token ? 15_000 : 120_000;
-  $('pollInfo').textContent = `refresh tiap ${every / 1000} dtk`;
+  clearTimeout(S.pollTimer);
   let tick = 0;
-  S.pollTimer = setInterval(async () => {
-    if (document.hidden || !S.owner) return;
-    tick += 1;
-    const liveBefore = new Set(S.config.accounts.filter((u) => stateOf(u) === 'live'));
-    if (tick % 8 === 0) { try { await loadConfig(); } catch { /* abaikan */ } }
-    await pollLive();
-    // Ada live yang baru selesai -> muat ulang histori & releases setelah upload (±5 menit)
-    const ended = [...liveBefore].filter((u) => stateOf(u) !== 'live');
-    if (ended.length) setTimeout(async () => { await loadReleases(); if (S.histAccount) await loadHistory(S.histAccount); renderHistory(); renderRecord(); }, 5 * 60_000);
-  }, every);
+  const loop = async () => {
+    if (!document.hidden && S.owner) {
+      tick += 1;
+      const liveBefore = new Set(S.config.accounts.filter((u) => stateOf(u) === 'live'));
+      if (tick % 8 === 0) { try { await loadConfig(); } catch { /* abaikan */ } }
+      await pollLive();
+      // Jadwal GitHub bolong -> picu detector sendiri selama dashboard terbuka (maks 1x/3 menit)
+      if (S.config.accounts.length && (!S.status || ageMs(S.status.updated_at) > STATUS_STALE_MS)) autoDetect('status basi (polling)');
+      // Ada live yang baru selesai -> muat ulang histori & releases setelah upload (±5 menit)
+      const ended = [...liveBefore].filter((u) => stateOf(u) !== 'live');
+      if (ended.length) setTimeout(async () => { await loadReleases(); if (S.histAccount) await loadHistory(S.histAccount); renderHistory(); renderRecord(); }, 5 * 60_000);
+    }
+    const every = pollIntervalMs();
+    $('pollInfo').textContent = `refresh tiap ${Math.round(every / 1000)} dtk`;
+    S.pollTimer = setTimeout(loop, every);
+  };
+  const first = pollIntervalMs();
+  $('pollInfo').textContent = `refresh tiap ${Math.round(first / 1000)} dtk`;
+  S.pollTimer = setTimeout(loop, first);
 
   clearInterval(S.tickTimer);
   S.tickTimer = setInterval(() => {
