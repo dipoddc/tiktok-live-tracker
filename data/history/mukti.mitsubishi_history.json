@@ -1,0 +1,161 @@
+{
+  "username": "mukti.mitsubishi",
+  "retention_days": 90,
+  "updated_at": "2026-10-25T03:00:56.971Z",
+  "sessions": [
+    {
+      "id": "mukti.mitsubishi_20261025_094355",
+      "username": "mukti.mitsubishi",
+      "room_id": "7700423503320828690",
+      "title": "Promo Juni cash back puluhan jt.",
+      "live_started_at": "2026-10-25T02:16:50.000Z",
+      "tracking_started_at": "2026-10-25T02:44:08.687Z",
+      "ended_at": "2026-10-25T03:00:56.970Z",
+      "duration_sec": 2647,
+      "tracked_duration_sec": 1008,
+      "end_reason": "stream_end",
+      "peak_viewers": 1,
+      "peak_viewers_at": "2026-10-25T02:49:05.616Z",
+      "avg_viewers": 1,
+      "total_likes": 6857,
+      "total_comments": 8,
+      "unique_commenters": 2,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-10-25T02:44:08.687Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T02:45:08.698Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T02:46:08.705Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T02:47:08.708Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T02:48:08.710Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T02:49:08.714Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-25T02:50:08.716Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-25T02:51:08.718Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-25T02:52:08.720Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-25T02:53:08.726Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T02:54:08.728Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T02:55:08.733Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T02:56:08.739Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T02:57:08.741Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T02:58:08.744Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T02:59:08.746Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T03:00:08.749Z",
+          "v": 0
+        },
+        {
+          "t": "2026-10-25T03:00:56.970Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "errendyounk",
+          "nickname": "DiL DiLLa🇹🇼",
+          "count": 6
+        },
+        {
+          "user": "mitsubishirara",
+          "nickname": "Rara Mitsu Pondok Indah",
+          "count": 2
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "jatim",
+          "count": 2
+        },
+        {
+          "word": "lumajang",
+          "count": 2
+        },
+        {
+          "word": "gambarnya",
+          "count": 1
+        },
+        {
+          "word": "ngeblur",
+          "count": 1
+        },
+        {
+          "word": "gambar",
+          "count": 1
+        },
+        {
+          "word": "template",
+          "count": 1
+        },
+        {
+          "word": "blur",
+          "count": 1
+        },
+        {
+          "word": "lokasi",
+          "count": 1
+        },
+        {
+          "word": "jauhh",
+          "count": 1
+        },
+        {
+          "word": "cabang",
+          "count": 1
+        },
+        {
+          "word": "canter",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mukti.mitsubishi_20261025_094355.xlsx",
+      "release_tag": "live-mukti.mitsubishi-20261025-094355"
+    }
+  ]
+}
