@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi.dipobkt",
   "retention_days": 90,
-  "updated_at": "2026-10-29T06:00:18.296Z",
+  "updated_at": "2026-10-29T07:54:09.627Z",
   "sessions": [
     {
       "id": "mitsubishi.dipobkt_20261028_121438",
@@ -1286,6 +1286,290 @@
       ],
       "session_report": "Session_mitsubishi.dipobkt_20261029_110740.xlsx",
       "release_tag": "live-mitsubishi.dipobkt-20261029-110740"
+    },
+    {
+      "id": "mitsubishi.dipobkt_20261029_142624",
+      "username": "mitsubishi.dipobkt",
+      "room_id": "7701979363813919495",
+      "title": "promo Rocktober",
+      "live_started_at": "2026-10-29T06:54:43.000Z",
+      "tracking_started_at": "2026-10-29T07:26:39.962Z",
+      "ended_at": "2026-10-29T07:54:09.626Z",
+      "duration_sec": 3567,
+      "tracked_duration_sec": 1650,
+      "end_reason": "stream_end",
+      "peak_viewers": 13,
+      "peak_viewers_at": "2026-10-29T07:26:43.008Z",
+      "avg_viewers": 3,
+      "total_likes": 3833,
+      "total_comments": 19,
+      "unique_commenters": 4,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-10-29T07:26:39.962Z",
+          "v": 10
+        },
+        {
+          "t": "2026-10-29T07:27:39.975Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-29T07:28:39.984Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-29T07:29:39.995Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-29T07:30:39.995Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-29T07:31:40.006Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-29T07:32:40.013Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-29T07:33:40.023Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-29T07:34:40.033Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-29T07:35:40.036Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-29T07:36:40.037Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-29T07:37:40.047Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-29T07:38:40.048Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-29T07:39:40.058Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-29T07:40:40.058Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-29T07:41:40.060Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-29T07:42:40.064Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-29T07:43:40.070Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-29T07:44:40.075Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-29T07:45:40.086Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-29T07:46:40.093Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-29T07:47:40.102Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-29T07:48:40.113Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-29T07:49:40.123Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-29T07:50:40.132Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-29T07:51:40.142Z",
+          "v": 1
+        },
+        {
+          "t": "2026-10-29T07:52:40.151Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-29T07:53:40.161Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-29T07:54:09.626Z",
+          "v": 2
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "mulefendi370",
+          "nickname": "mul💕🫰",
+          "count": 8
+        },
+        {
+          "user": "kaptenwin_",
+          "nickname": "Win_kce",
+          "count": 6
+        },
+        {
+          "user": "kusmadinata.kusma",
+          "nickname": "Kusmadinata Kusmadinata",
+          "count": 3
+        },
+        {
+          "user": "flexingtrushaha",
+          "nickname": "apakang",
+          "count": 2
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "bng",
+          "count": 15
+        },
+        {
+          "word": "pajero",
+          "count": 2
+        },
+        {
+          "word": "paking",
+          "count": 2
+        },
+        {
+          "word": "bel",
+          "count": 2
+        },
+        {
+          "word": "skitar",
+          "count": 2
+        },
+        {
+          "word": "brapo",
+          "count": 2
+        },
+        {
+          "word": "leni",
+          "count": 2
+        },
+        {
+          "word": "nyo",
+          "count": 2
+        },
+        {
+          "word": "oke",
+          "count": 2
+        },
+        {
+          "word": "wak",
+          "count": 2
+        },
+        {
+          "word": "daerah",
+          "count": 1
+        },
+        {
+          "word": "orang",
+          "count": 1
+        },
+        {
+          "word": "kisaran",
+          "count": 1
+        },
+        {
+          "word": "asahan",
+          "count": 1
+        },
+        {
+          "word": "klau",
+          "count": 1
+        },
+        {
+          "word": "berapaan",
+          "count": 1
+        },
+        {
+          "word": "bayar",
+          "count": 1
+        },
+        {
+          "word": "per",
+          "count": 1
+        },
+        {
+          "word": "bulan",
+          "count": 1
+        },
+        {
+          "word": "pertahun",
+          "count": 1
+        },
+        {
+          "word": "ganti",
+          "count": 1
+        },
+        {
+          "word": "biayanya",
+          "count": 1
+        },
+        {
+          "word": "set",
+          "count": 1
+        },
+        {
+          "word": "sma",
+          "count": 1
+        },
+        {
+          "word": "beringnya",
+          "count": 1
+        },
+        {
+          "word": "depe",
+          "count": 1
+        },
+        {
+          "word": "bara",
+          "count": 1
+        },
+        {
+          "word": "sabulan",
+          "count": 1
+        },
+        {
+          "word": "kkk",
+          "count": 1
+        },
+        {
+          "word": "dakek",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi.dipobkt_20261029_142624.xlsx",
+      "release_tag": "live-mitsubishi.dipobkt-20261029-142624"
     }
   ]
 }
