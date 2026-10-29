@@ -1,7 +1,7 @@
 {
   "username": "mitsubishiadise",
   "retention_days": 90,
-  "updated_at": "2026-10-26T08:36:59.909Z",
+  "updated_at": "2026-10-29T07:57:57.943Z",
   "sessions": [
     {
       "id": "mitsubishiadise_20261026_143433",
@@ -476,6 +476,346 @@
       ],
       "session_report": "Session_mitsubishiadise_20261026_143433.xlsx",
       "release_tag": "live-mitsubishiadise-20261026-143433"
+    },
+    {
+      "id": "mitsubishiadise_20261029_142623",
+      "username": "mitsubishiadise",
+      "room_id": "7701970176564153109",
+      "title": "MITSUBISHI DIPO AMPLAS",
+      "live_started_at": "2026-10-29T06:18:51.000Z",
+      "tracking_started_at": "2026-10-29T07:26:34.534Z",
+      "ended_at": "2026-10-29T07:57:57.941Z",
+      "duration_sec": 5947,
+      "tracked_duration_sec": 1883,
+      "end_reason": "stream_end",
+      "peak_viewers": 12,
+      "peak_viewers_at": "2026-10-29T07:34:29.327Z",
+      "avg_viewers": 6,
+      "total_likes": 5321,
+      "total_comments": 42,
+      "unique_commenters": 12,
+      "follows": 2,
+      "shares": 1,
+      "viewer_timeline": [
+        {
+          "t": "2026-10-29T07:26:34.535Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-29T07:27:34.540Z",
+          "v": 9
+        },
+        {
+          "t": "2026-10-29T07:28:34.547Z",
+          "v": 8
+        },
+        {
+          "t": "2026-10-29T07:29:34.547Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-29T07:30:34.554Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-29T07:31:34.557Z",
+          "v": 8
+        },
+        {
+          "t": "2026-10-29T07:32:34.560Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-29T07:33:34.566Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-29T07:34:34.567Z",
+          "v": 10
+        },
+        {
+          "t": "2026-10-29T07:35:34.566Z",
+          "v": 8
+        },
+        {
+          "t": "2026-10-29T07:36:34.569Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-29T07:37:34.569Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-29T07:38:34.571Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-29T07:39:34.576Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-29T07:40:34.578Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-29T07:41:34.586Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-29T07:42:34.596Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-29T07:43:34.606Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-29T07:44:34.607Z",
+          "v": 7
+        },
+        {
+          "t": "2026-10-29T07:45:34.607Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-29T07:46:34.614Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-29T07:47:34.614Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-29T07:48:34.616Z",
+          "v": 9
+        },
+        {
+          "t": "2026-10-29T07:49:34.618Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-29T07:50:34.625Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-29T07:51:34.626Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-29T07:52:34.627Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-29T07:53:34.637Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-29T07:54:34.640Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-29T07:55:34.643Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-29T07:56:34.653Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-29T07:57:34.656Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-29T07:57:57.941Z",
+          "v": 2
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "david270345",
+          "nickname": "NESCAFE LATTE☕",
+          "count": 12
+        },
+        {
+          "user": "y762274",
+          "nickname": "rendy",
+          "count": 7
+        },
+        {
+          "user": "windi.pratiwi424",
+          "nickname": "Windi Pratiwi",
+          "count": 4
+        },
+        {
+          "user": "sinaga310tvhd2",
+          "nickname": "WARUNG NAGA JAYA MEDAN",
+          "count": 4
+        },
+        {
+          "user": "freddy.simatupang7",
+          "nickname": "freddy simatupang",
+          "count": 4
+        },
+        {
+          "user": "tym27.17.25.21.3",
+          "nickname": "“PAPA GLORIA”",
+          "count": 3
+        },
+        {
+          "user": "dimaswardhana2",
+          "nickname": "Dimas Krishnawardhana 2",
+          "count": 2
+        },
+        {
+          "user": "indra.balam0",
+          "nickname": "indra",
+          "count": 2
+        },
+        {
+          "user": "b2719758",
+          "nickname": "B",
+          "count": 1
+        },
+        {
+          "user": "fazruldipoadammalik",
+          "nickname": "Fazrul Sales Mitsubishi Medan",
+          "count": 1
+        },
+        {
+          "user": "ahmadhani232",
+          "nickname": "rahmaddani2838",
+          "count": 1
+        },
+        {
+          "user": "wongedann9",
+          "nickname": "Aku Cinta Kamu",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "xpander",
+          "count": 4
+        },
+        {
+          "word": "brp",
+          "count": 4
+        },
+        {
+          "word": "bng",
+          "count": 4
+        },
+        {
+          "word": "oke",
+          "count": 3
+        },
+        {
+          "word": "kendaraan",
+          "count": 3
+        },
+        {
+          "word": "bole",
+          "count": 3
+        },
+        {
+          "word": "waktu",
+          "count": 3
+        },
+        {
+          "word": "triton",
+          "count": 3
+        },
+        {
+          "word": "sbb",
+          "count": 2
+        },
+        {
+          "word": "dimalaysia",
+          "count": 2
+        },
+        {
+          "word": "nantik",
+          "count": 2
+        },
+        {
+          "word": "30jt",
+          "count": 2
+        },
+        {
+          "word": "ambil",
+          "count": 2
+        },
+        {
+          "word": "thn",
+          "count": 2
+        },
+        {
+          "word": "diberikan",
+          "count": 2
+        },
+        {
+          "word": "seat",
+          "count": 2
+        },
+        {
+          "word": "spil",
+          "count": 2
+        },
+        {
+          "word": "oky",
+          "count": 2
+        },
+        {
+          "word": "hdx",
+          "count": 2
+        },
+        {
+          "word": "mobil",
+          "count": 2
+        },
+        {
+          "word": "gls",
+          "count": 2
+        },
+        {
+          "word": "juta",
+          "count": 2
+        },
+        {
+          "word": "masik",
+          "count": 1
+        },
+        {
+          "word": "single",
+          "count": 1
+        },
+        {
+          "word": "credit",
+          "count": 1
+        },
+        {
+          "word": "maaf",
+          "count": 1
+        },
+        {
+          "word": "tnyk²",
+          "count": 1
+        },
+        {
+          "word": "dlu",
+          "count": 1
+        },
+        {
+          "word": "sim",
+          "count": 1
+        },
+        {
+          "word": "terlalu",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishiadise_20261029_142623.xlsx",
+      "release_tag": "live-mitsubishiadise-20261029-142623"
     }
   ]
 }
