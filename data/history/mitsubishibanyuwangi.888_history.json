@@ -1,7 +1,7 @@
 {
   "username": "mitsubishibanyuwangi.888",
   "retention_days": 90,
-  "updated_at": "2026-10-30T01:00:16.453Z",
+  "updated_at": "2026-10-30T12:00:21.769Z",
   "sessions": [
     {
       "id": "mitsubishibanyuwangi.888_20261023_184533",
@@ -3838,6 +3838,187 @@
       ],
       "session_report": "Session_mitsubishibanyuwangi.888_20261030_065546.xlsx",
       "release_tag": "live-mitsubishibanyuwangi.888-20261030-065546"
+    },
+    {
+      "id": "mitsubishibanyuwangi.888_20261030_184057",
+      "username": "mitsubishibanyuwangi.888",
+      "room_id": "7702415391439489800",
+      "title": "Promo Mitsubishi O813 53357323",
+      "live_started_at": "2026-10-30T11:05:55.000Z",
+      "tracking_started_at": "2026-10-30T11:41:07.906Z",
+      "ended_at": "2026-10-30T12:00:21.767Z",
+      "duration_sec": 3267,
+      "tracked_duration_sec": 1154,
+      "end_reason": "stream_end",
+      "peak_viewers": 11,
+      "peak_viewers_at": "2026-10-30T11:44:10.385Z",
+      "avg_viewers": 4,
+      "total_likes": 3352,
+      "total_comments": 6,
+      "unique_commenters": 5,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-10-30T11:41:07.906Z",
+          "v": 6
+        },
+        {
+          "t": "2026-10-30T11:42:07.912Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-30T11:43:07.914Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-30T11:44:07.914Z",
+          "v": 10
+        },
+        {
+          "t": "2026-10-30T11:45:07.917Z",
+          "v": 8
+        },
+        {
+          "t": "2026-10-30T11:46:07.918Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-30T11:47:07.922Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-30T11:48:07.923Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-30T11:49:07.924Z",
+          "v": 2
+        },
+        {
+          "t": "2026-10-30T11:50:07.927Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-30T11:51:07.928Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-30T11:52:07.931Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-30T11:53:07.931Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-30T11:54:07.932Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-30T11:55:07.936Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-30T11:56:07.936Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-30T11:57:07.938Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-30T11:58:07.941Z",
+          "v": 3
+        },
+        {
+          "t": "2026-10-30T11:59:07.942Z",
+          "v": 4
+        },
+        {
+          "t": "2026-10-30T12:00:07.944Z",
+          "v": 5
+        },
+        {
+          "t": "2026-10-30T12:00:21.767Z",
+          "v": 5
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "geminiii46",
+          "nickname": "Belda Rochmania",
+          "count": 2
+        },
+        {
+          "user": "mhdramon06",
+          "nickname": "R@MON",
+          "count": 1
+        },
+        {
+          "user": "butterflyy4813",
+          "nickname": "🦋",
+          "count": 1
+        },
+        {
+          "user": "ags_786",
+          "nickname": "Agus",
+          "count": 1
+        },
+        {
+          "user": "mdps2412",
+          "nickname": "AllGood",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "xpander",
+          "count": 3
+        },
+        {
+          "word": "brp",
+          "count": 3
+        },
+        {
+          "word": "cross",
+          "count": 2
+        },
+        {
+          "word": "tahun",
+          "count": 1
+        },
+        {
+          "word": "gls",
+          "count": 1
+        },
+        {
+          "word": "cvt",
+          "count": 1
+        },
+        {
+          "word": "ultimate",
+          "count": 1
+        },
+        {
+          "word": "liat",
+          "count": 1
+        },
+        {
+          "word": "dalamnya",
+          "count": 1
+        },
+        {
+          "word": "xforce",
+          "count": 1
+        },
+        {
+          "word": "otr",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishibanyuwangi.888_20261030_184057.xlsx",
+      "release_tag": "live-mitsubishibanyuwangi.888-20261030-184057"
     }
   ]
 }
