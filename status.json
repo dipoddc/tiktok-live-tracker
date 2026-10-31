@@ -1,0 +1,164 @@
+{
+  "updated_at": "2026-10-31T20:44:43Z",
+  "next_check_at": "2026-10-31T20:46:06Z",
+  "sweep_interval_sec": 90,
+  "loop_mode": false,
+  "record_target": "",
+  "auto_record_enabled": false,
+  "accounts": {
+    "mitsubishiadise": {
+      "username": "mitsubishiadise",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    },
+    "ariandiposmaminn": {
+      "username": "ariandiposmaminn",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    },
+    "juraganmitsubishijkt": {
+      "username": "juraganmitsubishijkt",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    },
+    "rakanmitsubishiaceh": {
+      "username": "rakanmitsubishiaceh",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    },
+    "atikhamitsubishi": {
+      "username": "atikhamitsubishi",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    },
+    "bakulpajero": {
+      "username": "bakulpajero",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    },
+    "mukti.mitsubishi": {
+      "username": "mukti.mitsubishi",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "connector"
+    },
+    "amelia.dipomdn": {
+      "username": "amelia.dipomdn",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    },
+    "mitsubishidipocideng": {
+      "username": "mitsubishidipocideng",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    },
+    "mitsubishi.dipobkt": {
+      "username": "mitsubishi.dipobkt",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "connector"
+    },
+    "surya_mitsubishi5": {
+      "username": "surya_mitsubishi5",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    },
+    "mitsubishibanyuwangi.888": {
+      "username": "mitsubishibanyuwangi.888",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    },
+    "mitsubishi_sidempuan_de2": {
+      "username": "mitsubishi_sidempuan_de2",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    },
+    "rendimitsubishiserang": {
+      "username": "rendimitsubishiserang",
+      "live": false,
+      "state": "offline",
+      "error": null,
+      "checked_at": "2026-10-31T20:44:43Z",
+      "live_since": null,
+      "tracking": false,
+      "recording": false,
+      "source": "streamlink"
+    }
+  }
+}
