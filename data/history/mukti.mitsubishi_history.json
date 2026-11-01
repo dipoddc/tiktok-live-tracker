@@ -1,7 +1,7 @@
 {
   "username": "mukti.mitsubishi",
   "retention_days": 90,
-  "updated_at": "2026-10-26T08:19:54.394Z",
+  "updated_at": "2026-11-01T02:18:17.460Z",
   "sessions": [
     {
       "id": "mukti.mitsubishi_20261025_094355",
@@ -500,6 +500,59 @@
       ],
       "session_report": "Session_mukti.mitsubishi_20261026_143434.xlsx",
       "release_tag": "live-mukti.mitsubishi-20261026-143434"
+    },
+    {
+      "id": "mukti.mitsubishi_20261101_091530",
+      "username": "mukti.mitsubishi",
+      "room_id": "7703020353425083154",
+      "title": "Promo Juni cash back puluhan jt.",
+      "live_started_at": "2026-11-01T02:13:37.000Z",
+      "tracking_started_at": "2026-11-01T02:15:43.375Z",
+      "ended_at": "2026-11-01T02:18:17.459Z",
+      "duration_sec": 280,
+      "tracked_duration_sec": 154,
+      "end_reason": "stream_end",
+      "peak_viewers": 2,
+      "peak_viewers_at": "2026-11-01T02:17:05.453Z",
+      "avg_viewers": 1,
+      "total_likes": 0,
+      "total_comments": 1,
+      "unique_commenters": 1,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-01T02:15:43.375Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-01T02:16:43.391Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-01T02:17:43.393Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-01T02:18:17.459Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "adinda.sri37",
+          "nickname": "Adinda",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "aamiin",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mukti.mitsubishi_20261101_091530.xlsx",
+      "release_tag": "live-mukti.mitsubishi-20261101-091530"
     }
   ]
 }
