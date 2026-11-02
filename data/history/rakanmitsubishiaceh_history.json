@@ -1,7 +1,7 @@
 {
   "username": "rakanmitsubishiaceh",
   "retention_days": 90,
-  "updated_at": "2026-11-01T11:16:12.371Z",
+  "updated_at": "2026-11-02T11:21:38.960Z",
   "sessions": [
     {
       "id": "rakanmitsubishiaceh_20261024_162537",
@@ -2500,6 +2500,366 @@
       ],
       "session_report": "Session_rakanmitsubishiaceh_20261101_172434.xlsx",
       "release_tag": "live-rakanmitsubishiaceh-20261101-172434"
+    },
+    {
+      "id": "rakanmitsubishiaceh_20261102_175502",
+      "username": "rakanmitsubishiaceh",
+      "room_id": "7703521522628741909",
+      "title": "Promo Mitsubishi Aceh",
+      "live_started_at": "2026-11-02T10:38:50.000Z",
+      "tracking_started_at": "2026-11-02T10:55:14.358Z",
+      "ended_at": "2026-11-02T11:21:38.958Z",
+      "duration_sec": 2569,
+      "tracked_duration_sec": 1585,
+      "end_reason": "stream_end",
+      "peak_viewers": 15,
+      "peak_viewers_at": "2026-11-02T10:55:26.766Z",
+      "avg_viewers": 8,
+      "total_likes": 25,
+      "total_comments": 45,
+      "unique_commenters": 22,
+      "follows": 2,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-02T10:55:14.359Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-02T10:56:14.366Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-02T10:57:14.369Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-02T10:58:14.370Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-02T10:59:14.371Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-02T11:00:14.373Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-02T11:01:14.374Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-02T11:02:14.374Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-02T11:03:14.376Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-02T11:04:14.377Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-02T11:05:14.378Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-02T11:06:14.380Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-02T11:07:14.381Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-02T11:08:14.384Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-02T11:09:14.386Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-02T11:10:14.387Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-02T11:11:14.388Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-02T11:12:14.390Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-02T11:13:14.391Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-02T11:14:14.392Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-02T11:15:14.394Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-02T11:16:14.395Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-02T11:17:14.396Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-02T11:18:14.398Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-02T11:19:14.399Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-02T11:20:14.401Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-02T11:21:14.402Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-02T11:21:38.958Z",
+          "v": 3
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "tuahgioknagan",
+          "nickname": "Gamstone aceh",
+          "count": 6
+        },
+        {
+          "user": "abdmoses",
+          "nickname": "Julio Ramses",
+          "count": 5
+        },
+        {
+          "user": "ayahalara",
+          "nickname": "Om Alara",
+          "count": 4
+        },
+        {
+          "user": "user151729858",
+          "nickname": "Tik Toker",
+          "count": 3
+        },
+        {
+          "user": "nb14z204s",
+          "nickname": "Zull",
+          "count": 3
+        },
+        {
+          "user": "ekaernija1",
+          "nickname": "ekaernija1",
+          "count": 2
+        },
+        {
+          "user": "tuanmuda1305",
+          "nickname": "RAJA 亗 IPUL",
+          "count": 2
+        },
+        {
+          "user": "jamalabsaf",
+          "nickname": "Jamal",
+          "count": 2
+        },
+        {
+          "user": "cundda",
+          "nickname": "ܔܛܔܔ",
+          "count": 2
+        },
+        {
+          "user": "the.smurfs24",
+          "nickname": "THE SMURFs",
+          "count": 2
+        },
+        {
+          "user": "muhajjir65",
+          "nickname": "Muhajjir",
+          "count": 2
+        },
+        {
+          "user": "oppoa766",
+          "nickname": "Scaffolding Nagan Raya1",
+          "count": 2
+        },
+        {
+          "user": "en_antok37",
+          "nickname": "Anto",
+          "count": 1
+        },
+        {
+          "user": "r.maverick17",
+          "nickname": "R.maverick",
+          "count": 1
+        },
+        {
+          "user": "nagaya45",
+          "nickname": "Nagaya",
+          "count": 1
+        },
+        {
+          "user": "kari081313237771",
+          "nickname": "kari7771",
+          "count": 1
+        },
+        {
+          "user": "cekpon5191",
+          "nickname": ".CEK PON.",
+          "count": 1
+        },
+        {
+          "user": "fahrizhasan",
+          "nickname": "fahrizhasan",
+          "count": 1
+        },
+        {
+          "user": "nulainaputri",
+          "nickname": "putri",
+          "count": 1
+        },
+        {
+          "user": "shahibulbayan",
+          "nickname": "🛩🛩💘sale balap💕🛩🛩",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "pajero",
+          "count": 7
+        },
+        {
+          "word": "angsuran",
+          "count": 7
+        },
+        {
+          "word": "padum",
+          "count": 7
+        },
+        {
+          "word": "brp",
+          "count": 4
+        },
+        {
+          "word": "bng",
+          "count": 4
+        },
+        {
+          "word": "destinator",
+          "count": 4
+        },
+        {
+          "word": "cros",
+          "count": 4
+        },
+        {
+          "word": "l300",
+          "count": 3
+        },
+        {
+          "word": "thn",
+          "count": 3
+        },
+        {
+          "word": "ultimate",
+          "count": 3
+        },
+        {
+          "word": "baru",
+          "count": 3
+        },
+        {
+          "word": "xpander",
+          "count": 3
+        },
+        {
+          "word": "cash",
+          "count": 3
+        },
+        {
+          "word": "bln",
+          "count": 2
+        },
+        {
+          "word": "dakar",
+          "count": 2
+        },
+        {
+          "word": "cicilan",
+          "count": 2
+        },
+        {
+          "word": "kredit",
+          "count": 2
+        },
+        {
+          "word": "pesan",
+          "count": 2
+        },
+        {
+          "word": "klau",
+          "count": 2
+        },
+        {
+          "word": "survei",
+          "count": 2
+        },
+        {
+          "word": "unit",
+          "count": 2
+        },
+        {
+          "word": "canter",
+          "count": 2
+        },
+        {
+          "word": "jih",
+          "count": 2
+        },
+        {
+          "word": "expender",
+          "count": 2
+        },
+        {
+          "word": "kiban",
+          "count": 2
+        },
+        {
+          "word": "peu",
+          "count": 2
+        },
+        {
+          "word": "bulanan",
+          "count": 1
+        },
+        {
+          "word": "brapa",
+          "count": 1
+        },
+        {
+          "word": "tanks",
+          "count": 1
+        },
+        {
+          "word": "komen",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_rakanmitsubishiaceh_20261102_175502.xlsx",
+      "release_tag": "live-rakanmitsubishiaceh-20261102-175502"
     }
   ]
 }
