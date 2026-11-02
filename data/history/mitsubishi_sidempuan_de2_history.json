@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-10-31T10:57:56.595Z",
+  "updated_at": "2026-11-02T01:47:29.134Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -597,6 +597,134 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261031_174433.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261031-174433"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261102_084235",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7703382496259492609",
+      "title": "Tanya produck mitsubishi donk",
+      "live_started_at": "2026-11-02T01:38:48.000Z",
+      "tracking_started_at": "2026-11-02T01:42:48.779Z",
+      "ended_at": "2026-11-02T01:47:29.132Z",
+      "duration_sec": 521,
+      "tracked_duration_sec": 280,
+      "end_reason": "stream_end",
+      "peak_viewers": 6,
+      "peak_viewers_at": "2026-11-02T01:43:23.209Z",
+      "avg_viewers": 3,
+      "total_likes": 1140,
+      "total_comments": 6,
+      "unique_commenters": 4,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-02T01:42:48.779Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-02T01:43:48.785Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-02T01:44:48.796Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-02T01:45:48.800Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-02T01:46:48.801Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-02T01:47:29.132Z",
+          "v": 2
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "galaxysamsunga52",
+          "nickname": "regar Sena persada",
+          "count": 2
+        },
+        {
+          "user": "tuek060",
+          "nickname": "tuek",
+          "count": 2
+        },
+        {
+          "user": "nadila5793",
+          "nickname": "Nadd",
+          "count": 1
+        },
+        {
+          "user": "andry.nusi118",
+          "nickname": "andry",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "sehatdo",
+          "count": 2
+        },
+        {
+          "word": "orang",
+          "count": 1
+        },
+        {
+          "word": "mna",
+          "count": 1
+        },
+        {
+          "word": "cntik",
+          "count": 1
+        },
+        {
+          "word": "asalamualaikum",
+          "count": 1
+        },
+        {
+          "word": "mabia",
+          "count": 1
+        },
+        {
+          "word": "kabarna",
+          "count": 1
+        },
+        {
+          "word": "aude",
+          "count": 1
+        },
+        {
+          "word": "thumb",
+          "count": 1
+        },
+        {
+          "word": "sena",
+          "count": 1
+        },
+        {
+          "word": "persada",
+          "count": 1
+        },
+        {
+          "word": "sude",
+          "count": 1
+        },
+        {
+          "word": "l300",
+          "count": 1
+        },
+        {
+          "word": "long",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261102_084235.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261102-084235"
     }
   ]
 }
