@@ -1,7 +1,7 @@
 {
   "username": "mitsubishibanyuwangi.888",
   "retention_days": 90,
-  "updated_at": "2026-11-03T01:01:44.877Z",
+  "updated_at": "2026-11-03T13:05:07.352Z",
   "sessions": [
     {
       "id": "mitsubishibanyuwangi.888_20261023_184533",
@@ -6055,6 +6055,405 @@
       ],
       "session_report": "Session_mitsubishibanyuwangi.888_20261103_065352.xlsx",
       "release_tag": "live-mitsubishibanyuwangi.888-20261103-065352"
+    },
+    {
+      "id": "mitsubishibanyuwangi.888_20261103_192233",
+      "username": "mitsubishibanyuwangi.888",
+      "room_id": "7703914485064551176",
+      "title": "Promo Mitsubishi O813 53357323",
+      "live_started_at": "2026-11-03T12:03:31.000Z",
+      "tracking_started_at": "2026-11-03T12:22:47.184Z",
+      "ended_at": "2026-11-03T13:05:07.350Z",
+      "duration_sec": 3696,
+      "tracked_duration_sec": 2540,
+      "end_reason": "stream_end",
+      "peak_viewers": 16,
+      "peak_viewers_at": "2026-11-03T12:23:45.187Z",
+      "avg_viewers": 7,
+      "total_likes": 3140,
+      "total_comments": 28,
+      "unique_commenters": 15,
+      "follows": 1,
+      "shares": 6,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-03T12:22:47.185Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-03T12:23:47.189Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-03T12:24:47.191Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-03T12:25:47.192Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-03T12:26:47.193Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-03T12:27:47.194Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-03T12:28:47.197Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-03T12:29:47.198Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-03T12:30:47.199Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-03T12:31:47.200Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-03T12:32:47.208Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-03T12:33:47.210Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-03T12:34:47.212Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-03T12:35:47.213Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-03T12:36:47.214Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-03T12:37:47.216Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-03T12:38:47.216Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-03T12:39:47.220Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-03T12:40:47.221Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-03T12:41:47.222Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-03T12:42:47.227Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-03T12:43:47.231Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-03T12:44:47.232Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-03T12:45:47.232Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-03T12:46:47.242Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-03T12:47:47.243Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-03T12:48:47.249Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-03T12:49:47.253Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-03T12:50:47.256Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-03T12:51:47.257Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-03T12:52:47.262Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-03T12:53:47.263Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-03T12:54:47.269Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-03T12:55:47.272Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-03T12:56:47.275Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-03T12:57:47.275Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-03T12:58:47.283Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-03T12:59:47.285Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-03T13:00:47.291Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-03T13:01:47.296Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-03T13:02:47.297Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-03T13:03:47.299Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-03T13:04:47.299Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-03T13:05:07.350Z",
+          "v": 3
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "boswl2467ww3",
+          "nickname": "wl2467",
+          "count": 5
+        },
+        {
+          "user": "rmly.rmly",
+          "nickname": "H M R@mly R@mly",
+          "count": 3
+        },
+        {
+          "user": "handicrafts_bali",
+          "nickname": "Handicrafts_bali",
+          "count": 3
+        },
+        {
+          "user": "user3280826109972",
+          "nickname": "....",
+          "count": 2
+        },
+        {
+          "user": "aroby098",
+          "nickname": "Divya Aprilia",
+          "count": 2
+        },
+        {
+          "user": "yuyunjohanwicaksa",
+          "nickname": "YuyunJohan_Mitsubishi Madiun",
+          "count": 2
+        },
+        {
+          "user": "papi_susanti_",
+          "nickname": "SuSan❤️‍🔥🫣",
+          "count": 2
+        },
+        {
+          "user": "izamjaya",
+          "nickname": "mat dula 561",
+          "count": 2
+        },
+        {
+          "user": "suliani.bundane.a",
+          "nickname": "Suliani Bundane Armada",
+          "count": 1
+        },
+        {
+          "user": "ahmad.bukhori659",
+          "nickname": "Ahmad Bukhori",
+          "count": 1
+        },
+        {
+          "user": "user9624096857959",
+          "nickname": "ARJ",
+          "count": 1
+        },
+        {
+          "user": "abygobal086",
+          "nickname": "aby gobal #186❌❌⭕",
+          "count": 1
+        },
+        {
+          "user": "zaizainal2",
+          "nickname": "zai zainal",
+          "count": 1
+        },
+        {
+          "user": "darti.bwi7",
+          "nickname": "Darti Bwi",
+          "count": 1
+        },
+        {
+          "user": "whimakusuma1990",
+          "nickname": "whima kusuma",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "l300",
+          "count": 3
+        },
+        {
+          "word": "brp",
+          "count": 3
+        },
+        {
+          "word": "pingin",
+          "count": 3
+        },
+        {
+          "word": "bak",
+          "count": 2
+        },
+        {
+          "word": "cash",
+          "count": 2
+        },
+        {
+          "word": "tempo",
+          "count": 2
+        },
+        {
+          "word": "rini",
+          "count": 2
+        },
+        {
+          "word": "baru",
+          "count": 2
+        },
+        {
+          "word": "mbk",
+          "count": 2
+        },
+        {
+          "word": "beli",
+          "count": 2
+        },
+        {
+          "word": "pajero",
+          "count": 1
+        },
+        {
+          "word": "tipe",
+          "count": 1
+        },
+        {
+          "word": "harga",
+          "count": 1
+        },
+        {
+          "word": "dibawah",
+          "count": 1
+        },
+        {
+          "word": "pripon",
+          "count": 1
+        },
+        {
+          "word": "kbre",
+          "count": 1
+        },
+        {
+          "word": "assalamu",
+          "count": 1
+        },
+        {
+          "word": "alaikum",
+          "count": 1
+        },
+        {
+          "word": "10thn",
+          "count": 1
+        },
+        {
+          "word": "asal",
+          "count": 1
+        },
+        {
+          "word": "jangan",
+          "count": 1
+        },
+        {
+          "word": "tamba",
+          "count": 1
+        },
+        {
+          "word": "tukar",
+          "count": 1
+        },
+        {
+          "word": "klok",
+          "count": 1
+        },
+        {
+          "word": "cclan",
+          "count": 1
+        },
+        {
+          "word": "force",
+          "count": 1
+        },
+        {
+          "word": "hybrid",
+          "count": 1
+        },
+        {
+          "word": "berepa",
+          "count": 1
+        },
+        {
+          "word": "inden",
+          "count": 1
+        },
+        {
+          "word": "klo",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishibanyuwangi.888_20261103_192233.xlsx",
+      "release_tag": "live-mitsubishibanyuwangi.888-20261103-192233"
     }
   ]
 }
