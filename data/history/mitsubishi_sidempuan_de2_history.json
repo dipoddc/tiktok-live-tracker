@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-11-02T01:47:29.134Z",
+  "updated_at": "2026-11-03T05:51:29.672Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -725,6 +725,267 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261102_084235.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261102-084235"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261103_122649",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7703802721930119988",
+      "title": "Tanya produck mitsubishi donk",
+      "live_started_at": "2026-11-03T04:49:25.000Z",
+      "tracking_started_at": "2026-11-03T05:27:01.421Z",
+      "ended_at": "2026-11-03T05:51:29.671Z",
+      "duration_sec": 3725,
+      "tracked_duration_sec": 1468,
+      "end_reason": "stream_end",
+      "peak_viewers": 3,
+      "peak_viewers_at": "2026-11-03T05:30:51.070Z",
+      "avg_viewers": 1,
+      "total_likes": 67,
+      "total_comments": 17,
+      "unique_commenters": 5,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-03T05:27:01.422Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:28:01.433Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-03T05:29:01.442Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:30:01.453Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:31:01.455Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:32:01.457Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:33:01.458Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-03T05:34:01.468Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-03T05:35:01.469Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-03T05:36:01.471Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-03T05:37:01.476Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:38:01.479Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-03T05:39:01.479Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:40:01.482Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-03T05:41:01.493Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:42:01.503Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:43:01.513Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:44:01.514Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:45:01.525Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:46:01.528Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-03T05:47:01.538Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:48:01.544Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-03T05:49:01.545Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-03T05:50:01.555Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-03T05:51:01.557Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-03T05:51:29.671Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "mudahalomoansiregar",
+          "nickname": "MUDA DAIHATSU PADANGSIDIMPUAN",
+          "count": 7
+        },
+        {
+          "user": "frankyjuntakjunta",
+          "nickname": "pak Arkhan smnjtk htb16",
+          "count": 4
+        },
+        {
+          "user": "zainal09224",
+          "nickname": "zainal",
+          "count": 4
+        },
+        {
+          "user": "89kamza",
+          "nickname": "KAmza HRp",
+          "count": 1
+        },
+        {
+          "user": "ghibrans_0",
+          "nickname": ".....",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "minim",
+          "count": 2
+        },
+        {
+          "word": "sadia",
+          "count": 2
+        },
+        {
+          "word": "thn",
+          "count": 1
+        },
+        {
+          "word": "damtruk",
+          "count": 1
+        },
+        {
+          "word": "brapa",
+          "count": 1
+        },
+        {
+          "word": "kordinasi",
+          "count": 1
+        },
+        {
+          "word": "jolo",
+          "count": 1
+        },
+        {
+          "word": "dohot",
+          "count": 1
+        },
+        {
+          "word": "alak",
+          "count": 1
+        },
+        {
+          "word": "bagas",
+          "count": 1
+        },
+        {
+          "word": "insyaallah",
+          "count": 1
+        },
+        {
+          "word": "muda",
+          "count": 1
+        },
+        {
+          "word": "rasokina",
+          "count": 1
+        },
+        {
+          "word": "single",
+          "count": 1
+        },
+        {
+          "word": "cabin",
+          "count": 1
+        },
+        {
+          "word": "lokasi",
+          "count": 1
+        },
+        {
+          "word": "aceh",
+          "count": 1
+        },
+        {
+          "word": "kayak",
+          "count": 1
+        },
+        {
+          "word": "kenal",
+          "count": 1
+        },
+        {
+          "word": "kirain",
+          "count": 1
+        },
+        {
+          "word": "besok",
+          "count": 1
+        },
+        {
+          "word": "kampas",
+          "count": 1
+        },
+        {
+          "word": "wkwkkw",
+          "count": 1
+        },
+        {
+          "word": "ping",
+          "count": 1
+        },
+        {
+          "word": "vivi",
+          "count": 1
+        },
+        {
+          "word": "canter",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261103_122649.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261103-122649"
     }
   ]
 }
