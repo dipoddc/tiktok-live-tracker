@@ -1,7 +1,7 @@
 {
   "username": "rendimitsubishiserang",
   "retention_days": 90,
-  "updated_at": "2026-11-04T06:05:12.499Z",
+  "updated_at": "2026-11-04T06:55:27.149Z",
   "sessions": [
     {
       "id": "rendimitsubishiserang_20261029_231919",
@@ -1487,6 +1487,287 @@
       ],
       "session_report": "Session_rendimitsubishiserang_20261104_123820.xlsx",
       "release_tag": "live-rendimitsubishiserang-20261104-123820"
+    },
+    {
+      "id": "rendimitsubishiserang_20261104_133928",
+      "username": "rendimitsubishiserang",
+      "room_id": "7704194879429757716",
+      "title": "",
+      "live_started_at": "2026-11-04T06:11:57.000Z",
+      "tracking_started_at": "2026-11-04T06:39:45.825Z",
+      "ended_at": "2026-11-04T06:55:27.147Z",
+      "duration_sec": 2610,
+      "tracked_duration_sec": 941,
+      "end_reason": "stream_end",
+      "peak_viewers": 8,
+      "peak_viewers_at": "2026-11-04T06:42:42.423Z",
+      "avg_viewers": 4,
+      "total_likes": 1379,
+      "total_comments": 26,
+      "unique_commenters": 13,
+      "follows": 1,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-04T06:39:45.826Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-04T06:40:45.832Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T06:41:45.834Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-04T06:42:45.835Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-04T06:43:45.838Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T06:44:45.848Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T06:45:45.854Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-04T06:46:45.864Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-04T06:47:45.866Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T06:48:45.867Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T06:49:45.869Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-04T06:50:45.872Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T06:51:45.882Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T06:52:45.883Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-04T06:53:45.886Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-04T06:54:45.890Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-04T06:55:27.147Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "eddyrukmana971",
+          "nickname": "eddyrukmana971",
+          "count": 6
+        },
+        {
+          "user": "i2nnnnnn",
+          "nickname": "i2nnnnnn",
+          "count": 4
+        },
+        {
+          "user": "cya_609",
+          "nickname": "亲爱的",
+          "count": 3
+        },
+        {
+          "user": "yasmansuwandi86",
+          "nickname": "Yasman Suwandi807",
+          "count": 2
+        },
+        {
+          "user": "yuszgrtw3ro",
+          "nickname": "goodman",
+          "count": 2
+        },
+        {
+          "user": "mitsubishidipobanten",
+          "nickname": "Yudha Mitsubishi Serang",
+          "count": 2
+        },
+        {
+          "user": "editama36",
+          "nickname": "Edy Cuy",
+          "count": 1
+        },
+        {
+          "user": "black.mamba8427",
+          "nickname": "SOKD",
+          "count": 1
+        },
+        {
+          "user": "wiwinahyadi",
+          "nickname": "Ratuwiwin🌙",
+          "count": 1
+        },
+        {
+          "user": "icha.mrl",
+          "nickname": "meteor01",
+          "count": 1
+        },
+        {
+          "user": "zubir2612",
+          "nickname": "zubir",
+          "count": 1
+        },
+        {
+          "user": "onihmitsubishi",
+          "nickname": "Onih_Mitsubishi Banten",
+          "count": 1
+        },
+        {
+          "user": "aming.hamim",
+          "nickname": "Aming Hamim",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "brp",
+          "count": 7
+        },
+        {
+          "word": "cross",
+          "count": 2
+        },
+        {
+          "word": "kena",
+          "count": 2
+        },
+        {
+          "word": "otr",
+          "count": 1
+        },
+        {
+          "word": "potong",
+          "count": 1
+        },
+        {
+          "word": "ces",
+          "count": 1
+        },
+        {
+          "word": "bek",
+          "count": 1
+        },
+        {
+          "word": "cirebon",
+          "count": 1
+        },
+        {
+          "word": "force",
+          "count": 1
+        },
+        {
+          "word": "hbrt",
+          "count": 1
+        },
+        {
+          "word": "clgn",
+          "count": 1
+        },
+        {
+          "word": "destinator",
+          "count": 1
+        },
+        {
+          "word": "putih",
+          "count": 1
+        },
+        {
+          "word": "hitam",
+          "count": 1
+        },
+        {
+          "word": "harga",
+          "count": 1
+        },
+        {
+          "word": "ngk",
+          "count": 1
+        },
+        {
+          "word": "angsuran",
+          "count": 1
+        },
+        {
+          "word": "fortune",
+          "count": 1
+        },
+        {
+          "word": "dealer",
+          "count": 1
+        },
+        {
+          "word": "xpander",
+          "count": 1
+        },
+        {
+          "word": "亲爱的",
+          "count": 1
+        },
+        {
+          "word": "mitsubishi",
+          "count": 1
+        },
+        {
+          "word": "coba",
+          "count": 1
+        },
+        {
+          "word": "bukan",
+          "count": 1
+        },
+        {
+          "word": "toyota",
+          "count": 1
+        },
+        {
+          "word": "kacau",
+          "count": 1
+        },
+        {
+          "word": "pajero",
+          "count": 1
+        },
+        {
+          "word": "dakar",
+          "count": 1
+        },
+        {
+          "word": "2x4",
+          "count": 1
+        },
+        {
+          "word": "klo",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_rendimitsubishiserang_20261104_133928.xlsx",
+      "release_tag": "live-rendimitsubishiserang-20261104-133928"
     }
   ]
 }
