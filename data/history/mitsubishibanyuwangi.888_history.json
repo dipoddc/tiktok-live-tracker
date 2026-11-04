@@ -1,7 +1,7 @@
 {
   "username": "mitsubishibanyuwangi.888",
   "retention_days": 90,
-  "updated_at": "2026-11-04T01:08:16.500Z",
+  "updated_at": "2026-11-04T04:03:34.347Z",
   "sessions": [
     {
       "id": "mitsubishibanyuwangi.888_20261023_184533",
@@ -6880,6 +6880,127 @@
       ],
       "session_report": "Session_mitsubishibanyuwangi.888_20261104_070741.xlsx",
       "release_tag": "live-mitsubishibanyuwangi.888-20261104-070741"
+    },
+    {
+      "id": "mitsubishibanyuwangi.888_20261104_104837",
+      "username": "mitsubishibanyuwangi.888",
+      "room_id": "7704155347518524168",
+      "title": "Promo Mitsubishi O813 53357323",
+      "live_started_at": "2026-11-04T03:38:15.000Z",
+      "tracking_started_at": "2026-11-04T03:48:58.885Z",
+      "ended_at": "2026-11-04T04:03:34.345Z",
+      "duration_sec": 1519,
+      "tracked_duration_sec": 875,
+      "end_reason": "stream_end",
+      "peak_viewers": 5,
+      "peak_viewers_at": "2026-11-04T03:49:21.726Z",
+      "avg_viewers": 3,
+      "total_likes": 1655,
+      "total_comments": 2,
+      "unique_commenters": 1,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-04T03:48:58.885Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T03:49:58.893Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T03:50:58.893Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-04T03:51:58.898Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T03:52:58.906Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-04T03:53:58.909Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-04T03:54:58.910Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-04T03:55:58.911Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T03:56:58.914Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T03:57:58.922Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T03:58:58.924Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T03:59:58.932Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T04:00:58.940Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T04:01:58.946Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T04:02:58.950Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T04:03:34.345Z",
+          "v": 4
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "putrirenat",
+          "nickname": "Nilaa🐟",
+          "count": 2
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "expander",
+          "count": 1
+        },
+        {
+          "word": "ultimate",
+          "count": 1
+        },
+        {
+          "word": "baru",
+          "count": 1
+        },
+        {
+          "word": "cash",
+          "count": 1
+        },
+        {
+          "word": "brpa",
+          "count": 1
+        },
+        {
+          "word": "matic",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishibanyuwangi.888_20261104_104837.xlsx",
+      "release_tag": "live-mitsubishibanyuwangi.888-20261104-104837"
     }
   ]
 }
