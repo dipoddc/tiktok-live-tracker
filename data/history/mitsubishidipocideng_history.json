@@ -1,7 +1,7 @@
 {
   "username": "mitsubishidipocideng",
   "retention_days": 90,
-  "updated_at": "2026-10-30T09:53:14.993Z",
+  "updated_at": "2026-11-04T09:00:44.116Z",
   "sessions": [
     {
       "id": "mitsubishidipocideng_20261030_152432",
@@ -545,6 +545,135 @@
       ],
       "session_report": "Session_mitsubishidipocideng_20261030_152432.xlsx",
       "release_tag": "live-mitsubishidipocideng-20261030-152432"
+    },
+    {
+      "id": "mitsubishidipocideng_20261104_155304",
+      "username": "mitsubishidipocideng",
+      "room_id": "7704230177523124993",
+      "title": "PROMO AMBYAR AKHIR TAHUNNNNN",
+      "live_started_at": "2026-11-04T08:28:22.000Z",
+      "tracking_started_at": "2026-11-04T08:53:16.127Z",
+      "ended_at": "2026-11-04T09:00:44.115Z",
+      "duration_sec": 1942,
+      "tracked_duration_sec": 448,
+      "end_reason": "stream_end",
+      "peak_viewers": 57,
+      "peak_viewers_at": "2026-11-04T08:53:16.713Z",
+      "avg_viewers": 16,
+      "total_likes": 29,
+      "total_comments": 12,
+      "unique_commenters": 5,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-04T08:53:16.128Z",
+          "v": 56
+        },
+        {
+          "t": "2026-11-04T08:54:16.132Z",
+          "v": 29
+        },
+        {
+          "t": "2026-11-04T08:55:16.136Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-04T08:56:16.138Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-04T08:57:16.139Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-04T08:58:16.141Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-04T08:59:16.141Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-04T09:00:16.141Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-04T09:00:44.115Z",
+          "v": 6
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "dagangmobil",
+          "nickname": "Marteen",
+          "count": 5
+        },
+        {
+          "user": "mobil.baru.murah",
+          "nickname": "Mobil Baru Murah",
+          "count": 4
+        },
+        {
+          "user": "haiymitsubishi",
+          "nickname": "Dekai_destinator",
+          "count": 1
+        },
+        {
+          "user": "mitsubishidipocideng",
+          "nickname": "Mitsubishi DIPO Cideng",
+          "count": 1
+        },
+        {
+          "user": "pandu7094",
+          "nickname": "pandu",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "live",
+          "count": 2
+        },
+        {
+          "word": "gabut",
+          "count": 1
+        },
+        {
+          "word": "baru",
+          "count": 1
+        },
+        {
+          "word": "murah",
+          "count": 1
+        },
+        {
+          "word": "terima",
+          "count": 1
+        },
+        {
+          "word": "naik",
+          "count": 1
+        },
+        {
+          "word": "peaaaa",
+          "count": 1
+        },
+        {
+          "word": "maksudnya",
+          "count": 1
+        },
+        {
+          "word": "naikin",
+          "count": 1
+        },
+        {
+          "word": "ikutmau",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishidipocideng_20261104_155304.xlsx",
+      "release_tag": "live-mitsubishidipocideng-20261104-155304"
     }
   ]
 }
