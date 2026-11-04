@@ -1,7 +1,7 @@
 {
   "username": "mitsubishiadise",
   "retention_days": 90,
-  "updated_at": "2026-11-02T05:12:51.213Z",
+  "updated_at": "2026-11-04T04:26:13.144Z",
   "sessions": [
     {
       "id": "mitsubishiadise_20261026_143433",
@@ -1226,6 +1226,380 @@
       ],
       "session_report": "Session_mitsubishiadise_20261102_113050.xlsx",
       "release_tag": "live-mitsubishiadise-20261102-113050"
+    },
+    {
+      "id": "mitsubishiadise_20261104_104835",
+      "username": "mitsubishiadise",
+      "room_id": "7704152707480783636",
+      "title": "MITSUBISHI DIPO AMPLAS",
+      "live_started_at": "2026-11-04T03:28:38.000Z",
+      "tracking_started_at": "2026-11-04T03:48:58.214Z",
+      "ended_at": "2026-11-04T04:26:13.142Z",
+      "duration_sec": 3455,
+      "tracked_duration_sec": 2235,
+      "end_reason": "stream_end",
+      "peak_viewers": 13,
+      "peak_viewers_at": "2026-11-04T04:18:00.742Z",
+      "avg_viewers": 6,
+      "total_likes": 1053,
+      "total_comments": 43,
+      "unique_commenters": 14,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-04T03:48:58.214Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T03:49:58.228Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T03:50:58.232Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T03:51:58.235Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T03:52:58.244Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T03:53:58.245Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T03:54:58.248Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-04T03:55:58.254Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-04T03:56:58.255Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-04T03:57:58.266Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T03:58:58.276Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T03:59:58.286Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T04:00:58.290Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-04T04:01:58.294Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T04:02:58.299Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-04T04:03:58.309Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-04T04:04:58.314Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-04T04:05:58.319Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-04T04:06:58.325Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-04T04:07:58.335Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T04:08:58.345Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-04T04:09:58.346Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-04T04:10:58.351Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T04:11:58.359Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T04:12:58.365Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-04T04:13:58.367Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-04T04:14:58.376Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T04:15:58.379Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-04T04:16:58.383Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-04T04:17:58.383Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-04T04:18:58.385Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-04T04:19:58.388Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-04T04:20:58.389Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-04T04:21:58.391Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-04T04:22:58.392Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-04T04:23:58.397Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-04T04:24:58.401Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-04T04:25:58.411Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T04:26:13.142Z",
+          "v": 3
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "amanda.suwarsi",
+          "nickname": "Amanda Suwarsi",
+          "count": 7
+        },
+        {
+          "user": "dimasfadlanmotorsport",
+          "nickname": "Fadlan Motor Sport DIMAS",
+          "count": 7
+        },
+        {
+          "user": "dimaswardhana2",
+          "nickname": "Dimas Krishnawardhana 2",
+          "count": 6
+        },
+        {
+          "user": "yanti_.1_12",
+          "nickname": "yanti Mitsubishi Subulussalam",
+          "count": 3
+        },
+        {
+          "user": "chairulazzam23",
+          "nickname": "@Montec_2",
+          "count": 3
+        },
+        {
+          "user": "faris_alkatana",
+          "nickname": "NGEEMADU.",
+          "count": 3
+        },
+        {
+          "user": "tengkusadewa",
+          "nickname": "tengku sadewa",
+          "count": 3
+        },
+        {
+          "user": "macaronatani",
+          "nickname": "macarona tani",
+          "count": 2
+        },
+        {
+          "user": "yudi_jakarta",
+          "nickname": "Mas Yudi",
+          "count": 2
+        },
+        {
+          "user": "ariefsugianto417",
+          "nickname": "Arief Sugianto Pekanbaru",
+          "count": 2
+        },
+        {
+          "user": "wijayacho",
+          "nickname": "Wijaya Cho",
+          "count": 2
+        },
+        {
+          "user": "chandra17246",
+          "nickname": "chandra17246",
+          "count": 1
+        },
+        {
+          "user": "beurayeuksaba2",
+          "nickname": "Aneuk Buwah",
+          "count": 1
+        },
+        {
+          "user": "805_stp",
+          "nickname": "_______",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "xpander",
+          "count": 6
+        },
+        {
+          "word": "pajero",
+          "count": 5
+        },
+        {
+          "word": "cross",
+          "count": 4
+        },
+        {
+          "word": "brp",
+          "count": 4
+        },
+        {
+          "word": "brpa",
+          "count": 4
+        },
+        {
+          "word": "dipo",
+          "count": 3
+        },
+        {
+          "word": "waktu",
+          "count": 2
+        },
+        {
+          "word": "aman",
+          "count": 2
+        },
+        {
+          "word": "semoga",
+          "count": 2
+        },
+        {
+          "word": "amplas",
+          "count": 2
+        },
+        {
+          "word": "canter",
+          "count": 2
+        },
+        {
+          "word": "ready",
+          "count": 2
+        },
+        {
+          "word": "tipe",
+          "count": 2
+        },
+        {
+          "word": "nunggu",
+          "count": 2
+        },
+        {
+          "word": "unit",
+          "count": 2
+        },
+        {
+          "word": "maaf",
+          "count": 2
+        },
+        {
+          "word": "aki",
+          "count": 2
+        },
+        {
+          "word": "biasanya",
+          "count": 2
+        },
+        {
+          "word": "minta",
+          "count": 2
+        },
+        {
+          "word": "ganti",
+          "count": 2
+        },
+        {
+          "word": "pertama",
+          "count": 2
+        },
+        {
+          "word": "kalinya",
+          "count": 2
+        },
+        {
+          "word": "destinator",
+          "count": 2
+        },
+        {
+          "word": "improvement",
+          "count": 2
+        },
+        {
+          "word": "spill",
+          "count": 2
+        },
+        {
+          "word": "sepil",
+          "count": 2
+        },
+        {
+          "word": "manual",
+          "count": 2
+        },
+        {
+          "word": "tdi",
+          "count": 2
+        },
+        {
+          "word": "diskonnya",
+          "count": 2
+        },
+        {
+          "word": "semangat",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishiadise_20261104_104835.xlsx",
+      "release_tag": "live-mitsubishiadise-20261104-104835"
     }
   ]
 }
