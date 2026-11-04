@@ -1,7 +1,7 @@
 {
   "username": "mitsubishibanyuwangi.888",
   "retention_days": 90,
-  "updated_at": "2026-11-04T04:03:34.347Z",
+  "updated_at": "2026-11-04T12:52:20.016Z",
   "sessions": [
     {
       "id": "mitsubishibanyuwangi.888_20261023_184533",
@@ -7001,6 +7001,202 @@
       ],
       "session_report": "Session_mitsubishibanyuwangi.888_20261104_104837.xlsx",
       "release_tag": "live-mitsubishibanyuwangi.888-20261104-104837"
+    },
+    {
+      "id": "mitsubishibanyuwangi.888_20261104_194309",
+      "username": "mitsubishibanyuwangi.888",
+      "room_id": "7704284855634332423",
+      "title": "Promo Mitsubishi O813 53357323",
+      "live_started_at": "2026-11-04T12:00:24.000Z",
+      "tracking_started_at": "2026-11-04T12:43:27.958Z",
+      "ended_at": "2026-11-04T12:52:20.014Z",
+      "duration_sec": 3116,
+      "tracked_duration_sec": 532,
+      "end_reason": "stream_end",
+      "peak_viewers": 10,
+      "peak_viewers_at": "2026-11-04T12:45:22.589Z",
+      "avg_viewers": 5,
+      "total_likes": 0,
+      "total_comments": 10,
+      "unique_commenters": 4,
+      "follows": 0,
+      "shares": 2,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-04T12:43:27.959Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-04T12:44:27.965Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-04T12:45:27.967Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-04T12:46:27.969Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-04T12:47:27.969Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-04T12:48:27.970Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-04T12:49:27.977Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-04T12:50:27.982Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-04T12:51:27.983Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-04T12:52:20.014Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "mochamadyudas.e.m.t",
+          "nickname": "Mocca",
+          "count": 7
+        },
+        {
+          "user": "iskandar3659",
+          "nickname": "Iskandar",
+          "count": 1
+        },
+        {
+          "user": "husgeol_19",
+          "nickname": "husgeol_19",
+          "count": 1
+        },
+        {
+          "user": "accesoris.part.mo",
+          "nickname": "accesoris & part mobil jakarta",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "spill",
+          "count": 2
+        },
+        {
+          "word": "pajero",
+          "count": 2
+        },
+        {
+          "word": "coba",
+          "count": 1
+        },
+        {
+          "word": "destinatornya",
+          "count": 1
+        },
+        {
+          "word": "motic",
+          "count": 1
+        },
+        {
+          "word": "ayo",
+          "count": 1
+        },
+        {
+          "word": "spil",
+          "count": 1
+        },
+        {
+          "word": "lepas",
+          "count": 1
+        },
+        {
+          "word": "xpander",
+          "count": 1
+        },
+        {
+          "word": "kaca",
+          "count": 1
+        },
+        {
+          "word": "atasnya",
+          "count": 1
+        },
+        {
+          "word": "buka",
+          "count": 1
+        },
+        {
+          "word": "seperti",
+          "count": 1
+        },
+        {
+          "word": "sport",
+          "count": 1
+        },
+        {
+          "word": "duit",
+          "count": 1
+        },
+        {
+          "word": "ush",
+          "count": 1
+        },
+        {
+          "word": "sanrooop",
+          "count": 1
+        },
+        {
+          "word": "otr",
+          "count": 1
+        },
+        {
+          "word": "brapa",
+          "count": 1
+        },
+        {
+          "word": "lalu",
+          "count": 1
+        },
+        {
+          "word": "harga",
+          "count": 1
+        },
+        {
+          "word": "destinator",
+          "count": 1
+        },
+        {
+          "word": "tadi",
+          "count": 1
+        },
+        {
+          "word": "harganya",
+          "count": 1
+        },
+        {
+          "word": "lokasih",
+          "count": 1
+        },
+        {
+          "word": "jauh",
+          "count": 1
+        },
+        {
+          "word": "jakarta",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishibanyuwangi.888_20261104_194309.xlsx",
+      "release_tag": "live-mitsubishibanyuwangi.888-20261104-194309"
     }
   ]
 }
