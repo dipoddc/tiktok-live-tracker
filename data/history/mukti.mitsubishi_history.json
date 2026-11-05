@@ -1,7 +1,7 @@
 {
   "username": "mukti.mitsubishi",
   "retention_days": 90,
-  "updated_at": "2026-11-01T02:18:17.460Z",
+  "updated_at": "2026-11-05T04:33:33.944Z",
   "sessions": [
     {
       "id": "mukti.mitsubishi_20261025_094355",
@@ -553,6 +553,112 @@
       ],
       "session_report": "Session_mukti.mitsubishi_20261101_091530.xlsx",
       "release_tag": "live-mukti.mitsubishi-20261101-091530"
+    },
+    {
+      "id": "mukti.mitsubishi_20261105_112946",
+      "username": "mukti.mitsubishi",
+      "room_id": "7704529710474791698",
+      "title": "Promo  Nop ambyarr..",
+      "live_started_at": "2026-11-05T03:50:52.000Z",
+      "tracking_started_at": "2026-11-05T04:29:59.688Z",
+      "ended_at": "2026-11-05T04:33:33.942Z",
+      "duration_sec": 2562,
+      "tracked_duration_sec": 214,
+      "end_reason": "stream_end",
+      "peak_viewers": 0,
+      "peak_viewers_at": null,
+      "avg_viewers": 0,
+      "total_likes": 2268,
+      "total_comments": 6,
+      "unique_commenters": 2,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-05T04:29:59.689Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-05T04:30:59.699Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-05T04:31:59.707Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-05T04:32:59.709Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-05T04:33:33.942Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "imalamteuba",
+          "nickname": "husaini",
+          "count": 4
+        },
+        {
+          "user": "haiibrowwwwwww",
+          "nickname": "cailah",
+          "count": 2
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "aceh",
+          "count": 2
+        },
+        {
+          "word": "mangan",
+          "count": 1
+        },
+        {
+          "word": "wae",
+          "count": 1
+        },
+        {
+          "word": "tii",
+          "count": 1
+        },
+        {
+          "word": "kerja",
+          "count": 1
+        },
+        {
+          "word": "lokasi",
+          "count": 1
+        },
+        {
+          "word": "mna",
+          "count": 1
+        },
+        {
+          "word": "jauh",
+          "count": 1
+        },
+        {
+          "word": "jta",
+          "count": 1
+        },
+        {
+          "word": "per",
+          "count": 1
+        },
+        {
+          "word": "bulan",
+          "count": 1
+        },
+        {
+          "word": "sampek",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mukti.mitsubishi_20261105_112946.xlsx",
+      "release_tag": "live-mukti.mitsubishi-20261105-112946"
     }
   ]
 }
