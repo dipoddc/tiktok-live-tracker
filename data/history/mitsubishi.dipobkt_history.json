@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi.dipobkt",
   "retention_days": 90,
-  "updated_at": "2026-11-03T07:09:33.271Z",
+  "updated_at": "2026-11-05T05:37:42.845Z",
   "sessions": [
     {
       "id": "mitsubishi.dipobkt_20261028_121438",
@@ -4090,6 +4090,211 @@
       ],
       "session_report": "Session_mitsubishi.dipobkt_20261103_132558.xlsx",
       "release_tag": "live-mitsubishi.dipobkt-20261103-132558"
+    },
+    {
+      "id": "mitsubishi.dipobkt_20261105_123036",
+      "username": "mitsubishi.dipobkt",
+      "room_id": "7704551839668931346",
+      "title": "Diskon November Gacor",
+      "live_started_at": "2026-11-05T05:16:47.000Z",
+      "tracking_started_at": "2026-11-05T05:30:47.049Z",
+      "ended_at": "2026-11-05T05:37:42.844Z",
+      "duration_sec": 1256,
+      "tracked_duration_sec": 416,
+      "end_reason": "stream_end",
+      "peak_viewers": 5,
+      "peak_viewers_at": "2026-11-05T05:33:30.852Z",
+      "avg_viewers": 3,
+      "total_likes": 105,
+      "total_comments": 12,
+      "unique_commenters": 5,
+      "follows": 1,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-05T05:30:47.049Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-05T05:31:47.055Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-05T05:32:47.062Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-05T05:33:47.063Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-05T05:34:47.069Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-05T05:35:47.072Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-05T05:36:47.076Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-05T05:37:42.844Z",
+          "v": 3
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "royfirdho",
+          "nickname": "Roy Firdho Hanafi",
+          "count": 5
+        },
+        {
+          "user": "gtiyhr_",
+          "nickname": "Wisshhsesss",
+          "count": 2
+        },
+        {
+          "user": "vagabond642",
+          "nickname": "VAGABOND",
+          "count": 2
+        },
+        {
+          "user": "aulian.alkahfi",
+          "nickname": "BA 999",
+          "count": 2
+        },
+        {
+          "user": "epyboy93",
+          "nickname": "epyboy",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "ado",
+          "count": 3
+        },
+        {
+          "word": "nyo",
+          "count": 2
+        },
+        {
+          "word": "unit",
+          "count": 2
+        },
+        {
+          "word": "inden",
+          "count": 2
+        },
+        {
+          "word": "bawah",
+          "count": 2
+        },
+        {
+          "word": "baa",
+          "count": 1
+        },
+        {
+          "word": "uni",
+          "count": 1
+        },
+        {
+          "word": "ndak",
+          "count": 1
+        },
+        {
+          "word": "tau",
+          "count": 1
+        },
+        {
+          "word": "buroq",
+          "count": 1
+        },
+        {
+          "word": "ndk",
+          "count": 1
+        },
+        {
+          "word": "mmbaco",
+          "count": 1
+        },
+        {
+          "word": "kisah",
+          "count": 1
+        },
+        {
+          "word": "nabi",
+          "count": 1
+        },
+        {
+          "word": "hahah",
+          "count": 1
+        },
+        {
+          "word": "wajib",
+          "count": 1
+        },
+        {
+          "word": "juo",
+          "count": 1
+        },
+        {
+          "word": "awak",
+          "count": 1
+        },
+        {
+          "word": "tahu",
+          "count": 1
+        },
+        {
+          "word": "saketek",
+          "count": 1
+        },
+        {
+          "word": "tuu",
+          "count": 1
+        },
+        {
+          "word": "iyo",
+          "count": 1
+        },
+        {
+          "word": "canter",
+          "count": 1
+        },
+        {
+          "word": "harus",
+          "count": 1
+        },
+        {
+          "word": "dulu",
+          "count": 1
+        },
+        {
+          "word": "sebulan",
+          "count": 1
+        },
+        {
+          "word": "cicilan",
+          "count": 1
+        },
+        {
+          "word": "wak",
+          "count": 1
+        },
+        {
+          "word": "bulan",
+          "count": 1
+        },
+        {
+          "word": "kiro2",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi.dipobkt_20261105_123036.xlsx",
+      "release_tag": "live-mitsubishi.dipobkt-20261105-123036"
     }
   ]
 }
