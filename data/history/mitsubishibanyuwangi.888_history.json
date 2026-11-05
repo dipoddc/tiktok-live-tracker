@@ -1,7 +1,7 @@
 {
   "username": "mitsubishibanyuwangi.888",
   "retention_days": 90,
-  "updated_at": "2026-11-04T12:52:20.016Z",
+  "updated_at": "2026-11-05T00:29:45.836Z",
   "sessions": [
     {
       "id": "mitsubishibanyuwangi.888_20261023_184533",
@@ -7197,6 +7197,207 @@
       ],
       "session_report": "Session_mitsubishibanyuwangi.888_20261104_194309.xlsx",
       "release_tag": "live-mitsubishibanyuwangi.888-20261104-194309"
+    },
+    {
+      "id": "mitsubishibanyuwangi.888_20261105_071421",
+      "username": "mitsubishibanyuwangi.888",
+      "room_id": "7704467784436189960",
+      "title": "Promo Mitsubishi O813 53357323",
+      "live_started_at": "2026-11-04T23:51:16.000Z",
+      "tracking_started_at": "2026-11-05T00:14:33.433Z",
+      "ended_at": "2026-11-05T00:29:45.834Z",
+      "duration_sec": 2310,
+      "tracked_duration_sec": 912,
+      "end_reason": "stream_end",
+      "peak_viewers": 7,
+      "peak_viewers_at": "2026-11-05T00:14:33.433Z",
+      "avg_viewers": 2,
+      "total_likes": 0,
+      "total_comments": 11,
+      "unique_commenters": 5,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-05T00:14:33.433Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-05T00:15:33.442Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-05T00:16:33.444Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-05T00:17:33.448Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-05T00:18:33.452Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-05T00:19:33.453Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-05T00:20:33.453Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-05T00:21:33.456Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-05T00:22:33.459Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-05T00:23:33.465Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-05T00:24:33.466Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-05T00:25:33.467Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-05T00:26:33.469Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-05T00:27:33.478Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-05T00:28:33.482Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-05T00:29:33.485Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-05T00:29:45.834Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "rhikmabwi",
+          "nickname": "Rhikma",
+          "count": 4
+        },
+        {
+          "user": "nobiet59",
+          "nickname": "nazmi",
+          "count": 3
+        },
+        {
+          "user": "foocuscooffe21",
+          "nickname": "Si Kedin",
+          "count": 2
+        },
+        {
+          "user": "fredikrassi",
+          "nickname": "Fredik Rassi",
+          "count": 1
+        },
+        {
+          "user": "frendi.berutu8",
+          "nickname": "Frendi Berutu",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "surat",
+          "count": 2
+        },
+        {
+          "word": "zonk",
+          "count": 2
+        },
+        {
+          "word": "mobil",
+          "count": 2
+        },
+        {
+          "word": "curian",
+          "count": 2
+        },
+        {
+          "word": "laugh",
+          "count": 2
+        },
+        {
+          "word": "sabar",
+          "count": 1
+        },
+        {
+          "word": "santay",
+          "count": 1
+        },
+        {
+          "word": "ngantuk",
+          "count": 1
+        },
+        {
+          "word": "ges",
+          "count": 1
+        },
+        {
+          "word": "expander",
+          "count": 1
+        },
+        {
+          "word": "barang",
+          "count": 1
+        },
+        {
+          "word": "nanya",
+          "count": 1
+        },
+        {
+          "word": "durian",
+          "count": 1
+        },
+        {
+          "word": "merapat",
+          "count": 1
+        },
+        {
+          "word": "kali",
+          "count": 1
+        },
+        {
+          "word": "bendo",
+          "count": 1
+        },
+        {
+          "word": "kampunganyar",
+          "count": 1
+        },
+        {
+          "word": "hikma",
+          "count": 1
+        },
+        {
+          "word": "medapat",
+          "count": 1
+        },
+        {
+          "word": "meriki",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishibanyuwangi.888_20261105_071421.xlsx",
+      "release_tag": "live-mitsubishibanyuwangi.888-20261105-071421"
     }
   ]
 }
