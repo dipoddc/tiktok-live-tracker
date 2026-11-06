@@ -1,7 +1,7 @@
 {
   "username": "rakanmitsubishiaceh",
   "retention_days": 90,
-  "updated_at": "2026-11-05T05:14:04.643Z",
+  "updated_at": "2026-11-06T08:43:45.002Z",
   "sessions": [
     {
       "id": "rakanmitsubishiaceh_20261024_162537",
@@ -3695,6 +3695,157 @@
       ],
       "session_report": "Session_rakanmitsubishiaceh_20261105_112944.xlsx",
       "release_tag": "live-rakanmitsubishiaceh-20261105-112944"
+    },
+    {
+      "id": "rakanmitsubishiaceh_20261106_154105",
+      "username": "rakanmitsubishiaceh",
+      "room_id": "7704967855252982549",
+      "title": "Promo Mitsubishi Aceh",
+      "live_started_at": "2026-11-06T08:11:16.000Z",
+      "tracking_started_at": "2026-11-06T08:41:18.042Z",
+      "ended_at": "2026-11-06T08:43:45.001Z",
+      "duration_sec": 1949,
+      "tracked_duration_sec": 147,
+      "end_reason": "stream_end",
+      "peak_viewers": 7,
+      "peak_viewers_at": "2026-11-06T08:41:18.303Z",
+      "avg_viewers": 4,
+      "total_likes": 0,
+      "total_comments": 7,
+      "unique_commenters": 3,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-06T08:41:18.042Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-06T08:42:18.052Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-06T08:43:18.058Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-06T08:43:45.001Z",
+          "v": 2
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "padi0981",
+          "nickname": "FAKE ACCOUNT",
+          "count": 5
+        },
+        {
+          "user": "baksosultan86",
+          "nickname": "BAKSO SULTAN",
+          "count": 1
+        },
+        {
+          "user": "rieza424",
+          "nickname": "@@_@@",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "nyoe",
+          "count": 1
+        },
+        {
+          "word": "dibanda",
+          "count": 1
+        },
+        {
+          "word": "kon",
+          "count": 1
+        },
+        {
+          "word": "ready",
+          "count": 1
+        },
+        {
+          "word": "power",
+          "count": 1
+        },
+        {
+          "word": "steering",
+          "count": 1
+        },
+        {
+          "word": "l300",
+          "count": 1
+        },
+        {
+          "word": "sparepart",
+          "count": 1
+        },
+        {
+          "word": "mksdnya",
+          "count": 1
+        },
+        {
+          "word": "hhaha",
+          "count": 1
+        },
+        {
+          "word": "betoi",
+          "count": 1
+        },
+        {
+          "word": "get",
+          "count": 1
+        },
+        {
+          "word": "ttmksih",
+          "count": 1
+        },
+        {
+          "word": "bnyak",
+          "count": 1
+        },
+        {
+          "word": "infonya",
+          "count": 1
+        },
+        {
+          "word": "expander",
+          "count": 1
+        },
+        {
+          "word": "ultimate",
+          "count": 1
+        },
+        {
+          "word": "padum",
+          "count": 1
+        },
+        {
+          "word": "ansuran",
+          "count": 1
+        },
+        {
+          "word": "pajero",
+          "count": 1
+        },
+        {
+          "word": "150jt",
+          "count": 1
+        },
+        {
+          "word": "brp",
+          "count": 1
+        },
+        {
+          "word": "cicilan",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_rakanmitsubishiaceh_20261106_154105.xlsx",
+      "release_tag": "live-rakanmitsubishiaceh-20261106-154105"
     }
   ]
 }
