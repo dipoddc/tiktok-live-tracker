@@ -1,7 +1,7 @@
 {
   "username": "mitsubishiadise",
   "retention_days": 90,
-  "updated_at": "2026-11-04T04:26:13.144Z",
+  "updated_at": "2026-11-06T04:38:13.846Z",
   "sessions": [
     {
       "id": "mitsubishiadise_20261026_143433",
@@ -1600,6 +1600,225 @@
       ],
       "session_report": "Session_mitsubishiadise_20261104_104835.xlsx",
       "release_tag": "live-mitsubishiadise-20261104-104835"
+    },
+    {
+      "id": "mitsubishiadise_20261106_113021",
+      "username": "mitsubishiadise",
+      "room_id": "7704897405770828564",
+      "title": "MITSUBISHI DIPO AMPLAS",
+      "live_started_at": "2026-11-06T03:38:21.000Z",
+      "tracking_started_at": "2026-11-06T04:30:36.532Z",
+      "ended_at": "2026-11-06T04:38:13.845Z",
+      "duration_sec": 3593,
+      "tracked_duration_sec": 457,
+      "end_reason": "stream_end",
+      "peak_viewers": 7,
+      "peak_viewers_at": "2026-11-06T04:35:36.994Z",
+      "avg_viewers": 4,
+      "total_likes": 1535,
+      "total_comments": 20,
+      "unique_commenters": 7,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-06T04:30:36.532Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-06T04:31:36.540Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-06T04:32:36.543Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-06T04:33:36.549Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-06T04:34:36.550Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-06T04:35:36.552Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-06T04:36:36.555Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-06T04:37:36.559Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-06T04:38:13.845Z",
+          "v": 3
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "ritatambunan585",
+          "nickname": "Omeprazole",
+          "count": 10
+        },
+        {
+          "user": "weduskota",
+          "nickname": "Winter",
+          "count": 3
+        },
+        {
+          "user": "deardosaragihdear",
+          "nickname": "DEARDOSARAGIH DEARDOSARAGIH",
+          "count": 2
+        },
+        {
+          "user": "byylove08",
+          "nickname": "Deby Mitshubishi siantar 🍓",
+          "count": 2
+        },
+        {
+          "user": "hamszz66",
+          "nickname": "hamszz",
+          "count": 1
+        },
+        {
+          "user": "caramel.frapp0",
+          "nickname": "✨nita✨",
+          "count": 1
+        },
+        {
+          "user": "salesprindavann",
+          "nickname": "salesprindavann",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "sya",
+          "count": 4
+        },
+        {
+          "word": "mitsubishi",
+          "count": 3
+        },
+        {
+          "word": "makasih",
+          "count": 2
+        },
+        {
+          "word": "jawa",
+          "count": 2
+        },
+        {
+          "word": "barat",
+          "count": 2
+        },
+        {
+          "word": "tambunan",
+          "count": 2
+        },
+        {
+          "word": "balige",
+          "count": 2
+        },
+        {
+          "word": "ramah",
+          "count": 2
+        },
+        {
+          "word": "pajero",
+          "count": 1
+        },
+        {
+          "word": "4berapa",
+          "count": 1
+        },
+        {
+          "word": "spil",
+          "count": 1
+        },
+        {
+          "word": "ferrari",
+          "count": 1
+        },
+        {
+          "word": "nyari",
+          "count": 1
+        },
+        {
+          "word": "destinator",
+          "count": 1
+        },
+        {
+          "word": "ijin",
+          "count": 1
+        },
+        {
+          "word": "follow",
+          "count": 1
+        },
+        {
+          "word": "cewek",
+          "count": 1
+        },
+        {
+          "word": "pecinta",
+          "count": 1
+        },
+        {
+          "word": "tinggal",
+          "count": 1
+        },
+        {
+          "word": "cianjur",
+          "count": 1
+        },
+        {
+          "word": "boru",
+          "count": 1
+        },
+        {
+          "word": "danau",
+          "count": 1
+        },
+        {
+          "word": "toba",
+          "count": 1
+        },
+        {
+          "word": "orang",
+          "count": 1
+        },
+        {
+          "word": "baruara",
+          "count": 1
+        },
+        {
+          "word": "kecamatan",
+          "count": 1
+        },
+        {
+          "word": "xforce",
+          "count": 1
+        },
+        {
+          "word": "ice",
+          "count": 1
+        },
+        {
+          "word": "ultimate",
+          "count": 1
+        },
+        {
+          "word": "disc",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishiadise_20261106_113021.xlsx",
+      "release_tag": "live-mitsubishiadise-20261106-113021"
     }
   ]
 }
