@@ -1,0 +1,134 @@
+{
+  "username": "juraganmitsubishijkt",
+  "retention_days": 90,
+  "updated_at": "2026-11-09T05:02:58.843Z",
+  "sessions": [
+    {
+      "id": "juraganmitsubishijkt_20261109_115935",
+      "username": "juraganmitsubishijkt",
+      "room_id": "7706027113959705364",
+      "title": "",
+      "live_started_at": null,
+      "tracking_started_at": "2026-11-09T04:59:46.390Z",
+      "ended_at": "2026-11-09T05:02:58.841Z",
+      "duration_sec": 192,
+      "tracked_duration_sec": 192,
+      "end_reason": "stream_end",
+      "peak_viewers": 3,
+      "peak_viewers_at": "2026-11-09T04:59:52.556Z",
+      "avg_viewers": 2,
+      "total_likes": 1352,
+      "total_comments": 6,
+      "unique_commenters": 3,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-09T04:59:46.390Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-09T05:00:46.396Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-09T05:01:46.404Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-09T05:02:46.412Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-09T05:02:58.841Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "otaji1",
+          "nickname": "otaji1",
+          "count": 2
+        },
+        {
+          "user": "baksourat067",
+          "nickname": "baksourat067",
+          "count": 2
+        },
+        {
+          "user": "gundy_purple",
+          "nickname": "gundy",
+          "count": 2
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "disc",
+          "count": 2
+        },
+        {
+          "word": "juta",
+          "count": 1
+        },
+        {
+          "word": "tadi",
+          "count": 1
+        },
+        {
+          "word": "xforce",
+          "count": 1
+        },
+        {
+          "word": "hybrid",
+          "count": 1
+        },
+        {
+          "word": "pasaran",
+          "count": 1
+        },
+        {
+          "word": "brp",
+          "count": 1
+        },
+        {
+          "word": "xpander",
+          "count": 1
+        },
+        {
+          "word": "udh",
+          "count": 1
+        },
+        {
+          "word": "laku",
+          "count": 1
+        },
+        {
+          "word": "sekennya",
+          "count": 1
+        },
+        {
+          "word": "aamiin",
+          "count": 1
+        },
+        {
+          "word": "semangat",
+          "count": 1
+        },
+        {
+          "word": "spk",
+          "count": 1
+        },
+        {
+          "word": "byk",
+          "count": 1
+        },
+        {
+          "word": "koo",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_juraganmitsubishijkt_20261109_115935.xlsx",
+      "release_tag": "live-juraganmitsubishijkt-20261109-115935"
+    }
+  ]
+}
