@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi.dipobkt",
   "retention_days": 90,
-  "updated_at": "2026-11-09T06:00:54.459Z",
+  "updated_at": "2026-11-09T07:25:42.067Z",
   "sessions": [
     {
       "id": "mitsubishi.dipobkt_20261028_121438",
@@ -5730,6 +5730,40 @@
       ],
       "session_report": "Session_mitsubishi.dipobkt_20261109_115937.xlsx",
       "release_tag": "live-mitsubishi.dipobkt-20261109-115937"
+    },
+    {
+      "id": "mitsubishi.dipobkt_20261109_142438",
+      "username": "mitsubishi.dipobkt",
+      "room_id": "7706068231806585607",
+      "title": "Diskon November Gacor",
+      "live_started_at": "2026-11-09T07:21:14.000Z",
+      "tracking_started_at": "2026-11-09T07:24:51.450Z",
+      "ended_at": "2026-11-09T07:25:42.065Z",
+      "duration_sec": 268,
+      "tracked_duration_sec": 51,
+      "end_reason": "stream_end",
+      "peak_viewers": 0,
+      "peak_viewers_at": null,
+      "avg_viewers": 0,
+      "total_likes": 0,
+      "total_comments": 0,
+      "unique_commenters": 0,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-09T07:24:51.450Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-09T07:25:42.065Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [],
+      "top_keywords": [],
+      "session_report": "Session_mitsubishi.dipobkt_20261109_142438.xlsx",
+      "release_tag": "live-mitsubishi.dipobkt-20261109-142438"
     }
   ]
 }
