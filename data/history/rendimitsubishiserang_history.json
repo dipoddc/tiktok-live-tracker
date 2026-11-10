@@ -1,7 +1,7 @@
 {
   "username": "rendimitsubishiserang",
   "retention_days": 90,
-  "updated_at": "2026-11-10T10:23:01.454Z",
+  "updated_at": "2026-11-10T12:14:21.444Z",
   "sessions": [
     {
       "id": "rendimitsubishiserang_20261029_231919",
@@ -2248,6 +2248,435 @@
       ],
       "session_report": "Session_rendimitsubishiserang_20261110_163239.xlsx",
       "release_tag": "live-rendimitsubishiserang-20261110-163239"
+    },
+    {
+      "id": "rendimitsubishiserang_20261110_182145",
+      "username": "rendimitsubishiserang",
+      "room_id": "7706495264283233045",
+      "title": "",
+      "live_started_at": "2026-11-10T10:58:21.000Z",
+      "tracking_started_at": "2026-11-10T11:21:55.338Z",
+      "ended_at": "2026-11-10T12:14:21.442Z",
+      "duration_sec": 4560,
+      "tracked_duration_sec": 3146,
+      "end_reason": "stream_end",
+      "peak_viewers": 106,
+      "peak_viewers_at": "2026-11-10T11:32:15.257Z",
+      "avg_viewers": 19,
+      "total_likes": 2530,
+      "total_comments": 24,
+      "unique_commenters": 13,
+      "follows": 1,
+      "shares": 1,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-10T11:21:55.339Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-10T11:22:55.344Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-10T11:23:55.345Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-10T11:24:55.346Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-10T11:25:55.346Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-10T11:26:55.350Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-10T11:27:55.351Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-10T11:28:55.352Z",
+          "v": 19
+        },
+        {
+          "t": "2026-11-10T11:29:55.356Z",
+          "v": 19
+        },
+        {
+          "t": "2026-11-10T11:30:55.357Z",
+          "v": 63
+        },
+        {
+          "t": "2026-11-10T11:31:55.359Z",
+          "v": 89
+        },
+        {
+          "t": "2026-11-10T11:32:55.360Z",
+          "v": 101
+        },
+        {
+          "t": "2026-11-10T11:33:55.359Z",
+          "v": 87
+        },
+        {
+          "t": "2026-11-10T11:34:55.359Z",
+          "v": 91
+        },
+        {
+          "t": "2026-11-10T11:35:55.361Z",
+          "v": 66
+        },
+        {
+          "t": "2026-11-10T11:36:55.362Z",
+          "v": 44
+        },
+        {
+          "t": "2026-11-10T11:37:55.362Z",
+          "v": 19
+        },
+        {
+          "t": "2026-11-10T11:38:55.366Z",
+          "v": 14
+        },
+        {
+          "t": "2026-11-10T11:39:55.370Z",
+          "v": 14
+        },
+        {
+          "t": "2026-11-10T11:40:55.371Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-10T11:41:55.372Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-10T11:42:55.378Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-10T11:43:55.379Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-10T11:44:55.381Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-10T11:45:55.383Z",
+          "v": 14
+        },
+        {
+          "t": "2026-11-10T11:46:55.383Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-10T11:47:55.392Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-10T11:48:55.395Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-10T11:49:55.395Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-10T11:50:55.397Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-10T11:51:55.397Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-10T11:52:55.408Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-10T11:53:55.408Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-10T11:54:55.412Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-10T11:55:55.421Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-10T11:56:55.422Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-10T11:57:55.425Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-10T11:58:55.427Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-10T11:59:55.428Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-10T12:00:55.433Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-10T12:01:55.435Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-10T12:02:55.436Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-10T12:03:55.437Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-10T12:04:55.442Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-10T12:05:55.444Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-10T12:06:55.448Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-10T12:07:55.449Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-10T12:08:55.451Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-10T12:09:55.459Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-10T12:10:55.465Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-10T12:11:55.469Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-10T12:12:55.477Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-10T12:13:55.478Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-10T12:14:21.442Z",
+          "v": 5
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "aldihamsa2",
+          "nickname": "Aldi Hamsa",
+          "count": 6
+        },
+        {
+          "user": "brebraybri",
+          "nickname": "breee",
+          "count": 3
+        },
+        {
+          "user": "yogi_mahendra20",
+          "nickname": "Yogi_Mahendra",
+          "count": 2
+        },
+        {
+          "user": "sulistiantomp",
+          "nickname": "Sulistianto m.p",
+          "count": 2
+        },
+        {
+          "user": "nuyy_mitsubishi",
+          "nickname": "NuyHasanah_MitsubishiBanten",
+          "count": 2
+        },
+        {
+          "user": "mitsubishi_lia",
+          "nickname": "lia",
+          "count": 2
+        },
+        {
+          "user": "ryn.0829",
+          "nickname": "Automotive Marketing",
+          "count": 1
+        },
+        {
+          "user": "44342tersakiti.co.id",
+          "nickname": "$elalu tersakiti..44342",
+          "count": 1
+        },
+        {
+          "user": "masmensumanto",
+          "nickname": "masmen sumanto",
+          "count": 1
+        },
+        {
+          "user": "gibran.ali568",
+          "nickname": "GiBRAN Ali",
+          "count": 1
+        },
+        {
+          "user": "user5848422791144",
+          "nickname": "KusnadiHana",
+          "count": 1
+        },
+        {
+          "user": "andisarmitsubishiserang",
+          "nickname": "Andisar Mitsubishi Serang",
+          "count": 1
+        },
+        {
+          "user": "hendihonda",
+          "nickname": "hendi hondaAutocilegon.co.id",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "brpa",
+          "count": 3
+        },
+        {
+          "word": "xpander",
+          "count": 2
+        },
+        {
+          "word": "magrib",
+          "count": 1
+        },
+        {
+          "word": "lokasi",
+          "count": 1
+        },
+        {
+          "word": "bos",
+          "count": 1
+        },
+        {
+          "word": "beli",
+          "count": 1
+        },
+        {
+          "word": "new",
+          "count": 1
+        },
+        {
+          "word": "pajero",
+          "count": 1
+        },
+        {
+          "word": "takut",
+          "count": 1
+        },
+        {
+          "word": "kira",
+          "count": 1
+        },
+        {
+          "word": "bupati",
+          "count": 1
+        },
+        {
+          "word": "akhir",
+          "count": 1
+        },
+        {
+          "word": "beat",
+          "count": 1
+        },
+        {
+          "word": "cnda",
+          "count": 1
+        },
+        {
+          "word": "hiburan",
+          "count": 1
+        },
+        {
+          "word": "sales",
+          "count": 1
+        },
+        {
+          "word": "biar",
+          "count": 1
+        },
+        {
+          "word": "full",
+          "count": 1
+        },
+        {
+          "word": "senyum",
+          "count": 1
+        },
+        {
+          "word": "baik",
+          "count": 1
+        },
+        {
+          "word": "alkhmdulilah",
+          "count": 1
+        },
+        {
+          "word": "haloka",
+          "count": 1
+        },
+        {
+          "word": "semangaaat",
+          "count": 1
+        },
+        {
+          "word": "pejuang",
+          "count": 1
+        },
+        {
+          "word": "spk",
+          "count": 1
+        },
+        {
+          "word": "ikan",
+          "count": 1
+        },
+        {
+          "word": "gabus",
+          "count": 1
+        },
+        {
+          "word": "paus",
+          "count": 1
+        },
+        {
+          "word": "excited",
+          "count": 1
+        },
+        {
+          "word": "istmsi",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_rendimitsubishiserang_20261110_182145.xlsx",
+      "release_tag": "live-rendimitsubishiserang-20261110-182145"
     }
   ]
 }
