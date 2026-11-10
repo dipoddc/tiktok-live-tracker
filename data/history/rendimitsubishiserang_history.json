@@ -1,7 +1,7 @@
 {
   "username": "rendimitsubishiserang",
   "retention_days": 90,
-  "updated_at": "2026-11-04T06:55:27.149Z",
+  "updated_at": "2026-11-10T06:16:40.771Z",
   "sessions": [
     {
       "id": "rendimitsubishiserang_20261029_231919",
@@ -1768,6 +1768,55 @@
       ],
       "session_report": "Session_rendimitsubishiserang_20261104_133928.xlsx",
       "release_tag": "live-rendimitsubishiserang-20261104-133928"
+    },
+    {
+      "id": "rendimitsubishiserang_20261110_131452",
+      "username": "rendimitsubishiserang",
+      "room_id": "7706418809149623092",
+      "title": "",
+      "live_started_at": "2026-11-10T06:01:56.000Z",
+      "tracking_started_at": "2026-11-10T06:15:02.279Z",
+      "ended_at": "2026-11-10T06:16:40.770Z",
+      "duration_sec": 885,
+      "tracked_duration_sec": 98,
+      "end_reason": "stream_end",
+      "peak_viewers": 1,
+      "peak_viewers_at": "2026-11-10T06:15:02.451Z",
+      "avg_viewers": 1,
+      "total_likes": 477,
+      "total_comments": 1,
+      "unique_commenters": 1,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-10T06:15:02.279Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T06:16:02.409Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T06:16:40.770Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "jimitwomitsubishii",
+          "nickname": "jimiiiiimitsubishi",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "ngopsss",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_rendimitsubishiserang_20261110_131452.xlsx",
+      "release_tag": "live-rendimitsubishiserang-20261110-131452"
     }
   ]
 }
