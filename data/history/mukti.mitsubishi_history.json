@@ -1,7 +1,7 @@
 {
   "username": "mukti.mitsubishi",
   "retention_days": 90,
-  "updated_at": "2026-11-10T01:31:03.481Z",
+  "updated_at": "2026-11-10T02:36:32.020Z",
   "sessions": [
     {
       "id": "mukti.mitsubishi_20261025_094355",
@@ -1209,6 +1209,76 @@
       ],
       "session_report": "Session_mukti.mitsubishi_20261110_082830.xlsx",
       "release_tag": "live-mukti.mitsubishi-20261110-082830"
+    },
+    {
+      "id": "mukti.mitsubishi_20261110_092652",
+      "username": "mukti.mitsubishi",
+      "room_id": "7706349740450990866",
+      "title": "Promo  Nop ambyarr..",
+      "live_started_at": "2026-11-10T01:33:23.000Z",
+      "tracking_started_at": "2026-11-10T02:27:10.679Z",
+      "ended_at": "2026-11-10T02:36:32.019Z",
+      "duration_sec": 3789,
+      "tracked_duration_sec": 561,
+      "end_reason": "stream_end",
+      "peak_viewers": 0,
+      "peak_viewers_at": null,
+      "avg_viewers": 0,
+      "total_likes": 0,
+      "total_comments": 0,
+      "unique_commenters": 0,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-10T02:27:10.679Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T02:28:10.698Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T02:29:10.707Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T02:30:10.719Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T02:31:10.728Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T02:32:10.739Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T02:33:10.748Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T02:34:10.759Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T02:35:10.769Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T02:36:10.780Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T02:36:32.019Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [],
+      "top_keywords": [],
+      "session_report": "Session_mukti.mitsubishi_20261110_092652.xlsx",
+      "release_tag": "live-mukti.mitsubishi-20261110-092652"
     }
   ]
 }
