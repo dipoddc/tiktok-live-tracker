@@ -1,7 +1,7 @@
 {
   "username": "mukti.mitsubishi",
   "retention_days": 90,
-  "updated_at": "2026-11-07T12:27:37.930Z",
+  "updated_at": "2026-11-10T01:31:03.481Z",
   "sessions": [
     {
       "id": "mukti.mitsubishi_20261025_094355",
@@ -1115,6 +1115,100 @@
       "top_keywords": [],
       "session_report": "Session_mukti.mitsubishi_20261107_183736.xlsx",
       "release_tag": "live-mukti.mitsubishi-20261107-183736"
+    },
+    {
+      "id": "mukti.mitsubishi_20261110_082830",
+      "username": "mukti.mitsubishi",
+      "room_id": "7706346234295323400",
+      "title": "Promo  Nop ambyarr..",
+      "live_started_at": "2026-11-10T01:19:48.000Z",
+      "tracking_started_at": "2026-11-10T01:28:42.784Z",
+      "ended_at": "2026-11-10T01:31:03.478Z",
+      "duration_sec": 675,
+      "tracked_duration_sec": 141,
+      "end_reason": "stream_end",
+      "peak_viewers": 0,
+      "peak_viewers_at": null,
+      "avg_viewers": 0,
+      "total_likes": 0,
+      "total_comments": 6,
+      "unique_commenters": 2,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-10T01:28:42.784Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T01:29:42.801Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T01:30:42.811Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T01:31:03.478Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "ardinjkt",
+          "nickname": "Ardin",
+          "count": 3
+        },
+        {
+          "user": "mitsubishipondokindah10",
+          "nickname": "ardin mitsubishi pondok indah",
+          "count": 3
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "helooow",
+          "count": 1
+        },
+        {
+          "word": "halow",
+          "count": 1
+        },
+        {
+          "word": "hihiii",
+          "count": 1
+        },
+        {
+          "word": "buset",
+          "count": 1
+        },
+        {
+          "word": "ngomong",
+          "count": 1
+        },
+        {
+          "word": "semangat",
+          "count": 1
+        },
+        {
+          "word": "mba",
+          "count": 1
+        },
+        {
+          "word": "mukti",
+          "count": 1
+        },
+        {
+          "word": "atit",
+          "count": 1
+        },
+        {
+          "word": "yaa",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mukti.mitsubishi_20261110_082830.xlsx",
+      "release_tag": "live-mukti.mitsubishi-20261110-082830"
     }
   ]
 }
