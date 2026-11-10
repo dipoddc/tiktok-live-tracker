@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-11-10T05:12:50.327Z",
+  "updated_at": "2026-11-10T08:10:32.112Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -3898,6 +3898,268 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261110_111446.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261110-111446"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261110_143735",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7706442980610411316",
+      "title": "Tanya produck mitsubishi donk",
+      "live_started_at": "2026-11-10T07:35:14.000Z",
+      "tracking_started_at": "2026-11-10T07:37:46.513Z",
+      "ended_at": "2026-11-10T08:10:32.110Z",
+      "duration_sec": 2118,
+      "tracked_duration_sec": 1966,
+      "end_reason": "stream_end",
+      "peak_viewers": 6,
+      "peak_viewers_at": "2026-11-10T07:43:46.461Z",
+      "avg_viewers": 1,
+      "total_likes": 0,
+      "total_comments": 11,
+      "unique_commenters": 6,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-10T07:37:46.514Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T07:38:46.519Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:39:46.522Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:40:46.534Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:41:46.541Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:42:46.544Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-10T07:43:46.545Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-10T07:44:46.555Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-10T07:45:46.566Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-10T07:46:46.569Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-10T07:47:46.579Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:48:46.588Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:49:46.595Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:50:46.597Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:51:46.607Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:52:46.610Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-10T07:53:46.613Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-10T07:54:46.620Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:55:46.621Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:56:46.625Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:57:46.634Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:58:46.639Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T07:59:46.649Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T08:00:46.650Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T08:01:46.655Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T08:02:46.662Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-10T08:03:46.671Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T08:04:46.679Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T08:05:46.687Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T08:06:46.692Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T08:07:46.702Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T08:08:46.712Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T08:09:46.715Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-10T08:10:32.110Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "muhammad.sarip.lu",
+          "nickname": "Muhammad Sarip Lubis",
+          "count": 4
+        },
+        {
+          "user": "bangkitharahap210",
+          "nickname": "MITSUBISHI MEDAN HARAHAP",
+          "count": 3
+        },
+        {
+          "user": "sice00",
+          "nickname": "Si Ce",
+          "count": 1
+        },
+        {
+          "user": "mitsubishi_sidempuan_de2",
+          "nickname": "Dedek_Mitsubishi_sidempuan",
+          "count": 1
+        },
+        {
+          "user": "saran.boy28",
+          "nickname": "@sar'an boy",
+          "count": 1
+        },
+        {
+          "user": "ferdianand1",
+          "nickname": "Ferdian Uye",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "brp",
+          "count": 2
+        },
+        {
+          "word": "harga",
+          "count": 2
+        },
+        {
+          "word": "mitsubishi",
+          "count": 1
+        },
+        {
+          "word": "dipo",
+          "count": 1
+        },
+        {
+          "word": "adam",
+          "count": 1
+        },
+        {
+          "word": "malik",
+          "count": 1
+        },
+        {
+          "word": "salam",
+          "count": 1
+        },
+        {
+          "word": "kenal",
+          "count": 1
+        },
+        {
+          "word": "ateh",
+          "count": 1
+        },
+        {
+          "word": "plg",
+          "count": 1
+        },
+        {
+          "word": "l300",
+          "count": 1
+        },
+        {
+          "word": "skrg",
+          "count": 1
+        },
+        {
+          "word": "dek",
+          "count": 1
+        },
+        {
+          "word": "disc",
+          "count": 1
+        },
+        {
+          "word": "info",
+          "count": 1
+        },
+        {
+          "word": "thumb",
+          "count": 1
+        },
+        {
+          "word": "lokasi",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261110_143735.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261110-143735"
     }
   ]
 }
