@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-11-10T08:10:32.112Z",
+  "updated_at": "2026-11-11T01:45:49.898Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -4160,6 +4160,127 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261110_143735.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261110-143735"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261111_083936",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7706719589920459572",
+      "title": "Tanya produck mitsubishi donk",
+      "live_started_at": "2026-11-11T01:28:35.000Z",
+      "tracking_started_at": "2026-11-11T01:39:48.448Z",
+      "ended_at": "2026-11-11T01:45:49.896Z",
+      "duration_sec": 1035,
+      "tracked_duration_sec": 361,
+      "end_reason": "stream_end",
+      "peak_viewers": 2,
+      "peak_viewers_at": "2026-11-11T01:43:23.287Z",
+      "avg_viewers": 2,
+      "total_likes": 0,
+      "total_comments": 6,
+      "unique_commenters": 5,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-11T01:39:48.449Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T01:40:48.454Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T01:41:48.464Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T01:42:48.469Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T01:43:48.480Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T01:44:48.490Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T01:45:48.496Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T01:45:49.896Z",
+          "v": 2
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "suryajogya15",
+          "nickname": "satra prasetyo",
+          "count": 2
+        },
+        {
+          "user": "asad.fuadi6",
+          "nickname": "Asad Fuadi",
+          "count": 1
+        },
+        {
+          "user": "mitsubishi_sidempuan_de2",
+          "nickname": "Dedek_Mitsubishi_sidempuan",
+          "count": 1
+        },
+        {
+          "user": "soppeng467",
+          "nickname": "soppeng",
+          "count": 1
+        },
+        {
+          "user": "settung56",
+          "nickname": "h.badri",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "krj",
+          "count": 1
+        },
+        {
+          "word": "dmn",
+          "count": 1
+        },
+        {
+          "word": "minum",
+          "count": 1
+        },
+        {
+          "word": "jamu",
+          "count": 1
+        },
+        {
+          "word": "assalamualaikum",
+          "count": 1
+        },
+        {
+          "word": "tanya",
+          "count": 1
+        },
+        {
+          "word": "mitsubishi",
+          "count": 1
+        },
+        {
+          "word": "donk",
+          "count": 1
+        },
+        {
+          "word": "kenalan",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261111_083936.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261111-083936"
     }
   ]
 }
