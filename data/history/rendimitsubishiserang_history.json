@@ -1,7 +1,7 @@
 {
   "username": "rendimitsubishiserang",
   "retention_days": 90,
-  "updated_at": "2026-11-10T12:14:21.444Z",
+  "updated_at": "2026-11-11T14:59:53.822Z",
   "sessions": [
     {
       "id": "rendimitsubishiserang_20261029_231919",
@@ -2677,6 +2677,209 @@
       ],
       "session_report": "Session_rendimitsubishiserang_20261110_182145.xlsx",
       "release_tag": "live-rendimitsubishiserang-20261110-182145"
+    },
+    {
+      "id": "rendimitsubishiserang_20261111_215109",
+      "username": "rendimitsubishiserang",
+      "room_id": "7706913280535857940",
+      "title": "",
+      "live_started_at": "2026-11-11T14:00:07.000Z",
+      "tracking_started_at": "2026-11-11T14:51:21.031Z",
+      "ended_at": "2026-11-11T14:59:53.820Z",
+      "duration_sec": 3587,
+      "tracked_duration_sec": 513,
+      "end_reason": "stream_end",
+      "peak_viewers": 5,
+      "peak_viewers_at": "2026-11-11T14:53:06.892Z",
+      "avg_viewers": 2,
+      "total_likes": 1441,
+      "total_comments": 16,
+      "unique_commenters": 3,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-11T14:51:21.031Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-11T14:52:21.038Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T14:53:21.046Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-11T14:54:21.049Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T14:55:21.052Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T14:56:21.060Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T14:57:21.061Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T14:58:21.062Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T14:59:21.066Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T14:59:53.820Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "flowers2208",
+          "nickname": "Flowers Kristiany Ma",
+          "count": 12
+        },
+        {
+          "user": "sulistiantomp",
+          "nickname": "Sulistianto m.p",
+          "count": 3
+        },
+        {
+          "user": "sf_visuall",
+          "nickname": "chomenk",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "usaha",
+          "count": 1
+        },
+        {
+          "word": "singapore",
+          "count": 1
+        },
+        {
+          "word": "anak",
+          "count": 1
+        },
+        {
+          "word": "jepang",
+          "count": 1
+        },
+        {
+          "word": "kmrn",
+          "count": 1
+        },
+        {
+          "word": "muf",
+          "count": 1
+        },
+        {
+          "word": "tolak",
+          "count": 1
+        },
+        {
+          "word": "sedih",
+          "count": 1
+        },
+        {
+          "word": "mesti",
+          "count": 1
+        },
+        {
+          "word": "sana",
+          "count": 1
+        },
+        {
+          "word": "katanya",
+          "count": 1
+        },
+        {
+          "word": "namanya",
+          "count": 1
+        },
+        {
+          "word": "bagus",
+          "count": 1
+        },
+        {
+          "word": "okay",
+          "count": 1
+        },
+        {
+          "word": "sehat2",
+          "count": 1
+        },
+        {
+          "word": "mang",
+          "count": 1
+        },
+        {
+          "word": "hbd",
+          "count": 1
+        },
+        {
+          "word": "rendi",
+          "count": 1
+        },
+        {
+          "word": "bisaa",
+          "count": 1
+        },
+        {
+          "word": "bilang",
+          "count": 1
+        },
+        {
+          "word": "survey",
+          "count": 1
+        },
+        {
+          "word": "tadi",
+          "count": 1
+        },
+        {
+          "word": "telpon",
+          "count": 1
+        },
+        {
+          "word": "orang",
+          "count": 1
+        },
+        {
+          "word": "dealer",
+          "count": 1
+        },
+        {
+          "word": "blg",
+          "count": 1
+        },
+        {
+          "word": "lolos",
+          "count": 1
+        },
+        {
+          "word": "rangkas",
+          "count": 1
+        },
+        {
+          "word": "terima",
+          "count": 1
+        },
+        {
+          "word": "kasih",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_rendimitsubishiserang_20261111_215109.xlsx",
+      "release_tag": "live-rendimitsubishiserang-20261111-215109"
     }
   ]
 }
