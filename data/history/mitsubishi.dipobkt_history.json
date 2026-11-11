@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi.dipobkt",
   "retention_days": 90,
-  "updated_at": "2026-11-09T07:25:42.067Z",
+  "updated_at": "2026-11-11T08:07:10.227Z",
   "sessions": [
     {
       "id": "mitsubishi.dipobkt_20261028_121438",
@@ -5764,6 +5764,164 @@
       "top_keywords": [],
       "session_report": "Session_mitsubishi.dipobkt_20261109_142438.xlsx",
       "release_tag": "live-mitsubishi.dipobkt-20261109-142438"
+    },
+    {
+      "id": "mitsubishi.dipobkt_20261111_144710",
+      "username": "mitsubishi.dipobkt",
+      "room_id": "7706804854988376840",
+      "title": "Diskon November Gacor",
+      "live_started_at": "2026-11-11T06:59:31.000Z",
+      "tracking_started_at": "2026-11-11T07:47:23.706Z",
+      "ended_at": "2026-11-11T08:07:10.224Z",
+      "duration_sec": 4059,
+      "tracked_duration_sec": 1187,
+      "end_reason": "stream_end",
+      "peak_viewers": 6,
+      "peak_viewers_at": "2026-11-11T07:48:55.389Z",
+      "avg_viewers": 3,
+      "total_likes": 0,
+      "total_comments": 6,
+      "unique_commenters": 2,
+      "follows": 1,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-11T07:47:23.706Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-11T07:48:23.712Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-11T07:49:23.713Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-11T07:50:23.724Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-11T07:51:23.735Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-11T07:52:23.744Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-11T07:53:23.754Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T07:54:23.764Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T07:55:23.775Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T07:56:23.784Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T07:57:23.795Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T07:58:23.795Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T07:59:23.798Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T08:00:23.809Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T08:01:23.812Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T08:02:23.821Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T08:03:23.831Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T08:04:23.835Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-11T08:05:23.840Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T08:06:23.851Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-11T08:07:10.224Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "mdaenlagulagu",
+          "nickname": "mdaenlagulagu",
+          "count": 5
+        },
+        {
+          "user": "bang.dika89",
+          "nickname": "Bang Dika",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "dimakan",
+          "count": 1
+        },
+        {
+          "word": "atas",
+          "count": 1
+        },
+        {
+          "word": "uruf",
+          "count": 1
+        },
+        {
+          "word": "angka",
+          "count": 1
+        },
+        {
+          "word": "brpa",
+          "count": 1
+        },
+        {
+          "word": "orang",
+          "count": 1
+        },
+        {
+          "word": "host",
+          "count": 1
+        },
+        {
+          "word": "bukit",
+          "count": 1
+        },
+        {
+          "word": "tinggi",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi.dipobkt_20261111_144710.xlsx",
+      "release_tag": "live-mitsubishi.dipobkt-20261111-144710"
     }
   ]
 }
