@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-11-11T01:45:49.898Z",
+  "updated_at": "2026-11-11T04:35:01.215Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -4281,6 +4281,263 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261111_083936.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261111-083936"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261111_112459",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7706751361010518836",
+      "title": "Tanya produck mitsubishi donk",
+      "live_started_at": "2026-11-11T03:31:46.000Z",
+      "tracking_started_at": "2026-11-11T04:25:11.065Z",
+      "ended_at": "2026-11-11T04:35:01.212Z",
+      "duration_sec": 3795,
+      "tracked_duration_sec": 590,
+      "end_reason": "stream_end",
+      "peak_viewers": 9,
+      "peak_viewers_at": "2026-11-11T04:27:16.865Z",
+      "avg_viewers": 5,
+      "total_likes": 1292,
+      "total_comments": 30,
+      "unique_commenters": 13,
+      "follows": 4,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-11T04:25:11.065Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-11T04:26:11.072Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-11T04:27:11.074Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-11T04:28:11.076Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-11T04:29:11.079Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-11T04:30:11.081Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-11T04:31:11.084Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-11T04:32:11.086Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-11T04:33:11.087Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-11T04:34:11.088Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-11T04:35:01.212Z",
+          "v": 3
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "abdulghaffar3040",
+          "nickname": "Abdul Ghaffar",
+          "count": 10
+        },
+        {
+          "user": "user5031836262418",
+          "nickname": "dasmil",
+          "count": 4
+        },
+        {
+          "user": "boycobracobra",
+          "nickname": "🇩🇪💥 BUARDI 💥🇩🇪",
+          "count": 3
+        },
+        {
+          "user": "brilliantcollection_",
+          "nickname": "Brilliant",
+          "count": 2
+        },
+        {
+          "user": "pak.muhyi8",
+          "nickname": "Pak Muhyi",
+          "count": 2
+        },
+        {
+          "user": "sponsbob298",
+          "nickname": "perintis mudah",
+          "count": 2
+        },
+        {
+          "user": "ismantorotoro909",
+          "nickname": "andreismantoro9@gmail.com",
+          "count": 1
+        },
+        {
+          "user": "seandainya354",
+          "nickname": "فردان",
+          "count": 1
+        },
+        {
+          "user": "www_bigbbososs01",
+          "nickname": "Big noss",
+          "count": 1
+        },
+        {
+          "user": "bang.rojali00",
+          "nickname": "Bang Rojali",
+          "count": 1
+        },
+        {
+          "user": "pangaras.hasibuan",
+          "nickname": "Pangaras Hasibuan",
+          "count": 1
+        },
+        {
+          "user": "eli.lestuti",
+          "nickname": "Eli Lestuti",
+          "count": 1
+        },
+        {
+          "user": "ibrahimcomm6",
+          "nickname": "ibrahim",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "mobil",
+          "count": 2
+        },
+        {
+          "word": "klo",
+          "count": 2
+        },
+        {
+          "word": "ngidam",
+          "count": 1
+        },
+        {
+          "word": "punya",
+          "count": 1
+        },
+        {
+          "word": "triton",
+          "count": 1
+        },
+        {
+          "word": "mbk",
+          "count": 1
+        },
+        {
+          "word": "tinggal",
+          "count": 1
+        },
+        {
+          "word": "terios",
+          "count": 1
+        },
+        {
+          "word": "automatic",
+          "count": 1
+        },
+        {
+          "word": "brp",
+          "count": 1
+        },
+        {
+          "word": "disc",
+          "count": 1
+        },
+        {
+          "word": "akhir",
+          "count": 1
+        },
+        {
+          "word": "tahun",
+          "count": 1
+        },
+        {
+          "word": "maaf",
+          "count": 1
+        },
+        {
+          "word": "expander",
+          "count": 1
+        },
+        {
+          "word": "tanyak",
+          "count": 1
+        },
+        {
+          "word": "sorum",
+          "count": 1
+        },
+        {
+          "word": "bar",
+          "count": 1
+        },
+        {
+          "word": "leyan",
+          "count": 1
+        },
+        {
+          "word": "macam",
+          "count": 1
+        },
+        {
+          "word": "kes",
+          "count": 1
+        },
+        {
+          "word": "brapa",
+          "count": 1
+        },
+        {
+          "word": "cantik",
+          "count": 1
+        },
+        {
+          "word": "mikirin",
+          "count": 1
+        },
+        {
+          "word": "mintk",
+          "count": 1
+        },
+        {
+          "word": "kantor",
+          "count": 1
+        },
+        {
+          "word": "makan",
+          "count": 1
+        },
+        {
+          "word": "mmh",
+          "count": 1
+        },
+        {
+          "word": "sayang",
+          "count": 1
+        },
+        {
+          "word": "loksi",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261111_112459.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261111-112459"
     }
   ]
 }
