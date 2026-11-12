@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-11-11T07:57:46.651Z",
+  "updated_at": "2026-11-12T03:38:17.722Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -4779,6 +4779,82 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261111_144713.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261111-144713"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261112_103720",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7707114675250416436",
+      "title": "",
+      "live_started_at": null,
+      "tracking_started_at": "2026-11-12T03:37:33.726Z",
+      "ended_at": "2026-11-12T03:38:17.720Z",
+      "duration_sec": 44,
+      "tracked_duration_sec": 44,
+      "end_reason": "stream_end",
+      "peak_viewers": 0,
+      "peak_viewers_at": null,
+      "avg_viewers": 0,
+      "total_likes": 0,
+      "total_comments": 6,
+      "unique_commenters": 4,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-12T03:37:33.726Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-12T03:38:17.720Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "kamang.profil",
+          "nickname": "Kamang Jaya Profil",
+          "count": 3
+        },
+        {
+          "user": "dedi.setiabudi55",
+          "nickname": "Dedi Setiabudi",
+          "count": 1
+        },
+        {
+          "user": "amogareng",
+          "nickname": "Amo Gareng",
+          "count": 1
+        },
+        {
+          "user": "anas.abdullah.nst",
+          "nickname": "ANAS ABDULLAH NST",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "canter",
+          "count": 1
+        },
+        {
+          "word": "pagi",
+          "count": 1
+        },
+        {
+          "word": "yuro",
+          "count": 1
+        },
+        {
+          "word": "kosong",
+          "count": 1
+        },
+        {
+          "word": "cantik",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261112_103720.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261112-103720"
     }
   ]
 }
