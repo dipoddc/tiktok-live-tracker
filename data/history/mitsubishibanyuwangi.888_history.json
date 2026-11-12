@@ -1,7 +1,7 @@
 {
   "username": "mitsubishibanyuwangi.888",
   "retention_days": 90,
-  "updated_at": "2026-11-11T13:10:22.774Z",
+  "updated_at": "2026-11-12T05:11:29.050Z",
   "sessions": [
     {
       "id": "mitsubishibanyuwangi.888_20261023_184533",
@@ -11158,6 +11158,339 @@
       ],
       "session_report": "Session_mitsubishibanyuwangi.888_20261111_193824.xlsx",
       "release_tag": "live-mitsubishibanyuwangi.888-20261111-193824"
+    },
+    {
+      "id": "mitsubishibanyuwangi.888_20261112_113806",
+      "username": "mitsubishibanyuwangi.888",
+      "room_id": "7707125445988911890",
+      "title": "Promo Mitsubishi O813 53357323",
+      "live_started_at": "2026-11-12T03:43:34.000Z",
+      "tracking_started_at": "2026-11-12T04:38:24.821Z",
+      "ended_at": "2026-11-12T05:11:29.046Z",
+      "duration_sec": 5275,
+      "tracked_duration_sec": 1984,
+      "end_reason": "stream_end",
+      "peak_viewers": 7,
+      "peak_viewers_at": "2026-11-12T04:59:19.276Z",
+      "avg_viewers": 3,
+      "total_likes": 3357,
+      "total_comments": 22,
+      "unique_commenters": 9,
+      "follows": 1,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-12T04:38:24.822Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-12T04:39:24.832Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T04:40:24.833Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T04:41:24.839Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T04:42:24.840Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T04:43:24.842Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T04:44:24.844Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T04:45:24.849Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T04:46:24.851Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T04:47:24.853Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-12T04:48:24.858Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-12T04:49:24.863Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T04:50:24.870Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T04:51:24.872Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-12T04:52:24.872Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T04:53:24.874Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-12T04:54:24.874Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-12T04:55:24.876Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-12T04:56:24.880Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-12T04:57:24.881Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-12T04:58:24.887Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-12T04:59:24.888Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-12T05:00:24.892Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-12T05:01:24.893Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T05:02:24.895Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-12T05:03:24.903Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-12T05:04:24.911Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T05:05:24.915Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T05:06:24.917Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T05:07:24.920Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T05:08:24.922Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T05:09:24.922Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T05:10:24.925Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T05:11:24.926Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T05:11:29.046Z",
+          "v": 2
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "aynrnyy",
+          "nickname": "ayni",
+          "count": 5
+        },
+        {
+          "user": "user627044815629",
+          "nickname": "DK FURNITURE",
+          "count": 4
+        },
+        {
+          "user": "imamafi721",
+          "nickname": "Imam Afi",
+          "count": 4
+        },
+        {
+          "user": "wike.yasin",
+          "nickname": "Wike Yasin",
+          "count": 4
+        },
+        {
+          "user": "davit.cabe",
+          "nickname": "Tiger",
+          "count": 1
+        },
+        {
+          "user": "herman.bwi0",
+          "nickname": "H E R M A N",
+          "count": 1
+        },
+        {
+          "user": "ahmadlaven",
+          "nickname": "angkringan mas brewog",
+          "count": 1
+        },
+        {
+          "user": "zomzom608",
+          "nickname": "zero",
+          "count": 1
+        },
+        {
+          "user": "hen132_",
+          "nickname": "Hen",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "brp",
+          "count": 3
+        },
+        {
+          "word": "pajero",
+          "count": 2
+        },
+        {
+          "word": "ape",
+          "count": 2
+        },
+        {
+          "word": "klok",
+          "count": 1
+        },
+        {
+          "word": "pajakx",
+          "count": 1
+        },
+        {
+          "word": "pertahunx",
+          "count": 1
+        },
+        {
+          "word": "rin",
+          "count": 1
+        },
+        {
+          "word": "mbok",
+          "count": 1
+        },
+        {
+          "word": "pangleng",
+          "count": 1
+        },
+        {
+          "word": "jarre",
+          "count": 1
+        },
+        {
+          "word": "duduk",
+          "count": 1
+        },
+        {
+          "word": "samean",
+          "count": 1
+        },
+        {
+          "word": "maem",
+          "count": 1
+        },
+        {
+          "word": "sek",
+          "count": 1
+        },
+        {
+          "word": "oke",
+          "count": 1
+        },
+        {
+          "word": "lanjutt",
+          "count": 1
+        },
+        {
+          "word": "istirahat",
+          "count": 1
+        },
+        {
+          "word": "aduhh",
+          "count": 1
+        },
+        {
+          "word": "gawe",
+          "count": 1
+        },
+        {
+          "word": "caleteran",
+          "count": 1
+        },
+        {
+          "word": "pajerro",
+          "count": 1
+        },
+        {
+          "word": "iku",
+          "count": 1
+        },
+        {
+          "word": "tarjet",
+          "count": 1
+        },
+        {
+          "word": "nunggu",
+          "count": 1
+        },
+        {
+          "word": "nanggap",
+          "count": 1
+        },
+        {
+          "word": "janger",
+          "count": 1
+        },
+        {
+          "word": "alhamdulillah",
+          "count": 1
+        },
+        {
+          "word": "rini",
+          "count": 1
+        },
+        {
+          "word": "bulan",
+          "count": 1
+        },
+        {
+          "word": "lumayan",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishibanyuwangi.888_20261112_113806.xlsx",
+      "release_tag": "live-mitsubishibanyuwangi.888-20261112-113806"
     }
   ]
 }
