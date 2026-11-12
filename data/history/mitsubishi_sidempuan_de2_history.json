@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-11-12T03:38:17.722Z",
+  "updated_at": "2026-11-12T10:06:19.300Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -4855,6 +4855,257 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261112_103720.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261112-103720"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261112_165533",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7707217551394097972",
+      "title": "Tanya produck mitsubishi donk",
+      "live_started_at": "2026-11-12T09:40:55.000Z",
+      "tracking_started_at": "2026-11-12T09:55:44.593Z",
+      "ended_at": "2026-11-12T10:06:19.297Z",
+      "duration_sec": 1524,
+      "tracked_duration_sec": 635,
+      "end_reason": "stream_end",
+      "peak_viewers": 8,
+      "peak_viewers_at": "2026-11-12T09:57:38.606Z",
+      "avg_viewers": 4,
+      "total_likes": 162,
+      "total_comments": 56,
+      "unique_commenters": 11,
+      "follows": 2,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-12T09:55:44.594Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-12T09:56:44.599Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-12T09:57:44.599Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-12T09:58:44.601Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-12T09:59:44.602Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-12T10:00:44.613Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-12T10:01:44.617Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-12T10:02:44.623Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-12T10:03:44.632Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-12T10:04:44.634Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-12T10:05:44.637Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-12T10:06:19.297Z",
+          "v": 2
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "bhowmikloknath",
+          "nickname": "LOVE ME",
+          "count": 28
+        },
+        {
+          "user": "fajar_bre",
+          "nickname": "fajar_bre",
+          "count": 16
+        },
+        {
+          "user": "uda.romi0",
+          "nickname": "uda romi o3",
+          "count": 2
+        },
+        {
+          "user": "mumtazahfatiha",
+          "nickname": "pendi",
+          "count": 2
+        },
+        {
+          "user": "adliadli1431",
+          "nickname": "adli",
+          "count": 2
+        },
+        {
+          "user": "jppunya7",
+          "nickname": "Al,amin",
+          "count": 1
+        },
+        {
+          "user": "soppeng467",
+          "nickname": "soppeng",
+          "count": 1
+        },
+        {
+          "user": "ayah..afika",
+          "nickname": "ayah .afika.",
+          "count": 1
+        },
+        {
+          "user": "sabarimba00",
+          "nickname": "Bengkel pidoli jaya nst",
+          "count": 1
+        },
+        {
+          "user": "penggunatiktok1344",
+          "nickname": "bonar",
+          "count": 1
+        },
+        {
+          "user": "user260380560",
+          "nickname": "Hermansyah nasution",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "come",
+          "count": 10
+        },
+        {
+          "word": "singapore",
+          "count": 9
+        },
+        {
+          "word": "give",
+          "count": 7
+        },
+        {
+          "word": "money",
+          "count": 4
+        },
+        {
+          "word": "assalamualikum",
+          "count": 3
+        },
+        {
+          "word": "batam",
+          "count": 3
+        },
+        {
+          "word": "how",
+          "count": 2
+        },
+        {
+          "word": "adong",
+          "count": 2
+        },
+        {
+          "word": "piga",
+          "count": 2
+        },
+        {
+          "word": "one",
+          "count": 2
+        },
+        {
+          "word": "girl",
+          "count": 2
+        },
+        {
+          "word": "friend",
+          "count": 2
+        },
+        {
+          "word": "everything",
+          "count": 2
+        },
+        {
+          "word": "inbox",
+          "count": 2
+        },
+        {
+          "word": "see",
+          "count": 2
+        },
+        {
+          "word": "fery",
+          "count": 2
+        },
+        {
+          "word": "dei",
+          "count": 2
+        },
+        {
+          "word": "singapura",
+          "count": 2
+        },
+        {
+          "word": "month",
+          "count": 2
+        },
+        {
+          "word": "alak",
+          "count": 2
+        },
+        {
+          "word": "jukkit",
+          "count": 2
+        },
+        {
+          "word": "doi",
+          "count": 2
+        },
+        {
+          "word": "need",
+          "count": 2
+        },
+        {
+          "word": "okay",
+          "count": 2
+        },
+        {
+          "word": "nai",
+          "count": 2
+        },
+        {
+          "word": "bye",
+          "count": 2
+        },
+        {
+          "word": "lgi",
+          "count": 1
+        },
+        {
+          "word": "mna",
+          "count": 1
+        },
+        {
+          "word": "nhce",
+          "count": 1
+        },
+        {
+          "word": "kenalan",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261112_165533.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261112-165533"
     }
   ]
 }
