@@ -1,7 +1,7 @@
 {
   "username": "juraganmitsubishijkt",
   "retention_days": 90,
-  "updated_at": "2026-11-11T08:11:07.965Z",
+  "updated_at": "2026-11-12T08:09:58.164Z",
   "sessions": [
     {
       "id": "juraganmitsubishijkt_20261109_115935",
@@ -287,6 +287,181 @@
       ],
       "session_report": "Session_juraganmitsubishijkt_20261111_144709.xlsx",
       "release_tag": "live-juraganmitsubishijkt-20261111-144709"
+    },
+    {
+      "id": "juraganmitsubishijkt_20261112_145926",
+      "username": "juraganmitsubishijkt",
+      "room_id": "7707188400747105076",
+      "title": "",
+      "live_started_at": null,
+      "tracking_started_at": "2026-11-12T07:59:42.931Z",
+      "ended_at": "2026-11-12T08:09:58.163Z",
+      "duration_sec": 615,
+      "tracked_duration_sec": 615,
+      "end_reason": "stream_end",
+      "peak_viewers": 3,
+      "peak_viewers_at": "2026-11-12T08:04:25.456Z",
+      "avg_viewers": 1,
+      "total_likes": 1719,
+      "total_comments": 7,
+      "unique_commenters": 3,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-12T07:59:42.932Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-12T08:00:42.943Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T08:01:42.950Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T08:02:42.959Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T08:03:42.960Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T08:04:42.970Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T08:05:42.972Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-12T08:06:42.979Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T08:07:42.982Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T08:08:42.983Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T08:09:42.990Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T08:09:58.163Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "mfawaaz4",
+          "nickname": "Mfawaaz",
+          "count": 3
+        },
+        {
+          "user": "ahmad.syarif9536",
+          "nickname": "Ahmad Syarif",
+          "count": 3
+        },
+        {
+          "user": "saprisalsal8",
+          "nickname": "Saprisal sal",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "7jtaan",
+          "count": 2
+        },
+        {
+          "word": "kecil",
+          "count": 2
+        },
+        {
+          "word": "xpander",
+          "count": 1
+        },
+        {
+          "word": "ultimate",
+          "count": 1
+        },
+        {
+          "word": "angsuran",
+          "count": 1
+        },
+        {
+          "word": "brapa",
+          "count": 1
+        },
+        {
+          "word": "tahun",
+          "count": 1
+        },
+        {
+          "word": "diangka",
+          "count": 1
+        },
+        {
+          "word": "izin",
+          "count": 1
+        },
+        {
+          "word": "sya",
+          "count": 1
+        },
+        {
+          "word": "dapet",
+          "count": 1
+        },
+        {
+          "word": "hitungan",
+          "count": 1
+        },
+        {
+          "word": "cari",
+          "count": 1
+        },
+        {
+          "word": "sesuai",
+          "count": 1
+        },
+        {
+          "word": "buget",
+          "count": 1
+        },
+        {
+          "word": "angka",
+          "count": 1
+        },
+        {
+          "word": "lokasi",
+          "count": 1
+        },
+        {
+          "word": "jkrta",
+          "count": 1
+        },
+        {
+          "word": "boss",
+          "count": 1
+        },
+        {
+          "word": "yacakep",
+          "count": 1
+        },
+        {
+          "word": "zenia",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_juraganmitsubishijkt_20261112_145926.xlsx",
+      "release_tag": "live-juraganmitsubishijkt-20261112-145926"
     }
   ]
 }
