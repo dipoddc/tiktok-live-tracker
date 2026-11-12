@@ -1,7 +1,7 @@
 {
   "username": "rendimitsubishiserang",
   "retention_days": 90,
-  "updated_at": "2026-11-11T14:59:53.822Z",
+  "updated_at": "2026-11-12T05:45:19.720Z",
   "sessions": [
     {
       "id": "rendimitsubishiserang_20261029_231919",
@@ -2880,6 +2880,144 @@
       ],
       "session_report": "Session_rendimitsubishiserang_20261111_215109.xlsx",
       "release_tag": "live-rendimitsubishiserang-20261111-215109"
+    },
+    {
+      "id": "rendimitsubishiserang_20261112_123955",
+      "username": "rendimitsubishiserang",
+      "room_id": "7707150675792988949",
+      "title": "",
+      "live_started_at": "2026-11-12T05:21:50.000Z",
+      "tracking_started_at": "2026-11-12T05:40:07.740Z",
+      "ended_at": "2026-11-12T05:45:19.718Z",
+      "duration_sec": 1410,
+      "tracked_duration_sec": 312,
+      "end_reason": "stream_end",
+      "peak_viewers": 3,
+      "peak_viewers_at": "2026-11-12T05:40:12.672Z",
+      "avg_viewers": 1,
+      "total_likes": 0,
+      "total_comments": 7,
+      "unique_commenters": 2,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-12T05:40:07.740Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-12T05:41:07.754Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-12T05:42:07.762Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T05:43:07.770Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T05:44:07.780Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T05:45:07.790Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-12T05:45:19.718Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "bramasta_48",
+          "nickname": "Kumpulan Jersey Local",
+          "count": 6
+        },
+        {
+          "user": "hendi.khan",
+          "nickname": "juragan Rental mobil",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "kang",
+          "count": 4
+        },
+        {
+          "word": "hybrid",
+          "count": 1
+        },
+        {
+          "word": "putih",
+          "count": 1
+        },
+        {
+          "word": "ready",
+          "count": 1
+        },
+        {
+          "word": "spil",
+          "count": 1
+        },
+        {
+          "word": "dulu",
+          "count": 1
+        },
+        {
+          "word": "situ",
+          "count": 1
+        },
+        {
+          "word": "hitam",
+          "count": 1
+        },
+        {
+          "word": "brp",
+          "count": 1
+        },
+        {
+          "word": "nanti",
+          "count": 1
+        },
+        {
+          "word": "liat",
+          "count": 1
+        },
+        {
+          "word": "brosur",
+          "count": 1
+        },
+        {
+          "word": "assalamu",
+          "count": 1
+        },
+        {
+          "word": "alaikum",
+          "count": 1
+        },
+        {
+          "word": "lokasi",
+          "count": 1
+        },
+        {
+          "word": "dealer",
+          "count": 1
+        },
+        {
+          "word": "dmna",
+          "count": 1
+        },
+        {
+          "word": "udh",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_rendimitsubishiserang_20261112_123955.xlsx",
+      "release_tag": "live-rendimitsubishiserang-20261112-123955"
     }
   ]
 }
