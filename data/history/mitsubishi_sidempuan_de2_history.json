@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-11-12T10:06:19.300Z",
+  "updated_at": "2026-11-13T08:56:28.950Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -5106,6 +5106,55 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261112_165533.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261112-165533"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261113_155422",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7707571388948826886",
+      "title": "Tanya produck mitsubishi donk",
+      "live_started_at": "2026-11-13T08:34:08.000Z",
+      "tracking_started_at": "2026-11-13T08:54:33.389Z",
+      "ended_at": "2026-11-13T08:56:28.948Z",
+      "duration_sec": 1341,
+      "tracked_duration_sec": 116,
+      "end_reason": "stream_end",
+      "peak_viewers": 0,
+      "peak_viewers_at": null,
+      "avg_viewers": 0,
+      "total_likes": 0,
+      "total_comments": 1,
+      "unique_commenters": 1,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-13T08:54:33.389Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-13T08:55:33.401Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-13T08:56:28.948Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "zulfananwarsiregar7",
+          "nickname": "zulfananwarsiregar",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "kabar",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261113_155422.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261113-155422"
     }
   ]
 }
