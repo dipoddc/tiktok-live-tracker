@@ -1,7 +1,7 @@
 {
   "username": "rakanmitsubishiaceh",
   "retention_days": 90,
-  "updated_at": "2026-11-12T05:15:29.708Z",
+  "updated_at": "2026-11-14T08:19:02.325Z",
   "sessions": [
     {
       "id": "rakanmitsubishiaceh_20261024_162537",
@@ -5174,6 +5174,514 @@
       ],
       "session_report": "Session_rakanmitsubishiaceh_20261112_113805.xlsx",
       "release_tag": "live-rakanmitsubishiaceh-20261112-113805"
+    },
+    {
+      "id": "rakanmitsubishiaceh_20261114_141546",
+      "username": "rakanmitsubishiaceh",
+      "room_id": "7707921758816537364",
+      "title": "Promo Mitsubishi Aceh",
+      "live_started_at": "2026-11-14T07:14:27.000Z",
+      "tracking_started_at": "2026-11-14T07:15:57.855Z",
+      "ended_at": "2026-11-14T08:19:02.322Z",
+      "duration_sec": 3875,
+      "tracked_duration_sec": 3784,
+      "end_reason": "stream_end",
+      "peak_viewers": 19,
+      "peak_viewers_at": "2026-11-14T07:44:42.859Z",
+      "avg_viewers": 10,
+      "total_likes": 191,
+      "total_comments": 77,
+      "unique_commenters": 44,
+      "follows": 5,
+      "shares": 1,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-14T07:15:57.855Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-14T07:16:57.860Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-14T07:17:57.860Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-14T07:18:57.862Z",
+          "v": 14
+        },
+        {
+          "t": "2026-11-14T07:19:57.862Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-14T07:20:57.864Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-14T07:21:57.865Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-14T07:22:57.867Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-14T07:23:57.869Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-14T07:24:57.869Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-14T07:25:57.871Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-14T07:26:57.873Z",
+          "v": 14
+        },
+        {
+          "t": "2026-11-14T07:27:57.873Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-14T07:28:57.877Z",
+          "v": 14
+        },
+        {
+          "t": "2026-11-14T07:29:57.877Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-14T07:30:57.878Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-14T07:31:57.879Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-14T07:32:57.879Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-14T07:33:57.881Z",
+          "v": 15
+        },
+        {
+          "t": "2026-11-14T07:34:57.882Z",
+          "v": 14
+        },
+        {
+          "t": "2026-11-14T07:35:57.881Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-14T07:36:57.883Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-14T07:37:57.882Z",
+          "v": 14
+        },
+        {
+          "t": "2026-11-14T07:38:57.885Z",
+          "v": 14
+        },
+        {
+          "t": "2026-11-14T07:39:57.884Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-14T07:40:57.885Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-14T07:41:57.887Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-14T07:42:57.888Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-14T07:43:57.889Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-14T07:44:57.891Z",
+          "v": 15
+        },
+        {
+          "t": "2026-11-14T07:45:57.892Z",
+          "v": 16
+        },
+        {
+          "t": "2026-11-14T07:46:57.893Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-14T07:47:57.894Z",
+          "v": 15
+        },
+        {
+          "t": "2026-11-14T07:48:57.897Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-14T07:49:57.899Z",
+          "v": 16
+        },
+        {
+          "t": "2026-11-14T07:50:57.899Z",
+          "v": 14
+        },
+        {
+          "t": "2026-11-14T07:51:57.900Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-14T07:52:57.903Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-14T07:53:57.905Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-14T07:54:57.908Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-14T07:55:57.910Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-14T07:56:57.911Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-14T07:57:57.912Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-14T07:58:57.916Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-14T07:59:57.917Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-14T08:00:57.916Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-14T08:01:57.917Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-14T08:02:57.919Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-14T08:03:57.922Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-14T08:04:57.923Z",
+          "v": 13
+        },
+        {
+          "t": "2026-11-14T08:05:57.923Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-14T08:06:57.923Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-14T08:07:57.923Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-14T08:08:57.925Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-14T08:09:57.926Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-14T08:10:57.928Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-14T08:11:57.929Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-14T08:12:57.931Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-14T08:13:57.933Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-14T08:14:57.935Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-14T08:15:57.935Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-14T08:16:57.936Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-14T08:17:57.939Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-14T08:18:57.947Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-14T08:19:02.322Z",
+          "v": 5
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "umar.1234a1",
+          "nickname": "boy",
+          "count": 6
+        },
+        {
+          "user": "yukchekcout",
+          "nickname": "Yuk Checkout!",
+          "count": 5
+        },
+        {
+          "user": "culaculo7",
+          "nickname": "Cincau",
+          "count": 4
+        },
+        {
+          "user": "dedy.sunardy3",
+          "nickname": "Dedy sunardy",
+          "count": 4
+        },
+        {
+          "user": "brokus07",
+          "nickname": "BROKUS07",
+          "count": 4
+        },
+        {
+          "user": "jamalabsaf",
+          "nickname": "Jamal",
+          "count": 4
+        },
+        {
+          "user": "suwarni1770",
+          "nickname": "suwarni",
+          "count": 3
+        },
+        {
+          "user": "sahata.coffee.co",
+          "nickname": "Sahata Coffee co",
+          "count": 3
+        },
+        {
+          "user": "aku.run52",
+          "nickname": "arcy,,rayyan",
+          "count": 3
+        },
+        {
+          "user": "icut.maya",
+          "nickname": "Icut Maya",
+          "count": 3
+        },
+        {
+          "user": "lambungsiblah",
+          "nickname": "hjP 50ss",
+          "count": 2
+        },
+        {
+          "user": "minion52782",
+          "nickname": "Deriey 2kd",
+          "count": 2
+        },
+        {
+          "user": "toke_bisnis",
+          "nickname": "Yo Yoeng",
+          "count": 2
+        },
+        {
+          "user": "muhammadfrhan92",
+          "nickname": "MUNI",
+          "count": 2
+        },
+        {
+          "user": "variobiru333",
+          "nickname": "variobiru333",
+          "count": 1
+        },
+        {
+          "user": "user9944524118400",
+          "nickname": "alfatih",
+          "count": 1
+        },
+        {
+          "user": "isalbiah7",
+          "nickname": "mamak sultan👶",
+          "count": 1
+        },
+        {
+          "user": "lian.8240",
+          "nickname": "lian.82",
+          "count": 1
+        },
+        {
+          "user": "tawir38",
+          "nickname": "Tawir38",
+          "count": 1
+        },
+        {
+          "user": "khailir19",
+          "nickname": "khailir19",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "pajero",
+          "count": 13
+        },
+        {
+          "word": "angsuran",
+          "count": 11
+        },
+        {
+          "word": "xpander",
+          "count": 7
+        },
+        {
+          "word": "brp",
+          "count": 7
+        },
+        {
+          "word": "cash",
+          "count": 7
+        },
+        {
+          "word": "canter",
+          "count": 6
+        },
+        {
+          "word": "lon",
+          "count": 5
+        },
+        {
+          "word": "l300",
+          "count": 4
+        },
+        {
+          "word": "ultimate",
+          "count": 4
+        },
+        {
+          "word": "triton",
+          "count": 4
+        },
+        {
+          "word": "padup",
+          "count": 4
+        },
+        {
+          "word": "dakar",
+          "count": 4
+        },
+        {
+          "word": "ansuran",
+          "count": 4
+        },
+        {
+          "word": "jih",
+          "count": 4
+        },
+        {
+          "word": "4x2",
+          "count": 3
+        },
+        {
+          "word": "jeut",
+          "count": 3
+        },
+        {
+          "word": "padit",
+          "count": 3
+        },
+        {
+          "word": "pdum",
+          "count": 2
+        },
+        {
+          "word": "harga",
+          "count": 2
+        },
+        {
+          "word": "kas",
+          "count": 2
+        },
+        {
+          "word": "pajak",
+          "count": 2
+        },
+        {
+          "word": "angsurannya",
+          "count": 2
+        },
+        {
+          "word": "pick",
+          "count": 2
+        },
+        {
+          "word": "ultimat",
+          "count": 2
+        },
+        {
+          "word": "gantung",
+          "count": 2
+        },
+        {
+          "word": "box",
+          "count": 2
+        },
+        {
+          "word": "padum",
+          "count": 2
+        },
+        {
+          "word": "roda",
+          "count": 2
+        },
+        {
+          "word": "long",
+          "count": 2
+        },
+        {
+          "word": "expander",
+          "count": 2
+        }
+      ],
+      "session_report": "Session_rakanmitsubishiaceh_20261114_141546.xlsx",
+      "release_tag": "live-rakanmitsubishiaceh-20261114-141546"
     }
   ]
 }
