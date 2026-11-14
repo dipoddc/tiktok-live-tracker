@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-11-13T08:56:28.950Z",
+  "updated_at": "2026-11-14T02:55:51.320Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -5155,6 +5155,154 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261113_155422.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261113-155422"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261114_094604",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7707843024550988545",
+      "title": "Tanya produck mitsubishi donk",
+      "live_started_at": "2026-11-14T02:08:02.000Z",
+      "tracking_started_at": "2026-11-14T02:46:19.772Z",
+      "ended_at": "2026-11-14T02:55:51.318Z",
+      "duration_sec": 2869,
+      "tracked_duration_sec": 572,
+      "end_reason": "stream_end",
+      "peak_viewers": 3,
+      "peak_viewers_at": "2026-11-14T02:47:17.837Z",
+      "avg_viewers": 1,
+      "total_likes": 0,
+      "total_comments": 6,
+      "unique_commenters": 4,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-14T02:46:19.772Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-14T02:47:19.783Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-14T02:48:19.783Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-14T02:49:19.787Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-14T02:50:19.796Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-14T02:51:19.796Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-14T02:52:19.806Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-14T02:53:19.808Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-14T02:54:19.810Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-14T02:55:19.812Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-14T02:55:51.318Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "31208125297",
+          "nickname": "syamsul arif",
+          "count": 2
+        },
+        {
+          "user": "zakirfatheraulya",
+          "nickname": "ℤ∆𝕜𝕚𝕣 ℕ∆𝕘𝕒𝕟 𝟙𝟡𝟠𝟙",
+          "count": 2
+        },
+        {
+          "user": "ibrahimcomm6",
+          "nickname": "ibrahim",
+          "count": 1
+        },
+        {
+          "user": "beban.teamm",
+          "nickname": "User03884729378187",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "manis",
+          "count": 2
+        },
+        {
+          "word": "ibrahim",
+          "count": 1
+        },
+        {
+          "word": "pajero",
+          "count": 1
+        },
+        {
+          "word": "dakar",
+          "count": 1
+        },
+        {
+          "word": "4x2",
+          "count": 1
+        },
+        {
+          "word": "otr",
+          "count": 1
+        },
+        {
+          "word": "situbondo",
+          "count": 1
+        },
+        {
+          "word": "jatim",
+          "count": 1
+        },
+        {
+          "word": "l300",
+          "count": 1
+        },
+        {
+          "word": "angsuran",
+          "count": 1
+        },
+        {
+          "word": "bibir",
+          "count": 1
+        },
+        {
+          "word": "buk",
+          "count": 1
+        },
+        {
+          "word": "bos",
+          "count": 1
+        },
+        {
+          "word": "senyum",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261114_094604.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261114-094604"
     }
   ]
 }
