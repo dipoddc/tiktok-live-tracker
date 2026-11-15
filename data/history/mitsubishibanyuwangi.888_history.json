@@ -1,7 +1,7 @@
 {
   "username": "mitsubishibanyuwangi.888",
   "retention_days": 90,
-  "updated_at": "2026-11-14T00:38:22.354Z",
+  "updated_at": "2026-11-15T12:28:14.303Z",
   "sessions": [
     {
       "id": "mitsubishibanyuwangi.888_20261023_184533",
@@ -12263,6 +12263,192 @@
       ],
       "session_report": "Session_mitsubishibanyuwangi.888_20261114_065947.xlsx",
       "release_tag": "live-mitsubishibanyuwangi.888-20261114-065947"
+    },
+    {
+      "id": "mitsubishibanyuwangi.888_20261115_191240",
+      "username": "mitsubishibanyuwangi.888",
+      "room_id": "7708358671738096402",
+      "title": "Promo Mitsubishi O813 53357323",
+      "live_started_at": "2026-11-15T11:29:10.000Z",
+      "tracking_started_at": "2026-11-15T12:12:57.576Z",
+      "ended_at": "2026-11-15T12:28:14.300Z",
+      "duration_sec": 3544,
+      "tracked_duration_sec": 917,
+      "end_reason": "stream_end",
+      "peak_viewers": 1,
+      "peak_viewers_at": "2026-11-15T12:12:57.576Z",
+      "avg_viewers": 1,
+      "total_likes": 0,
+      "total_comments": 6,
+      "unique_commenters": 6,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-15T12:12:57.577Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-15T12:13:57.585Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-15T12:14:57.587Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-15T12:15:57.589Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-15T12:16:57.593Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-15T12:17:57.600Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-15T12:18:57.607Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-15T12:19:57.611Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-15T12:20:57.614Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-15T12:21:57.617Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-15T12:22:57.617Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-15T12:23:57.626Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-15T12:24:57.635Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-15T12:25:57.642Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-15T12:26:57.647Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-15T12:27:57.652Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-15T12:28:14.300Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "ucha_vhie",
+          "nickname": "ucha",
+          "count": 1
+        },
+        {
+          "user": "awg.giyanto.giyan",
+          "nickname": "Awg Giyanto Giyanto",
+          "count": 1
+        },
+        {
+          "user": "uti.jeskia",
+          "nickname": "Uti Jeskia",
+          "count": 1
+        },
+        {
+          "user": "user275828402",
+          "nickname": "Abdul Azis",
+          "count": 1
+        },
+        {
+          "user": "wahyu.amrullah2",
+          "nickname": "WAHYU IMAM AMRULLAH",
+          "count": 1
+        },
+        {
+          "user": "17riz4ever0",
+          "nickname": "-17riz¡4ever★",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "destinator",
+          "count": 1
+        },
+        {
+          "word": "berpa",
+          "count": 1
+        },
+        {
+          "word": "5thn",
+          "count": 1
+        },
+        {
+          "word": "l300",
+          "count": 1
+        },
+        {
+          "word": "angsuran",
+          "count": 1
+        },
+        {
+          "word": "brapa",
+          "count": 1
+        },
+        {
+          "word": "ambil",
+          "count": 1
+        },
+        {
+          "word": "thn",
+          "count": 1
+        },
+        {
+          "word": "xpander",
+          "count": 1
+        },
+        {
+          "word": "paling",
+          "count": 1
+        },
+        {
+          "word": "murah",
+          "count": 1
+        },
+        {
+          "word": "tipe",
+          "count": 1
+        },
+        {
+          "word": "juoss",
+          "count": 1
+        },
+        {
+          "word": "assalamualaikum",
+          "count": 1
+        },
+        {
+          "word": "mobil",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishibanyuwangi.888_20261115_191240.xlsx",
+      "release_tag": "live-mitsubishibanyuwangi.888-20261115-191240"
     }
   ]
 }
