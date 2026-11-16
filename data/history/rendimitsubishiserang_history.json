@@ -1,7 +1,7 @@
 {
   "username": "rendimitsubishiserang",
   "retention_days": 90,
-  "updated_at": "2026-11-12T05:45:19.720Z",
+  "updated_at": "2026-11-16T07:04:34.318Z",
   "sessions": [
     {
       "id": "rendimitsubishiserang_20261029_231919",
@@ -3018,6 +3018,197 @@
       ],
       "session_report": "Session_rendimitsubishiserang_20261112_123955.xlsx",
       "release_tag": "live-rendimitsubishiserang-20261112-123955"
+    },
+    {
+      "id": "rendimitsubishiserang_20261116_135536",
+      "username": "rendimitsubishiserang",
+      "room_id": "7708644007206750982",
+      "title": "",
+      "live_started_at": "2026-11-16T05:56:40.000Z",
+      "tracking_started_at": "2026-11-16T06:55:47.677Z",
+      "ended_at": "2026-11-16T07:04:34.316Z",
+      "duration_sec": 4074,
+      "tracked_duration_sec": 527,
+      "end_reason": "stream_end",
+      "peak_viewers": 10,
+      "peak_viewers_at": "2026-11-16T06:56:41.027Z",
+      "avg_viewers": 4,
+      "total_likes": 482,
+      "total_comments": 14,
+      "unique_commenters": 3,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-16T06:55:47.678Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-16T06:56:47.686Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-16T06:57:47.690Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-16T06:58:47.693Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-16T06:59:47.694Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-16T07:00:47.694Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-16T07:01:47.695Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-16T07:02:47.699Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-16T07:03:47.701Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-16T07:04:34.316Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "mdiyooo_",
+          "nickname": "Diyo",
+          "count": 7
+        },
+        {
+          "user": "usernameguenodebat",
+          "nickname": "Pipa rucika99",
+          "count": 5
+        },
+        {
+          "user": "endrakusumawnp",
+          "nickname": "Endra KaWe _ MITSUBISHI",
+          "count": 2
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "abang",
+          "count": 3
+        },
+        {
+          "word": "timur",
+          "count": 3
+        },
+        {
+          "word": "kah",
+          "count": 3
+        },
+        {
+          "word": "otr",
+          "count": 1
+        },
+        {
+          "word": "brpa",
+          "count": 1
+        },
+        {
+          "word": "kasemen",
+          "count": 1
+        },
+        {
+          "word": "warna",
+          "count": 1
+        },
+        {
+          "word": "putih",
+          "count": 1
+        },
+        {
+          "word": "tmbhan",
+          "count": 1
+        },
+        {
+          "word": "biaya",
+          "count": 1
+        },
+        {
+          "word": "cashback",
+          "count": 1
+        },
+        {
+          "word": "klo",
+          "count": 1
+        },
+        {
+          "word": "beli",
+          "count": 1
+        },
+        {
+          "word": "cash",
+          "count": 1
+        },
+        {
+          "word": "lokasi",
+          "count": 1
+        },
+        {
+          "word": "orang",
+          "count": 1
+        },
+        {
+          "word": "kirim",
+          "count": 1
+        },
+        {
+          "word": "lewat",
+          "count": 1
+        },
+        {
+          "word": "tanah",
+          "count": 1
+        },
+        {
+          "word": "logat",
+          "count": 1
+        },
+        {
+          "word": "kragilan",
+          "count": 1
+        },
+        {
+          "word": "panasss",
+          "count": 1
+        },
+        {
+          "word": "destinator",
+          "count": 1
+        },
+        {
+          "word": "manual",
+          "count": 1
+        },
+        {
+          "word": "harga",
+          "count": 1
+        },
+        {
+          "word": "teu",
+          "count": 1
+        },
+        {
+          "word": "asuuup",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_rendimitsubishiserang_20261116_135536.xlsx",
+      "release_tag": "live-rendimitsubishiserang-20261116-135536"
     }
   ]
 }
