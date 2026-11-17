@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-11-17T03:41:18.410Z",
+  "updated_at": "2026-11-17T06:37:09.567Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -5380,6 +5380,91 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261117_103237.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261117-103237"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261117_133531",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7709021293357714182",
+      "title": "Tanya produck mitsubishi donk",
+      "live_started_at": "2026-11-17T06:20:26.000Z",
+      "tracking_started_at": "2026-11-17T06:35:45.118Z",
+      "ended_at": "2026-11-17T06:37:09.564Z",
+      "duration_sec": 1004,
+      "tracked_duration_sec": 84,
+      "end_reason": "stream_end",
+      "peak_viewers": 1,
+      "peak_viewers_at": "2026-11-17T06:35:48.875Z",
+      "avg_viewers": 1,
+      "total_likes": 0,
+      "total_comments": 4,
+      "unique_commenters": 1,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-17T06:35:45.118Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-17T06:36:45.124Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T06:37:09.564Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "fajar_bre",
+          "nickname": "fajar_bre",
+          "count": 4
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "lama",
+          "count": 1
+        },
+        {
+          "word": "tak",
+          "count": 1
+        },
+        {
+          "word": "tarids",
+          "count": 1
+        },
+        {
+          "word": "bukan",
+          "count": 1
+        },
+        {
+          "word": "kau",
+          "count": 1
+        },
+        {
+          "word": "dek",
+          "count": 1
+        },
+        {
+          "word": "kakakku",
+          "count": 1
+        },
+        {
+          "word": "kutanya",
+          "count": 1
+        },
+        {
+          "word": "spil",
+          "count": 1
+        },
+        {
+          "word": "dulu",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261117_133531.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261117-133531"
     }
   ]
 }
