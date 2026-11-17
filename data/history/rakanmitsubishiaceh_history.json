@@ -1,7 +1,7 @@
 {
   "username": "rakanmitsubishiaceh",
   "retention_days": 90,
-  "updated_at": "2026-11-14T08:19:02.325Z",
+  "updated_at": "2026-11-17T03:40:51.399Z",
   "sessions": [
     {
       "id": "rakanmitsubishiaceh_20261024_162537",
@@ -5682,6 +5682,213 @@
       ],
       "session_report": "Session_rakanmitsubishiaceh_20261114_141546.xlsx",
       "release_tag": "live-rakanmitsubishiaceh-20261114-141546"
+    },
+    {
+      "id": "rakanmitsubishiaceh_20261117_103232",
+      "username": "rakanmitsubishiaceh",
+      "room_id": "7708969661737814790",
+      "title": "Promo Mitsubishi Aceh",
+      "live_started_at": "2026-11-17T03:00:17.000Z",
+      "tracking_started_at": "2026-11-17T03:32:43.680Z",
+      "ended_at": "2026-11-17T03:40:51.397Z",
+      "duration_sec": 2434,
+      "tracked_duration_sec": 488,
+      "end_reason": "stream_end",
+      "peak_viewers": 12,
+      "peak_viewers_at": "2026-11-17T03:38:08.647Z",
+      "avg_viewers": 7,
+      "total_likes": 0,
+      "total_comments": 14,
+      "unique_commenters": 7,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-17T03:32:43.681Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-17T03:33:43.689Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-17T03:34:43.695Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-17T03:35:43.696Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-17T03:36:43.697Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-17T03:37:43.698Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-17T03:38:43.704Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-17T03:39:43.705Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-17T03:40:43.712Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-17T03:40:51.397Z",
+          "v": 9
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "p4nn16",
+          "nickname": "P4nn💫",
+          "count": 4
+        },
+        {
+          "user": "darmanchenel",
+          "nickname": "darmanchenel",
+          "count": 3
+        },
+        {
+          "user": "umiyusbagok1234",
+          "nickname": "renungan030",
+          "count": 3
+        },
+        {
+          "user": "wahidin198305",
+          "nickname": "Kimwahid",
+          "count": 1
+        },
+        {
+          "user": "ahjoiljoin07",
+          "nickname": "ajoi.ji",
+          "count": 1
+        },
+        {
+          "user": "irman_mitsubishi",
+          "nickname": "Irman || Mitsubishi Aceh ✍️",
+          "count": 1
+        },
+        {
+          "user": "zulkifliyoung",
+          "nickname": "Bang.zul sultan",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "bng",
+          "count": 2
+        },
+        {
+          "word": "bares",
+          "count": 1
+        },
+        {
+          "word": "nan",
+          "count": 1
+        },
+        {
+          "word": "dealer",
+          "count": 1
+        },
+        {
+          "word": "expander",
+          "count": 1
+        },
+        {
+          "word": "padum",
+          "count": 1
+        },
+        {
+          "word": "jeut",
+          "count": 1
+        },
+        {
+          "word": "pajero",
+          "count": 1
+        },
+        {
+          "word": "klo",
+          "count": 1
+        },
+        {
+          "word": "200angsuran",
+          "count": 1
+        },
+        {
+          "word": "brp",
+          "count": 1
+        },
+        {
+          "word": "jeit",
+          "count": 1
+        },
+        {
+          "word": "mese",
+          "count": 1
+        },
+        {
+          "word": "cash",
+          "count": 1
+        },
+        {
+          "word": "destinator",
+          "count": 1
+        },
+        {
+          "word": "spil",
+          "count": 1
+        },
+        {
+          "word": "hitam",
+          "count": 1
+        },
+        {
+          "word": "juah",
+          "count": 1
+        },
+        {
+          "word": "meukancaahhhh",
+          "count": 1
+        },
+        {
+          "word": "rakan",
+          "count": 1
+        },
+        {
+          "word": "tanyou",
+          "count": 1
+        },
+        {
+          "word": "aceh",
+          "count": 1
+        },
+        {
+          "word": "peu",
+          "count": 1
+        },
+        {
+          "word": "program",
+          "count": 1
+        },
+        {
+          "word": "ces",
+          "count": 1
+        },
+        {
+          "word": "gantung",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_rakanmitsubishiaceh_20261117_103232.xlsx",
+      "release_tag": "live-rakanmitsubishiaceh-20261117-103232"
     }
   ]
 }
