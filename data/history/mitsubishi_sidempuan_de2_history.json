@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-11-17T06:37:09.567Z",
+  "updated_at": "2026-11-17T09:08:53.303Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -5465,6 +5465,99 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261117_133531.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261117-133531"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261117_155602",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7709059139108113158",
+      "title": "Tanya produck mitsubishi donk",
+      "live_started_at": "2026-11-17T08:47:12.000Z",
+      "tracking_started_at": "2026-11-17T08:56:14.231Z",
+      "ended_at": "2026-11-17T09:08:53.300Z",
+      "duration_sec": 1301,
+      "tracked_duration_sec": 759,
+      "end_reason": "stream_end",
+      "peak_viewers": 5,
+      "peak_viewers_at": "2026-11-17T08:56:15.159Z",
+      "avg_viewers": 2,
+      "total_likes": 0,
+      "total_comments": 2,
+      "unique_commenters": 1,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-17T08:56:14.231Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-17T08:57:14.245Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T08:58:14.245Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T08:59:14.245Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-17T09:00:14.249Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T09:01:14.259Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-17T09:02:14.264Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T09:03:14.266Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T09:04:14.276Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T09:05:14.286Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-17T09:06:14.295Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-17T09:07:14.301Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-17T09:08:14.310Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-17T09:08:53.300Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "kaya_m90",
+          "nickname": "KAYA",
+          "count": 2
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "slm",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261117_155602.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261117-155602"
     }
   ]
 }
