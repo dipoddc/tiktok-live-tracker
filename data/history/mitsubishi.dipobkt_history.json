@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi.dipobkt",
   "retention_days": 90,
-  "updated_at": "2026-11-11T08:07:10.227Z",
+  "updated_at": "2026-11-17T03:41:23.410Z",
   "sessions": [
     {
       "id": "mitsubishi.dipobkt_20261028_121438",
@@ -5922,6 +5922,87 @@
       ],
       "session_report": "Session_mitsubishi.dipobkt_20261111_144710.xlsx",
       "release_tag": "live-mitsubishi.dipobkt-20261111-144710"
+    },
+    {
+      "id": "mitsubishi.dipobkt_20261117_103235",
+      "username": "mitsubishi.dipobkt",
+      "room_id": "7708966445836962568",
+      "title": "November Gacor",
+      "live_started_at": "2026-11-17T02:47:53.000Z",
+      "tracking_started_at": "2026-11-17T03:32:47.865Z",
+      "ended_at": "2026-11-17T03:41:23.408Z",
+      "duration_sec": 3210,
+      "tracked_duration_sec": 516,
+      "end_reason": "stream_end",
+      "peak_viewers": 2,
+      "peak_viewers_at": "2026-11-17T03:34:26.664Z",
+      "avg_viewers": 1,
+      "total_likes": 427,
+      "total_comments": 1,
+      "unique_commenters": 1,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-17T03:32:47.865Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-17T03:33:47.881Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-17T03:34:47.891Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T03:35:47.901Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-17T03:36:47.902Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T03:37:47.912Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-17T03:38:47.922Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-17T03:39:47.932Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-17T03:40:47.942Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-17T03:41:23.408Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "rindutama.cantika",
+          "nickname": "Rindutama Cantika",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "nnton",
+          "count": 1
+        },
+        {
+          "word": "walid",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi.dipobkt_20261117_103235.xlsx",
+      "release_tag": "live-mitsubishi.dipobkt-20261117-103235"
     }
   ]
 }
