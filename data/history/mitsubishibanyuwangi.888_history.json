@@ -1,7 +1,7 @@
 {
   "username": "mitsubishibanyuwangi.888",
   "retention_days": 90,
-  "updated_at": "2026-11-16T12:55:30.753Z",
+  "updated_at": "2026-11-17T00:08:05.596Z",
   "sessions": [
     {
       "id": "mitsubishibanyuwangi.888_20261023_184533",
@@ -13192,6 +13192,286 @@
       ],
       "session_report": "Session_mitsubishibanyuwangi.888_20261116_190829.xlsx",
       "release_tag": "live-mitsubishibanyuwangi.888-20261116-190829"
+    },
+    {
+      "id": "mitsubishibanyuwangi.888_20261117_064032",
+      "username": "mitsubishibanyuwangi.888",
+      "room_id": "7708916921558633224",
+      "title": "Promo Mitsubishi O813 53357323",
+      "live_started_at": "2026-11-16T23:35:55.000Z",
+      "tracking_started_at": "2026-11-16T23:40:43.828Z",
+      "ended_at": "2026-11-17T00:08:05.594Z",
+      "duration_sec": 1931,
+      "tracked_duration_sec": 1642,
+      "end_reason": "stream_end",
+      "peak_viewers": 13,
+      "peak_viewers_at": "2026-11-16T23:49:46.762Z",
+      "avg_viewers": 5,
+      "total_likes": 21,
+      "total_comments": 11,
+      "unique_commenters": 8,
+      "follows": 0,
+      "shares": 1,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-16T23:40:43.828Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-16T23:41:43.834Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-16T23:42:43.835Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-16T23:43:43.835Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-16T23:44:43.837Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-16T23:45:43.839Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-16T23:46:43.841Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-16T23:47:43.842Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-16T23:48:43.844Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-16T23:49:43.845Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-16T23:50:43.849Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-16T23:51:43.850Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-16T23:52:43.850Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-16T23:53:43.851Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-16T23:54:43.855Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-16T23:55:43.855Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-16T23:56:43.857Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-16T23:57:43.857Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-16T23:58:43.860Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-16T23:59:43.862Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-17T00:00:43.862Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-17T00:01:43.863Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-17T00:02:43.867Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-17T00:03:43.867Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-17T00:04:43.869Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-17T00:05:43.869Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-17T00:06:43.869Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-17T00:07:43.869Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-17T00:08:05.594Z",
+          "v": 2
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "yulidwi12061993",
+          "nickname": "🇲🇨Nur imam cahyono🇹🇼",
+          "count": 3
+        },
+        {
+          "user": "user6786543875214",
+          "nickname": "user6786543875214",
+          "count": 2
+        },
+        {
+          "user": "sangpolsopol",
+          "nickname": "khoirul Anam",
+          "count": 1
+        },
+        {
+          "user": "mbaknda163",
+          "nickname": "NandaResdiana",
+          "count": 1
+        },
+        {
+          "user": "tokmat227",
+          "nickname": "TOK MAT",
+          "count": 1
+        },
+        {
+          "user": "pratamafikii",
+          "nickname": "pratama",
+          "count": 1
+        },
+        {
+          "user": "cakamim",
+          "nickname": "cak kamim wong ndeso",
+          "count": 1
+        },
+        {
+          "user": "rahmat.angga.seti",
+          "nickname": "Rahmat Angga Setiawan",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "ping",
+          "count": 2
+        },
+        {
+          "word": "harga",
+          "count": 2
+        },
+        {
+          "word": "brp",
+          "count": 2
+        },
+        {
+          "word": "exceed",
+          "count": 2
+        },
+        {
+          "word": "brpa",
+          "count": 1
+        },
+        {
+          "word": "hrga",
+          "count": 1
+        },
+        {
+          "word": "solar",
+          "count": 1
+        },
+        {
+          "word": "ready",
+          "count": 1
+        },
+        {
+          "word": "cek",
+          "count": 1
+        },
+        {
+          "word": "pajero",
+          "count": 1
+        },
+        {
+          "word": "bulan",
+          "count": 1
+        },
+        {
+          "word": "lunasi",
+          "count": 1
+        },
+        {
+          "word": "sisa",
+          "count": 1
+        },
+        {
+          "word": "force",
+          "count": 1
+        },
+        {
+          "word": "pejero",
+          "count": 1
+        },
+        {
+          "word": "baru",
+          "count": 1
+        },
+        {
+          "word": "nerapaan",
+          "count": 1
+        },
+        {
+          "word": "juta",
+          "count": 1
+        },
+        {
+          "word": "xforce",
+          "count": 1
+        },
+        {
+          "word": "msh",
+          "count": 1
+        },
+        {
+          "word": "expander",
+          "count": 1
+        },
+        {
+          "word": "manual",
+          "count": 1
+        },
+        {
+          "word": "auker",
+          "count": 1
+        },
+        {
+          "word": "tmbag",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishibanyuwangi.888_20261117_064032.xlsx",
+      "release_tag": "live-mitsubishibanyuwangi.888-20261117-064032"
     }
   ]
 }
