@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi_sidempuan_de2",
   "retention_days": 90,
-  "updated_at": "2026-11-14T02:55:51.320Z",
+  "updated_at": "2026-11-17T03:41:18.410Z",
   "sessions": [
     {
       "id": "mitsubishi_sidempuan_de2_20261026_000836",
@@ -5303,6 +5303,83 @@
       ],
       "session_report": "Session_mitsubishi_sidempuan_de2_20261114_094604.xlsx",
       "release_tag": "live-mitsubishi_sidempuan_de2-20261114-094604"
+    },
+    {
+      "id": "mitsubishi_sidempuan_de2_20261117_103237",
+      "username": "mitsubishi_sidempuan_de2",
+      "room_id": "7708977376704662324",
+      "title": "Tanya produck mitsubishi donk",
+      "live_started_at": "2026-11-17T03:29:55.000Z",
+      "tracking_started_at": "2026-11-17T03:32:51.656Z",
+      "ended_at": "2026-11-17T03:41:18.408Z",
+      "duration_sec": 683,
+      "tracked_duration_sec": 507,
+      "end_reason": "stream_end",
+      "peak_viewers": 3,
+      "peak_viewers_at": "2026-11-17T03:33:43.350Z",
+      "avg_viewers": 2,
+      "total_likes": 1,
+      "total_comments": 1,
+      "unique_commenters": 1,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-17T03:32:51.657Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-17T03:33:51.670Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-17T03:34:51.676Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T03:35:51.687Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T03:36:51.698Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T03:37:51.698Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-17T03:38:51.709Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-17T03:39:51.720Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-17T03:40:51.720Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-17T03:41:18.408Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "user9026145018322",
+          "nickname": "R@MbeMurs@LM@R1T0",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "cantik",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi_sidempuan_de2_20261117_103237.xlsx",
+      "release_tag": "live-mitsubishi_sidempuan_de2-20261117-103237"
     }
   ]
 }
