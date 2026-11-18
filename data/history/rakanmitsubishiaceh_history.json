@@ -1,7 +1,7 @@
 {
   "username": "rakanmitsubishiaceh",
   "retention_days": 90,
-  "updated_at": "2026-11-17T03:40:51.399Z",
+  "updated_at": "2026-11-18T11:20:24.513Z",
   "sessions": [
     {
       "id": "rakanmitsubishiaceh_20261024_162537",
@@ -5889,6 +5889,223 @@
       ],
       "session_report": "Session_rakanmitsubishiaceh_20261117_103232.xlsx",
       "release_tag": "live-rakanmitsubishiaceh-20261117-103232"
+    },
+    {
+      "id": "rakanmitsubishiaceh_20261118_181413",
+      "username": "rakanmitsubishiaceh",
+      "room_id": "7709453113364515604",
+      "title": "Promo Mitsubishi Aceh",
+      "live_started_at": "2026-11-18T10:16:23.000Z",
+      "tracking_started_at": "2026-11-18T11:14:23.688Z",
+      "ended_at": "2026-11-18T11:20:24.511Z",
+      "duration_sec": 3842,
+      "tracked_duration_sec": 361,
+      "end_reason": "stream_end",
+      "peak_viewers": 17,
+      "peak_viewers_at": "2026-11-18T11:18:15.313Z",
+      "avg_viewers": 12,
+      "total_likes": 35,
+      "total_comments": 12,
+      "unique_commenters": 9,
+      "follows": 1,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-18T11:14:23.689Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-18T11:15:23.694Z",
+          "v": 16
+        },
+        {
+          "t": "2026-11-18T11:16:23.693Z",
+          "v": 14
+        },
+        {
+          "t": "2026-11-18T11:17:23.695Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-18T11:18:23.696Z",
+          "v": 15
+        },
+        {
+          "t": "2026-11-18T11:19:23.697Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-18T11:20:23.701Z",
+          "v": 12
+        },
+        {
+          "t": "2026-11-18T11:20:24.511Z",
+          "v": 10
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "riskysfrn05",
+          "nickname": "Risky safriana🎀",
+          "count": 2
+        },
+        {
+          "user": "sukriyandaalami",
+          "nickname": "SUKRIYANDA ALAMI",
+          "count": 2
+        },
+        {
+          "user": "akbar.elkun0",
+          "nickname": "cityzens",
+          "count": 2
+        },
+        {
+          "user": "usermen1248",
+          "nickname": "PUTRA",
+          "count": 1
+        },
+        {
+          "user": "desa.0791",
+          "nickname": "𝐀𝐉𝐔𝐃𝐀𝐍 Riska",
+          "count": 1
+        },
+        {
+          "user": "nov_danish",
+          "nickname": "Nov_danish",
+          "count": 1
+        },
+        {
+          "user": "yahmuh766",
+          "nickname": "Bertani Lebih mulia",
+          "count": 1
+        },
+        {
+          "user": "ftyaraa_",
+          "nickname": "ftyaraa_",
+          "count": 1
+        },
+        {
+          "user": "alii404found",
+          "nickname": "Lembideeee",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "xpander",
+          "count": 3
+        },
+        {
+          "word": "brp",
+          "count": 3
+        },
+        {
+          "word": "l300",
+          "count": 3
+        },
+        {
+          "word": "cross",
+          "count": 2
+        },
+        {
+          "word": "ultimate",
+          "count": 2
+        },
+        {
+          "word": "angsuran",
+          "count": 2
+        },
+        {
+          "word": "segitu",
+          "count": 1
+        },
+        {
+          "word": "brpa",
+          "count": 1
+        },
+        {
+          "word": "ngsurannya",
+          "count": 1
+        },
+        {
+          "word": "tenor",
+          "count": 1
+        },
+        {
+          "word": "tahun",
+          "count": 1
+        },
+        {
+          "word": "jut",
+          "count": 1
+        },
+        {
+          "word": "cashback",
+          "count": 1
+        },
+        {
+          "word": "xpdr",
+          "count": 1
+        },
+        {
+          "word": "ansuran",
+          "count": 1
+        },
+        {
+          "word": "case",
+          "count": 1
+        },
+        {
+          "word": "back",
+          "count": 1
+        },
+        {
+          "word": "cash",
+          "count": 1
+        },
+        {
+          "word": "thn",
+          "count": 1
+        },
+        {
+          "word": "bln",
+          "count": 1
+        },
+        {
+          "word": "bereh",
+          "count": 1
+        },
+        {
+          "word": "tanya",
+          "count": 1
+        },
+        {
+          "word": "dulu",
+          "count": 1
+        },
+        {
+          "word": "perbulannya",
+          "count": 1
+        },
+        {
+          "word": "domisili",
+          "count": 1
+        },
+        {
+          "word": "nyan",
+          "count": 1
+        },
+        {
+          "word": "padim",
+          "count": 1
+        },
+        {
+          "word": "jih",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_rakanmitsubishiaceh_20261118_181413.xlsx",
+      "release_tag": "live-rakanmitsubishiaceh-20261118-181413"
     }
   ]
 }
