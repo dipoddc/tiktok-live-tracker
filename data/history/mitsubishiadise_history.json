@@ -1,7 +1,7 @@
 {
   "username": "mitsubishiadise",
   "retention_days": 90,
-  "updated_at": "2026-11-17T09:36:26.736Z",
+  "updated_at": "2026-11-18T10:49:01.901Z",
   "sessions": [
     {
       "id": "mitsubishiadise_20261026_143433",
@@ -4043,6 +4043,370 @@
       ],
       "session_report": "Session_mitsubishiadise_20261117_155558.xlsx",
       "release_tag": "live-mitsubishiadise-20261117-155558"
+    },
+    {
+      "id": "mitsubishiadise_20261118_171058",
+      "username": "mitsubishiadise",
+      "room_id": "7709446255277181717",
+      "title": "DIPO AMPLAS SM RAJA",
+      "live_started_at": "2026-11-18T09:49:35.000Z",
+      "tracking_started_at": "2026-11-18T10:11:10.440Z",
+      "ended_at": "2026-11-18T10:49:01.899Z",
+      "duration_sec": 3567,
+      "tracked_duration_sec": 2271,
+      "end_reason": "stream_end",
+      "peak_viewers": 14,
+      "peak_viewers_at": "2026-11-18T10:31:40.643Z",
+      "avg_viewers": 5,
+      "total_likes": 2739,
+      "total_comments": 38,
+      "unique_commenters": 12,
+      "follows": 2,
+      "shares": 1,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-18T10:11:10.440Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-18T10:12:10.451Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-18T10:13:10.453Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-18T10:14:10.455Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-18T10:15:10.456Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-18T10:16:10.456Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-18T10:17:10.458Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-18T10:18:10.458Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-18T10:19:10.458Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-18T10:20:10.465Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-18T10:21:10.468Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-18T10:22:10.469Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-18T10:23:10.471Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-18T10:24:10.472Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-18T10:25:10.477Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-18T10:26:10.478Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-18T10:27:10.481Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-18T10:28:10.491Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-18T10:29:10.496Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-18T10:30:10.502Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-18T10:31:10.507Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-18T10:32:10.507Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-18T10:33:10.508Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-18T10:34:10.518Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-18T10:35:10.518Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-18T10:36:10.520Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-18T10:37:10.530Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-18T10:38:10.533Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-18T10:39:10.534Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-18T10:40:10.535Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-18T10:41:10.545Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-18T10:42:10.545Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-18T10:43:10.549Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-18T10:44:10.550Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-18T10:45:10.552Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-18T10:46:10.553Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-18T10:47:10.557Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-18T10:48:10.559Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-18T10:49:01.899Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "dimas.krishnawardhana",
+          "nickname": "dimaskrishnawardh",
+          "count": 18
+        },
+        {
+          "user": "qiv_qiv",
+          "nickname": "qiv",
+          "count": 6
+        },
+        {
+          "user": "whyni344",
+          "nickname": "🐰",
+          "count": 2
+        },
+        {
+          "user": "jw91868",
+          "nickname": "jw",
+          "count": 2
+        },
+        {
+          "user": "mip_rav",
+          "nickname": "Mom FF",
+          "count": 2
+        },
+        {
+          "user": "user39966798074835",
+          "nickname": "afuk",
+          "count": 2
+        },
+        {
+          "user": "hendriceo78",
+          "nickname": "𝐍𝐞𝐰 𝐌𝐈𝐓𝐒𝐔𝐁𝐈𝐒𝐇𝐈",
+          "count": 1
+        },
+        {
+          "user": "harrycardsimanull",
+          "nickname": "Harry",
+          "count": 1
+        },
+        {
+          "user": "bontokad",
+          "nickname": "MESJID AN NABA",
+          "count": 1
+        },
+        {
+          "user": "maruli09_",
+          "nickname": "maruli",
+          "count": 1
+        },
+        {
+          "user": "tandanberduri122",
+          "nickname": "Boy_Ba®a",
+          "count": 1
+        },
+        {
+          "user": "samosir_hutapea",
+          "nickname": "Edward M.Samosir",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "mobil",
+          "count": 5
+        },
+        {
+          "word": "dipo",
+          "count": 3
+        },
+        {
+          "word": "kah",
+          "count": 3
+        },
+        {
+          "word": "pernah",
+          "count": 2
+        },
+        {
+          "word": "malam",
+          "count": 2
+        },
+        {
+          "word": "brpa",
+          "count": 2
+        },
+        {
+          "word": "siantar",
+          "count": 2
+        },
+        {
+          "word": "hybrid",
+          "count": 2
+        },
+        {
+          "word": "tumben",
+          "count": 2
+        },
+        {
+          "word": "seragam",
+          "count": 2
+        },
+        {
+          "word": "destinator",
+          "count": 2
+        },
+        {
+          "word": "biasanya",
+          "count": 2
+        },
+        {
+          "word": "supardi",
+          "count": 2
+        },
+        {
+          "word": "disini",
+          "count": 2
+        },
+        {
+          "word": "baris",
+          "count": 2
+        },
+        {
+          "word": "kedua",
+          "count": 2
+        },
+        {
+          "word": "drivernya",
+          "count": 2
+        },
+        {
+          "word": "tidur",
+          "count": 2
+        },
+        {
+          "word": "subsidi",
+          "count": 2
+        },
+        {
+          "word": "kebanggaan",
+          "count": 2
+        },
+        {
+          "word": "perawatan",
+          "count": 2
+        },
+        {
+          "word": "live",
+          "count": 1
+        },
+        {
+          "word": "sore",
+          "count": 1
+        },
+        {
+          "word": "tetap",
+          "count": 1
+        },
+        {
+          "word": "sesi",
+          "count": 1
+        },
+        {
+          "word": "stock",
+          "count": 1
+        },
+        {
+          "word": "gudang",
+          "count": 1
+        },
+        {
+          "word": "nah",
+          "count": 1
+        },
+        {
+          "word": "dulu",
+          "count": 1
+        },
+        {
+          "word": "sekali",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishiadise_20261118_171058.xlsx",
+      "release_tag": "live-mitsubishiadise-20261118-171058"
     }
   ]
 }
