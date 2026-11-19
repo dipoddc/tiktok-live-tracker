@@ -1,7 +1,7 @@
 {
   "username": "rakanmitsubishiaceh",
   "retention_days": 90,
-  "updated_at": "2026-11-18T11:20:24.513Z",
+  "updated_at": "2026-11-19T05:50:02.462Z",
   "sessions": [
     {
       "id": "rakanmitsubishiaceh_20261024_162537",
@@ -6106,6 +6106,242 @@
       ],
       "session_report": "Session_rakanmitsubishiaceh_20261118_181413.xlsx",
       "release_tag": "live-rakanmitsubishiaceh-20261118-181413"
+    },
+    {
+      "id": "rakanmitsubishiaceh_20261119_123627",
+      "username": "rakanmitsubishiaceh",
+      "room_id": "7709740680049920788",
+      "title": "Promo Mitsubishi Aceh",
+      "live_started_at": "2026-11-19T04:52:17.000Z",
+      "tracking_started_at": "2026-11-19T05:36:42.691Z",
+      "ended_at": "2026-11-19T05:50:02.460Z",
+      "duration_sec": 3465,
+      "tracked_duration_sec": 800,
+      "end_reason": "stream_end",
+      "peak_viewers": 10,
+      "peak_viewers_at": "2026-11-19T05:43:02.763Z",
+      "avg_viewers": 4,
+      "total_likes": 1595,
+      "total_comments": 11,
+      "unique_commenters": 8,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-19T05:36:42.691Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-19T05:37:42.696Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-19T05:38:42.700Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-19T05:39:42.702Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-19T05:40:42.704Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-19T05:41:42.706Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-19T05:42:42.707Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-19T05:43:42.707Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-19T05:44:42.711Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-19T05:45:42.716Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-19T05:46:42.725Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-19T05:47:42.735Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-19T05:48:42.745Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-19T05:49:42.755Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-19T05:50:02.460Z",
+          "v": 2
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "dutabautpanton",
+          "nickname": "Duta baut",
+          "count": 2
+        },
+        {
+          "user": "ampo_nl3k",
+          "nickname": "ampo_nl3k",
+          "count": 2
+        },
+        {
+          "user": "asmara6855",
+          "nickname": "asmara story",
+          "count": 2
+        },
+        {
+          "user": "azhari.azhar343",
+          "nickname": "Papa Alysha",
+          "count": 1
+        },
+        {
+          "user": "baba.fahri29",
+          "nickname": "Baba Fahri",
+          "count": 1
+        },
+        {
+          "user": "user8657727023487",
+          "nickname": "R",
+          "count": 1
+        },
+        {
+          "user": "....wakhen",
+          "nickname": "...WAK,,,,HeN....",
+          "count": 1
+        },
+        {
+          "user": "irwansuferi",
+          "nickname": "irwansuferi",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "bulan",
+          "count": 4
+        },
+        {
+          "word": "xpander",
+          "count": 4
+        },
+        {
+          "word": "brp",
+          "count": 3
+        },
+        {
+          "word": "expander",
+          "count": 2
+        },
+        {
+          "word": "pajero",
+          "count": 2
+        },
+        {
+          "word": "padup",
+          "count": 2
+        },
+        {
+          "word": "ultimate",
+          "count": 2
+        },
+        {
+          "word": "tahun",
+          "count": 2
+        },
+        {
+          "word": "per",
+          "count": 2
+        },
+        {
+          "word": "padip",
+          "count": 1
+        },
+        {
+          "word": "tutup",
+          "count": 1
+        },
+        {
+          "word": "sibulun",
+          "count": 1
+        },
+        {
+          "word": "top",
+          "count": 1
+        },
+        {
+          "word": "ultimette",
+          "count": 1
+        },
+        {
+          "word": "bulanan",
+          "count": 1
+        },
+        {
+          "word": "ansuran",
+          "count": 1
+        },
+        {
+          "word": "40jtan",
+          "count": 1
+        },
+        {
+          "word": "cicilan",
+          "count": 1
+        },
+        {
+          "word": "4jt",
+          "count": 1
+        },
+        {
+          "word": "dpt",
+          "count": 1
+        },
+        {
+          "word": "juta",
+          "count": 1
+        },
+        {
+          "word": "ambil",
+          "count": 1
+        },
+        {
+          "word": "pdup",
+          "count": 1
+        },
+        {
+          "word": "sblen",
+          "count": 1
+        },
+        {
+          "word": "tipe",
+          "count": 1
+        },
+        {
+          "word": "lengkap",
+          "count": 1
+        },
+        {
+          "word": "cashback",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_rakanmitsubishiaceh_20261119_123627.xlsx",
+      "release_tag": "live-rakanmitsubishiaceh-20261119-123627"
     }
   ]
 }
