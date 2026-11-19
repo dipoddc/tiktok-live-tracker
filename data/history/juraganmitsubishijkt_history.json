@@ -1,7 +1,7 @@
 {
   "username": "juraganmitsubishijkt",
   "retention_days": 90,
-  "updated_at": "2026-11-12T08:09:58.164Z",
+  "updated_at": "2026-11-19T10:09:18.403Z",
   "sessions": [
     {
       "id": "juraganmitsubishijkt_20261109_115935",
@@ -462,6 +462,165 @@
       ],
       "session_report": "Session_juraganmitsubishijkt_20261112_145926.xlsx",
       "release_tag": "live-juraganmitsubishijkt-20261112-145926"
+    },
+    {
+      "id": "juraganmitsubishijkt_20261119_170020",
+      "username": "juraganmitsubishijkt",
+      "room_id": "7709818138319768340",
+      "title": "",
+      "live_started_at": null,
+      "tracking_started_at": "2026-11-19T10:00:32.347Z",
+      "ended_at": "2026-11-19T10:09:18.401Z",
+      "duration_sec": 526,
+      "tracked_duration_sec": 526,
+      "end_reason": "stream_end",
+      "peak_viewers": 18,
+      "peak_viewers_at": "2026-11-19T10:00:52.611Z",
+      "avg_viewers": 4,
+      "total_likes": 3579,
+      "total_comments": 7,
+      "unique_commenters": 3,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-19T10:00:32.347Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-19T10:01:32.353Z",
+          "v": 11
+        },
+        {
+          "t": "2026-11-19T10:02:32.356Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-19T10:03:32.357Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-19T10:04:32.360Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-19T10:05:32.361Z",
+          "v": 9
+        },
+        {
+          "t": "2026-11-19T10:06:32.363Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-19T10:07:32.365Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-19T10:08:32.367Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-19T10:09:18.401Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "itsyourhomeee",
+          "nickname": "Raka Chery Palmerah",
+          "count": 4
+        },
+        {
+          "user": "rusdayaninasution",
+          "nickname": "butterfly 🦋🦋",
+          "count": 2
+        },
+        {
+          "user": "seandainya354",
+          "nickname": "AHMAD MAY. ALLAH",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "gjaw",
+          "count": 2
+        },
+        {
+          "word": "ciclan",
+          "count": 1
+        },
+        {
+          "word": "brp",
+          "count": 1
+        },
+        {
+          "word": "xpander",
+          "count": 1
+        },
+        {
+          "word": "lokasi",
+          "count": 1
+        },
+        {
+          "word": "mna",
+          "count": 1
+        },
+        {
+          "word": "sumatra",
+          "count": 1
+        },
+        {
+          "word": "utara",
+          "count": 1
+        },
+        {
+          "word": "ujan",
+          "count": 1
+        },
+        {
+          "word": "deres",
+          "count": 1
+        },
+        {
+          "word": "eko",
+          "count": 1
+        },
+        {
+          "word": "terbaik",
+          "count": 1
+        },
+        {
+          "word": "promonya",
+          "count": 1
+        },
+        {
+          "word": "beli",
+          "count": 1
+        },
+        {
+          "word": "mitsubishi",
+          "count": 1
+        },
+        {
+          "word": "jaga",
+          "count": 1
+        },
+        {
+          "word": "oke",
+          "count": 1
+        },
+        {
+          "word": "sampe",
+          "count": 1
+        },
+        {
+          "word": "ketemu",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_juraganmitsubishijkt_20261119_170020.xlsx",
+      "release_tag": "live-juraganmitsubishijkt-20261119-170020"
     }
   ]
 }
