@@ -1,7 +1,7 @@
 {
   "username": "mitsubishiadise",
   "retention_days": 90,
-  "updated_at": "2026-11-18T10:49:01.901Z",
+  "updated_at": "2026-11-20T10:24:46.707Z",
   "sessions": [
     {
       "id": "mitsubishiadise_20261026_143433",
@@ -4407,6 +4407,351 @@
       ],
       "session_report": "Session_mitsubishiadise_20261118_171058.xlsx",
       "release_tag": "live-mitsubishiadise-20261118-171058"
+    },
+    {
+      "id": "mitsubishiadise_20261120_165757",
+      "username": "mitsubishiadise",
+      "room_id": "7710179860494732052",
+      "title": "DIPO AMPLAS SM RAJA",
+      "live_started_at": "2026-11-20T09:16:34.000Z",
+      "tracking_started_at": "2026-11-20T09:58:13.549Z",
+      "ended_at": "2026-11-20T10:24:46.705Z",
+      "duration_sec": 4093,
+      "tracked_duration_sec": 1593,
+      "end_reason": "stream_end",
+      "peak_viewers": 9,
+      "peak_viewers_at": "2026-11-20T10:16:36.404Z",
+      "avg_viewers": 3,
+      "total_likes": 1964,
+      "total_comments": 44,
+      "unique_commenters": 17,
+      "follows": 1,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-20T09:58:13.549Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T09:59:13.557Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-20T10:00:13.569Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T10:01:13.569Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T10:02:13.570Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T10:03:13.573Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-20T10:04:13.578Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-20T10:05:13.579Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-20T10:06:13.584Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-20T10:07:13.585Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T10:08:13.587Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-20T10:09:13.591Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T10:10:13.593Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-20T10:11:13.596Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-20T10:12:13.598Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-20T10:13:13.599Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-20T10:14:13.608Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T10:15:13.610Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-20T10:16:13.620Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-20T10:17:13.621Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-20T10:18:13.624Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T10:19:13.625Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T10:20:13.635Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T10:21:13.639Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-20T10:22:13.642Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-20T10:23:13.646Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T10:24:13.656Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T10:24:46.705Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "an_di20",
+          "nickname": "AA",
+          "count": 10
+        },
+        {
+          "user": "biwaolicel",
+          "nickname": "biw",
+          "count": 6
+        },
+        {
+          "user": "yansyah402",
+          "nickname": "Fender",
+          "count": 5
+        },
+        {
+          "user": "fachriritonga2",
+          "nickname": "Mohd Zulfachri Fadli Ritonga",
+          "count": 4
+        },
+        {
+          "user": "nobodyakwoakwok",
+          "nickname": "pertamax turbo",
+          "count": 3
+        },
+        {
+          "user": "memeai44",
+          "nickname": "Nia_@!ni",
+          "count": 2
+        },
+        {
+          "user": "putriaskia12",
+          "nickname": "putriaskiasyakiraa",
+          "count": 2
+        },
+        {
+          "user": "ramajaya2022",
+          "nickname": "Ramajaya collections",
+          "count": 2
+        },
+        {
+          "user": "tandanberduri122",
+          "nickname": "Boy_Ba®a",
+          "count": 2
+        },
+        {
+          "user": "hendriceo78",
+          "nickname": "𝐍𝐞𝐰 𝐌𝐈𝐓𝐒𝐔𝐁𝐈𝐒𝐇𝐈",
+          "count": 1
+        },
+        {
+          "user": "rahmadhidayat95a",
+          "nickname": "ER_HA",
+          "count": 1
+        },
+        {
+          "user": "user4924156710878",
+          "nickname": "titin",
+          "count": 1
+        },
+        {
+          "user": "mitsubishipospengumben0",
+          "nickname": "MITSUBISHI POSPENGUMBEN JAKBAR",
+          "count": 1
+        },
+        {
+          "user": "jogi_sinambela1",
+          "nickname": "jogi.sinambela1",
+          "count": 1
+        },
+        {
+          "user": "hottuabutarbutar",
+          "nickname": "Hanstama",
+          "count": 1
+        },
+        {
+          "user": "_adell.05",
+          "nickname": "adellee",
+          "count": 1
+        },
+        {
+          "user": "mitsubishiaiesiregar",
+          "nickname": "Mitsubishi Medan Murah",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "manual",
+          "count": 4
+        },
+        {
+          "word": "expander",
+          "count": 3
+        },
+        {
+          "word": "putih",
+          "count": 3
+        },
+        {
+          "word": "bapak",
+          "count": 3
+        },
+        {
+          "word": "cash",
+          "count": 2
+        },
+        {
+          "word": "cross",
+          "count": 2
+        },
+        {
+          "word": "sport",
+          "count": 2
+        },
+        {
+          "word": "casback",
+          "count": 2
+        },
+        {
+          "word": "bulan",
+          "count": 2
+        },
+        {
+          "word": "sore",
+          "count": 2
+        },
+        {
+          "word": "pulang",
+          "count": 2
+        },
+        {
+          "word": "mhal",
+          "count": 1
+        },
+        {
+          "word": "sblah",
+          "count": 1
+        },
+        {
+          "word": "lgsg",
+          "count": 1
+        },
+        {
+          "word": "kedeler",
+          "count": 1
+        },
+        {
+          "word": "hitam",
+          "count": 1
+        },
+        {
+          "word": "satu2",
+          "count": 1
+        },
+        {
+          "word": "jmpt",
+          "count": 1
+        },
+        {
+          "word": "lansung",
+          "count": 1
+        },
+        {
+          "word": "redy",
+          "count": 1
+        },
+        {
+          "word": "warna",
+          "count": 1
+        },
+        {
+          "word": "bronze",
+          "count": 1
+        },
+        {
+          "word": "sudh",
+          "count": 1
+        },
+        {
+          "word": "punya",
+          "count": 1
+        },
+        {
+          "word": "rincian",
+          "count": 1
+        },
+        {
+          "word": "harga",
+          "count": 1
+        },
+        {
+          "word": "mitsubishi",
+          "count": 1
+        },
+        {
+          "word": "riau",
+          "count": 1
+        },
+        {
+          "word": "sampek",
+          "count": 1
+        },
+        {
+          "word": "marelan",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishiadise_20261120_165757.xlsx",
+      "release_tag": "live-mitsubishiadise-20261120-165757"
     }
   ]
 }
