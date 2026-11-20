@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi.dipobkt",
   "retention_days": 90,
-  "updated_at": "2026-11-17T03:41:23.410Z",
+  "updated_at": "2026-11-20T08:51:49.142Z",
   "sessions": [
     {
       "id": "mitsubishi.dipobkt_20261028_121438",
@@ -6003,6 +6003,420 @@
       ],
       "session_report": "Session_mitsubishi.dipobkt_20261117_103235.xlsx",
       "release_tag": "live-mitsubishi.dipobkt-20261117-103235"
+    },
+    {
+      "id": "mitsubishi.dipobkt_20261120_145832",
+      "username": "mitsubishi.dipobkt",
+      "room_id": "7710150889071201031",
+      "title": "ZumbaReward Employee",
+      "live_started_at": "2026-11-20T07:23:52.000Z",
+      "tracking_started_at": "2026-11-20T07:58:50.419Z",
+      "ended_at": "2026-11-20T08:51:49.140Z",
+      "duration_sec": 5277,
+      "tracked_duration_sec": 3179,
+      "end_reason": "stream_end",
+      "peak_viewers": 4,
+      "peak_viewers_at": "2026-11-20T08:32:45.657Z",
+      "avg_viewers": 2,
+      "total_likes": 2227,
+      "total_comments": 27,
+      "unique_commenters": 10,
+      "follows": 2,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-20T07:58:50.420Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T07:59:50.430Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:00:50.433Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:01:50.444Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:02:50.451Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:03:50.454Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:04:50.463Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:05:50.473Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:06:50.479Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:07:50.490Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:08:50.500Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:09:50.507Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:10:50.516Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:11:50.524Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:12:50.534Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:13:50.539Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:14:50.541Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:15:50.549Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:16:50.552Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:17:50.561Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:18:50.561Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:19:50.563Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:20:50.565Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:21:50.565Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:22:50.575Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:23:50.576Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:24:50.585Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:25:50.587Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T08:26:50.590Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:27:50.592Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:28:50.601Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:29:50.606Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:30:50.616Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:31:50.621Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:32:50.622Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T08:33:50.633Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T08:34:50.635Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-20T08:35:50.635Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T08:36:50.645Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T08:37:50.648Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:38:50.648Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T08:39:50.657Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:40:50.660Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T08:41:50.664Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:42:50.665Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:43:50.674Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:44:50.674Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:45:50.678Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:46:50.682Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:47:50.692Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:48:50.701Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:49:50.705Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T08:50:50.706Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T08:51:49.140Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "mitsubaby.21",
+          "nickname": "LeniMitsubishi_BKT🌸",
+          "count": 8
+        },
+        {
+          "user": "mrblac185",
+          "nickname": "💲MR,BLAC💲",
+          "count": 4
+        },
+        {
+          "user": "alolaloll",
+          "nickname": "Mamiw💅🏻",
+          "count": 4
+        },
+        {
+          "user": "lioneiusman",
+          "nickname": "onei🍃",
+          "count": 3
+        },
+        {
+          "user": "toni12345340",
+          "nickname": "toni123",
+          "count": 2
+        },
+        {
+          "user": "abadi_berkahfashion",
+          "nickname": "abadi berkah fashion",
+          "count": 2
+        },
+        {
+          "user": "mitsubishi.diporsumbar",
+          "nickname": "mitsubishi.diporsumbar 💯",
+          "count": 1
+        },
+        {
+          "user": "bos.jimmy08",
+          "nickname": "Bos Jimmy",
+          "count": 1
+        },
+        {
+          "user": "arkamotor05",
+          "nickname": "arkamotor",
+          "count": 1
+        },
+        {
+          "user": "jefrymitsubishi",
+          "nickname": "JefryMitsubishi",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "unit",
+          "count": 2
+        },
+        {
+          "word": "pia",
+          "count": 2
+        },
+        {
+          "word": "ndk",
+          "count": 2
+        },
+        {
+          "word": "dek",
+          "count": 2
+        },
+        {
+          "word": "piket",
+          "count": 2
+        },
+        {
+          "word": "situ",
+          "count": 2
+        },
+        {
+          "word": "rami",
+          "count": 2
+        },
+        {
+          "word": "kantua",
+          "count": 2
+        },
+        {
+          "word": "ultimate",
+          "count": 2
+        },
+        {
+          "word": "bara",
+          "count": 2
+        },
+        {
+          "word": "ranca",
+          "count": 1
+        },
+        {
+          "word": "tambah",
+          "count": 1
+        },
+        {
+          "word": "lai",
+          "count": 1
+        },
+        {
+          "word": "mntap",
+          "count": 1
+        },
+        {
+          "word": "surang",
+          "count": 1
+        },
+        {
+          "word": "dlm",
+          "count": 1
+        },
+        {
+          "word": "keraguan",
+          "count": 1
+        },
+        {
+          "word": "kini",
+          "count": 1
+        },
+        {
+          "word": "antaro",
+          "count": 1
+        },
+        {
+          "word": "pajero",
+          "count": 1
+        },
+        {
+          "word": "helux",
+          "count": 1
+        },
+        {
+          "word": "tarafo",
+          "count": 1
+        },
+        {
+          "word": "bsk",
+          "count": 1
+        },
+        {
+          "word": "cantiya",
+          "count": 1
+        },
+        {
+          "word": "lokasi",
+          "count": 1
+        },
+        {
+          "word": "adaa",
+          "count": 1
+        },
+        {
+          "word": "jual",
+          "count": 1
+        },
+        {
+          "word": "vios",
+          "count": 1
+        },
+        {
+          "word": "sia",
+          "count": 1
+        },
+        {
+          "word": "kmu",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi.dipobkt_20261120_145832.xlsx",
+      "release_tag": "live-mitsubishi.dipobkt-20261120-145832"
     }
   ]
 }
