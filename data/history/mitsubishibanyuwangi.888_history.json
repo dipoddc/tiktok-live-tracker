@@ -1,7 +1,7 @@
 {
   "username": "mitsubishibanyuwangi.888",
   "retention_days": 90,
-  "updated_at": "2026-11-20T01:22:00.408Z",
+  "updated_at": "2026-11-20T06:08:47.211Z",
   "sessions": [
     {
       "id": "mitsubishibanyuwangi.888_20261023_184533",
@@ -15874,6 +15874,269 @@
       ],
       "session_report": "Session_mitsubishibanyuwangi.888_20261120_073234.xlsx",
       "release_tag": "live-mitsubishibanyuwangi.888-20261120-073234"
+    },
+    {
+      "id": "mitsubishibanyuwangi.888_20261120_124137",
+      "username": "mitsubishibanyuwangi.888",
+      "room_id": "7710120680305494791",
+      "title": "Promo Mitsubishi O813 53357323",
+      "live_started_at": "2026-11-20T05:26:32.000Z",
+      "tracking_started_at": "2026-11-20T05:41:54.630Z",
+      "ended_at": "2026-11-20T06:08:47.208Z",
+      "duration_sec": 2535,
+      "tracked_duration_sec": 1613,
+      "end_reason": "stream_end",
+      "peak_viewers": 4,
+      "peak_viewers_at": "2026-11-20T05:44:05.629Z",
+      "avg_viewers": 1,
+      "total_likes": 190,
+      "total_comments": 7,
+      "unique_commenters": 3,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-20T05:41:54.631Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T05:42:54.638Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T05:43:54.639Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T05:44:54.639Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T05:45:54.643Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-20T05:46:54.651Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T05:47:54.656Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-20T05:48:54.658Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T05:49:54.661Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T05:50:54.663Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T05:51:54.665Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T05:52:54.675Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T05:53:54.684Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T05:54:54.690Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T05:55:54.695Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T05:56:54.696Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T05:57:54.698Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T05:58:54.704Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T05:59:54.708Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T06:00:54.714Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T06:01:54.720Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T06:02:54.721Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T06:03:54.725Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T06:04:54.726Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T06:05:54.726Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T06:06:54.735Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-20T06:07:54.743Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-20T06:08:47.208Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "theofilus.vincent4",
+          "nickname": "Theofilus Vincent Ericson",
+          "count": 5
+        },
+        {
+          "user": "dahlanardiansyah",
+          "nickname": "dahlanardiansyah",
+          "count": 1
+        },
+        {
+          "user": "umar.dipayana5",
+          "nickname": "Dipa",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "antar",
+          "count": 2
+        },
+        {
+          "word": "destinator",
+          "count": 1
+        },
+        {
+          "word": "ultimate",
+          "count": 1
+        },
+        {
+          "word": "net",
+          "count": 1
+        },
+        {
+          "word": "brp",
+          "count": 1
+        },
+        {
+          "word": "bos",
+          "count": 1
+        },
+        {
+          "word": "ayo",
+          "count": 1
+        },
+        {
+          "word": "purwoharjo",
+          "count": 1
+        },
+        {
+          "word": "butuh",
+          "count": 1
+        },
+        {
+          "word": "driver",
+          "count": 1
+        },
+        {
+          "word": "unit",
+          "count": 1
+        },
+        {
+          "word": "siap",
+          "count": 1
+        },
+        {
+          "word": "gpp",
+          "count": 1
+        },
+        {
+          "word": "masalah",
+          "count": 1
+        },
+        {
+          "word": "kerja",
+          "count": 1
+        },
+        {
+          "word": "jemput",
+          "count": 1
+        },
+        {
+          "word": "penumpang",
+          "count": 1
+        },
+        {
+          "word": "stasiun",
+          "count": 1
+        },
+        {
+          "word": "genteng",
+          "count": 1
+        },
+        {
+          "word": "kalibaru",
+          "count": 1
+        },
+        {
+          "word": "banyuwangi",
+          "count": 1
+        },
+        {
+          "word": "lama",
+          "count": 1
+        },
+        {
+          "word": "pena",
+          "count": 1
+        },
+        {
+          "word": "liat",
+          "count": 1
+        },
+        {
+          "word": "live",
+          "count": 1
+        },
+        {
+          "word": "mbk",
+          "count": 1
+        },
+        {
+          "word": "rini",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishibanyuwangi.888_20261120_124137.xlsx",
+      "release_tag": "live-mitsubishibanyuwangi.888-20261120-124137"
     }
   ]
 }
