@@ -1,7 +1,7 @@
 {
   "username": "mitsubishibanyuwangi.888",
   "retention_days": 90,
-  "updated_at": "2026-11-21T02:27:36.176Z",
+  "updated_at": "2026-11-25T01:04:44.566Z",
   "sessions": [
     {
       "id": "mitsubishibanyuwangi.888_20261023_184533",
@@ -16446,6 +16446,139 @@
       ],
       "session_report": "Session_mitsubishibanyuwangi.888_20261121_085424.xlsx",
       "release_tag": "live-mitsubishibanyuwangi.888-20261121-085424"
+    },
+    {
+      "id": "mitsubishibanyuwangi.888_20261125_080002",
+      "username": "mitsubishibanyuwangi.888",
+      "room_id": "7711890397542320904",
+      "title": "Promo Mitsubishi O813 53357323",
+      "live_started_at": "2026-11-24T23:54:16.000Z",
+      "tracking_started_at": "2026-11-25T01:00:15.168Z",
+      "ended_at": "2026-11-25T01:04:44.562Z",
+      "duration_sec": 4229,
+      "tracked_duration_sec": 269,
+      "end_reason": "stream_end",
+      "peak_viewers": 6,
+      "peak_viewers_at": "2026-11-25T01:02:06.171Z",
+      "avg_viewers": 4,
+      "total_likes": 0,
+      "total_comments": 7,
+      "unique_commenters": 5,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-25T01:00:15.168Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-25T01:01:15.174Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-25T01:02:15.178Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-25T01:03:15.180Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T01:04:15.190Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T01:04:44.562Z",
+          "v": 3
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "awie.jkt",
+          "nickname": "awie jkt",
+          "count": 2
+        },
+        {
+          "user": "ela.nindawati19",
+          "nickname": "Elaninda",
+          "count": 2
+        },
+        {
+          "user": "rizkiy.lombok",
+          "nickname": "rizkiy lombok",
+          "count": 1
+        },
+        {
+          "user": "berkahrawitbangsring",
+          "nickname": "Brada",
+          "count": 1
+        },
+        {
+          "user": "pemudasess3",
+          "nickname": "Pemuda sess",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "ansuran",
+          "count": 2
+        },
+        {
+          "word": "klo",
+          "count": 2
+        },
+        {
+          "word": "l300",
+          "count": 1
+        },
+        {
+          "word": "perbulan",
+          "count": 1
+        },
+        {
+          "word": "mbae",
+          "count": 1
+        },
+        {
+          "word": "bulan",
+          "count": 1
+        },
+        {
+          "word": "xpander",
+          "count": 1
+        },
+        {
+          "word": "angsuran",
+          "count": 1
+        },
+        {
+          "word": "pajero",
+          "count": 1
+        },
+        {
+          "word": "manual",
+          "count": 1
+        },
+        {
+          "word": "matic",
+          "count": 1
+        },
+        {
+          "word": "fauzi",
+          "count": 1
+        },
+        {
+          "word": "kmn",
+          "count": 1
+        },
+        {
+          "word": "giga",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishibanyuwangi.888_20261125_080002.xlsx",
+      "release_tag": "live-mitsubishibanyuwangi.888-20261125-080002"
     }
   ]
 }
