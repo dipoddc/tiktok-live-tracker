@@ -1,7 +1,7 @@
 {
   "username": "mitsubishiadise",
   "retention_days": 90,
-  "updated_at": "2026-11-20T10:24:46.707Z",
+  "updated_at": "2026-11-25T10:41:20.406Z",
   "sessions": [
     {
       "id": "mitsubishiadise_20261026_143433",
@@ -4752,6 +4752,486 @@
       ],
       "session_report": "Session_mitsubishiadise_20261120_165757.xlsx",
       "release_tag": "live-mitsubishiadise-20261120-165757"
+    },
+    {
+      "id": "mitsubishiadise_20261125_164419",
+      "username": "mitsubishiadise",
+      "room_id": "7712042209235585813",
+      "title": "DIPO AMPLAS SM RAJA",
+      "live_started_at": "2026-11-25T09:43:37.000Z",
+      "tracking_started_at": "2026-11-25T09:44:50.033Z",
+      "ended_at": "2026-11-25T10:41:20.404Z",
+      "duration_sec": 3463,
+      "tracked_duration_sec": 3390,
+      "end_reason": "stream_end",
+      "peak_viewers": 11,
+      "peak_viewers_at": "2026-11-25T10:10:43.145Z",
+      "avg_viewers": 4,
+      "total_likes": 1382,
+      "total_comments": 62,
+      "unique_commenters": 21,
+      "follows": 4,
+      "shares": 1,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-25T09:44:50.034Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-25T09:45:50.040Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-25T09:46:50.043Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-25T09:47:50.044Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-25T09:48:50.045Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-25T09:49:50.046Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-25T09:50:50.046Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T09:51:50.048Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-25T09:52:50.053Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T09:53:50.054Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T09:54:50.055Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-25T09:55:50.056Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T09:56:50.056Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T09:57:50.059Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-25T09:58:50.060Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-25T09:59:50.061Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-25T10:00:50.062Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T10:01:50.068Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-25T10:02:50.070Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T10:03:50.073Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T10:04:50.075Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-25T10:05:50.075Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-25T10:06:50.077Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T10:07:50.080Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T10:08:50.080Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-25T10:09:50.081Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-25T10:10:50.082Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-25T10:11:50.085Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-25T10:12:50.090Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-25T10:13:50.092Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-25T10:14:50.093Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-25T10:15:50.094Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-25T10:16:50.095Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-25T10:17:50.095Z",
+          "v": 10
+        },
+        {
+          "t": "2026-11-25T10:18:50.099Z",
+          "v": 7
+        },
+        {
+          "t": "2026-11-25T10:19:50.100Z",
+          "v": 8
+        },
+        {
+          "t": "2026-11-25T10:20:50.102Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-25T10:21:50.104Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-25T10:22:50.104Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-25T10:23:50.105Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-25T10:24:50.106Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T10:25:50.110Z",
+          "v": 5
+        },
+        {
+          "t": "2026-11-25T10:26:50.116Z",
+          "v": 6
+        },
+        {
+          "t": "2026-11-25T10:27:50.117Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-25T10:28:50.118Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-25T10:29:50.122Z",
+          "v": 4
+        },
+        {
+          "t": "2026-11-25T10:30:50.128Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T10:31:50.130Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T10:32:50.134Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-25T10:33:50.135Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T10:34:50.136Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-25T10:35:50.143Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-25T10:36:50.143Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-25T10:37:50.146Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-25T10:38:50.148Z",
+          "v": 2
+        },
+        {
+          "t": "2026-11-25T10:39:50.149Z",
+          "v": 3
+        },
+        {
+          "t": "2026-11-25T10:40:50.151Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-25T10:41:20.404Z",
+          "v": 1
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "dimaswardhana2",
+          "nickname": "Dimas Krishnawardhana 2",
+          "count": 20
+        },
+        {
+          "user": "dipomedan12",
+          "nickname": "Marketing Mobil  Medan",
+          "count": 10
+        },
+        {
+          "user": "dedisabenamanik",
+          "nickname": "Dedi Sabena Manik",
+          "count": 4
+        },
+        {
+          "user": "ayahsan_",
+          "nickname": "Kamera Belakang",
+          "count": 3
+        },
+        {
+          "user": "wowonangler2",
+          "nickname": "W O W O N",
+          "count": 3
+        },
+        {
+          "user": "umi1eza",
+          "nickname": "Ummi Eza",
+          "count": 3
+        },
+        {
+          "user": "rikimayang14",
+          "nickname": "riki14",
+          "count": 3
+        },
+        {
+          "user": "hahagaaaaaaaa",
+          "nickname": "H24♎️",
+          "count": 2
+        },
+        {
+          "user": "bojezt.birumuda",
+          "nickname": "Arief",
+          "count": 2
+        },
+        {
+          "user": "zensantoso93",
+          "nickname": "Zen_Sant93",
+          "count": 1
+        },
+        {
+          "user": "atika.putri510",
+          "nickname": "Atika Putri",
+          "count": 1
+        },
+        {
+          "user": "jmld3wi.km4",
+          "nickname": "INA @Assitalia 88",
+          "count": 1
+        },
+        {
+          "user": "rasid.abd2",
+          "nickname": "rasid abd",
+          "count": 1
+        },
+        {
+          "user": "febryfebry255",
+          "nickname": "Febryfebry255",
+          "count": 1
+        },
+        {
+          "user": "the.one.dantez",
+          "nickname": "NY",
+          "count": 1
+        },
+        {
+          "user": "tobatlahwahaimanusia11",
+          "nickname": "Human_or kuman",
+          "count": 1
+        },
+        {
+          "user": "ziggyloki",
+          "nickname": "Ziggy Darky",
+          "count": 1
+        },
+        {
+          "user": "dimaslintarofficial_15",
+          "nickname": "Dimas Lintar",
+          "count": 1
+        },
+        {
+          "user": "mitsubishi_medan_berutu",
+          "nickname": "Himen Berutu Mitsubishi Medan",
+          "count": 1
+        },
+        {
+          "user": "budytampu",
+          "nickname": "budytampu",
+          "count": 1
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "mobil",
+          "count": 7
+        },
+        {
+          "word": "pajero",
+          "count": 7
+        },
+        {
+          "word": "bos",
+          "count": 7
+        },
+        {
+          "word": "habis",
+          "count": 5
+        },
+        {
+          "word": "xpander",
+          "count": 5
+        },
+        {
+          "word": "brp",
+          "count": 5
+        },
+        {
+          "word": "dulu",
+          "count": 4
+        },
+        {
+          "word": "putih",
+          "count": 4
+        },
+        {
+          "word": "konsumen",
+          "count": 3
+        },
+        {
+          "word": "nabrak",
+          "count": 3
+        },
+        {
+          "word": "coba",
+          "count": 3
+        },
+        {
+          "word": "jalan",
+          "count": 3
+        },
+        {
+          "word": "desti",
+          "count": 3
+        },
+        {
+          "word": "4x2",
+          "count": 3
+        },
+        {
+          "word": "disc",
+          "count": 3
+        },
+        {
+          "word": "lama",
+          "count": 3
+        },
+        {
+          "word": "supardi",
+          "count": 2
+        },
+        {
+          "word": "kemungkinan",
+          "count": 2
+        },
+        {
+          "word": "masuk",
+          "count": 2
+        },
+        {
+          "word": "body",
+          "count": 2
+        },
+        {
+          "word": "angkot",
+          "count": 2
+        },
+        {
+          "word": "sampai",
+          "count": 2
+        },
+        {
+          "word": "mobilnya",
+          "count": 2
+        },
+        {
+          "word": "sekitar",
+          "count": 2
+        },
+        {
+          "word": "pecah",
+          "count": 2
+        },
+        {
+          "word": "hybrid",
+          "count": 2
+        },
+        {
+          "word": "harga",
+          "count": 2
+        },
+        {
+          "word": "kek",
+          "count": 2
+        },
+        {
+          "word": "xforce",
+          "count": 2
+        },
+        {
+          "word": "ikut",
+          "count": 2
+        }
+      ],
+      "session_report": "Session_mitsubishiadise_20261125_164419.xlsx",
+      "release_tag": "live-mitsubishiadise-20261125-164419"
     }
   ]
 }
