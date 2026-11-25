@@ -1,7 +1,7 @@
 {
   "username": "mitsubishi.dipobkt",
   "retention_days": 90,
-  "updated_at": "2026-11-20T08:51:49.142Z",
+  "updated_at": "2026-11-25T09:52:40.404Z",
   "sessions": [
     {
       "id": "mitsubishi.dipobkt_20261028_121438",
@@ -6417,6 +6417,144 @@
       ],
       "session_report": "Session_mitsubishi.dipobkt_20261120_145832.xlsx",
       "release_tag": "live-mitsubishi.dipobkt-20261120-145832"
+    },
+    {
+      "id": "mitsubishi.dipobkt_20261125_164422",
+      "username": "mitsubishi.dipobkt",
+      "room_id": "7712027085745113863",
+      "title": "promo akhir tahun",
+      "live_started_at": "2026-11-25T08:44:34.000Z",
+      "tracking_started_at": "2026-11-25T09:44:47.140Z",
+      "ended_at": "2026-11-25T09:52:40.402Z",
+      "duration_sec": 4086,
+      "tracked_duration_sec": 473,
+      "end_reason": "stream_end",
+      "peak_viewers": 2,
+      "peak_viewers_at": "2026-11-25T09:45:43.179Z",
+      "avg_viewers": 1,
+      "total_likes": 0,
+      "total_comments": 6,
+      "unique_commenters": 2,
+      "follows": 0,
+      "shares": 0,
+      "viewer_timeline": [
+        {
+          "t": "2026-11-25T09:44:47.141Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-25T09:45:47.149Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-25T09:46:47.151Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-25T09:47:47.155Z",
+          "v": 1
+        },
+        {
+          "t": "2026-11-25T09:48:47.156Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-25T09:49:47.156Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-25T09:50:47.159Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-25T09:51:47.159Z",
+          "v": 0
+        },
+        {
+          "t": "2026-11-25T09:52:40.402Z",
+          "v": 0
+        }
+      ],
+      "top_commenters": [
+        {
+          "user": "ayamsaikua_bukittinggi",
+          "nickname": "DAPUR MAMI KILLUA",
+          "count": 4
+        },
+        {
+          "user": "suci.ladora",
+          "nickname": "suci.ladora",
+          "count": 2
+        }
+      ],
+      "top_keywords": [
+        {
+          "word": "ditunggu",
+          "count": 2
+        },
+        {
+          "word": "mode",
+          "count": 1
+        },
+        {
+          "word": "laiii",
+          "count": 1
+        },
+        {
+          "word": "capek",
+          "count": 1
+        },
+        {
+          "word": "habis",
+          "count": 1
+        },
+        {
+          "word": "edo",
+          "count": 1
+        },
+        {
+          "word": "acok",
+          "count": 1
+        },
+        {
+          "word": "makan",
+          "count": 1
+        },
+        {
+          "word": "siko",
+          "count": 1
+        },
+        {
+          "word": "sipp",
+          "count": 1
+        },
+        {
+          "word": "cabut",
+          "count": 1
+        },
+        {
+          "word": "wak",
+          "count": 1
+        },
+        {
+          "word": "pikumbuah",
+          "count": 1
+        },
+        {
+          "word": "pulang",
+          "count": 1
+        },
+        {
+          "word": "uncu",
+          "count": 1
+        },
+        {
+          "word": "tdi",
+          "count": 1
+        }
+      ],
+      "session_report": "Session_mitsubishi.dipobkt_20261125_164422.xlsx",
+      "release_tag": "live-mitsubishi.dipobkt-20261125-164422"
     }
   ]
 }
